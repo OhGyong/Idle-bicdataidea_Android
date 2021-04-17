@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Idle_Project.ui.idea_board.Idea_Board_Fragment">
+    tools:context="com.example.Idle_Project.ui.notice_cs_board.cs.Cs_Board_Fragment">
 
     <TextView
-        android:id="@+id/text_idea"
+        android:id="@+id/text_anno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

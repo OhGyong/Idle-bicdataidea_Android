@@ -22,15 +22,10 @@ class Idea_Board_Fragment : Fragment() {
         idea_board_model =
                 ViewModelProvider(this).get(IdeaViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_idea_board, container, false)
-        val textView: TextView = root.findViewById(R.id.text_gallery)
+        val textView: TextView = root.findViewById(R.id.text_idea)
         idea_board_model.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
     }
 }

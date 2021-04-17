@@ -21,10 +21,17 @@
         android:id="@+id/nav_anno_board"
         android:name="com.example.Idle_Project.ui.anno_board.Anno_Board_Fragment"
         android:label="anno_board"
-        tools:layout="fragment_anno_board" />
+        tools:layout="@layout/fragment_anno_board" />
     <fragment
         android:id="@+id/nav_notice_board"
         android:name="com.example.Idle_Project.ui.notice_cs_board.notice.Notice_Board_Fragment"
-        />
+        android:label="notice_board"
+        tools:layout="@layout/fragment_notice_board" />
+    <fragment
+        android:id="@+id/nav_cs_board"
+        android:name="com.example.Idle_Project.ui.notice_cs_board.cs.Cs_Board_Fragment"
+        android:label="notice_board"
+        tools:layout="@layout/fragment_notice_board" />
+
 
 </navigation>
