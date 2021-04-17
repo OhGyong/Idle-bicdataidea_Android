@@ -18,8 +18,13 @@
         tools:layout="@layout/fragment_idea_board" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.Idle_Project.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_anno_board"
+        android:name="com.example.Idle_Project.ui.anno_board.Anno_Board_Fragment"
+        android:label="anno_board"
+        tools:layout="fragment_anno_board" />
+    <fragment
+        android:id="@+id/nav_notice_board"
+        android:name="com.example.Idle_Project.ui.notice_cs_board.notice.Notice_Board_Fragment"
+        />
+
 </navigation>

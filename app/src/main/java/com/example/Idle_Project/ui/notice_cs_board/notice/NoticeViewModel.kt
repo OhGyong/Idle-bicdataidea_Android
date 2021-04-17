@@ -1,13 +1,12 @@
-package com.example.Idle_Project.ui.slideshow
+package com.example.Idle_Project.ui.notice_cs_board.notice
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
-
+class NoticeViewModel {
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "공지사항 화면"
     }
     val text: LiveData<String> = _text
+
 }

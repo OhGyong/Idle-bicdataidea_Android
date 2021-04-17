@@ -113,8 +113,5 @@
                 android:textSize="25dp"/>
 
         </LinearLayout>
-
-
-
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

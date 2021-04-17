@@ -1,13 +1,13 @@
-package com.example.Idle_Project.ui.idea_board
+package com.example.Idle_Project.ui.anno_board
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GalleryViewModel : ViewModel() {
+class AnnoViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is gallery Fragment"
+        value = "공고정보 게시판 화면"
     }
     val text: LiveData<String> = _text
 }

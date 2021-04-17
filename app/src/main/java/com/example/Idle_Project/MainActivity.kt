@@ -22,38 +22,40 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // 상단 toolbar
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-
-        val navHome: TextView = findViewById(R.id.nav_idea_board);
-        navHome.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_idea_board, Bundle().apply {
-
-            })
-
-        }
+        val drawer: DrawerLayout = findViewById(R.id.drawer_layout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
 
         /*
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = findViewById(R.id.nav_view)
-        val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.nav_home,
-                R.id.nav_idea_board,
-                R.id.nav_anno_board
-        ), drawerLayout)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-    */
+        * 각 페이지 fragment 띄우기
+        * */
+        // 홈 화면
+        val navHome: TextView = findViewById(R.id.nav_home)
+        navHome.setOnClickListener {
+            // nav_host_fragment -> layout/content_main.xml 파일(메인에 프래그먼트 띄우는 부분)
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_home, Bundle().apply {
+            })
+            drawer.closeDrawer(navView) // drawer 에서 항목 클릭 시 닫게 만들기
+        }
+        // 아이디어 플랫폼 화면
+        val nav_idea_board: TextView = findViewById(R.id.nav_idea_board)
+        nav_idea_board.setOnClickListener {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_idea_board, Bundle().apply {
+            })
+            drawer.closeDrawer(navView)
+        }
+        // 공고정보 게시판 화면
+        val nav_anno_board: TextView = findViewById(R.id.nav_anno_board)
+        nav_anno_board.setOnClickListener {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_anno_board, Bundle().apply {
+            })
+            drawer.closeDrawer(navView)
+        }
+
 
     }
-/*
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
-   */
 }
