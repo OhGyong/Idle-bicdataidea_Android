@@ -106,6 +106,12 @@ class MainActivity : AppCompatActivity() {
             findNavController(R.id.nav_host_fragment).navigate(R.id.nav_member_idea_page)
             drawer.closeDrawer(navView)
         }
+        // 관심 사업 화면
+        val nav_member_anno_page: TextView = findViewById(R.id.nav_member_anno_page)
+        nav_member_anno_page.setOnClickListener{
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_member_anno_page)
+            drawer.closeDrawer(navView)
+        }
 
     }
 }
