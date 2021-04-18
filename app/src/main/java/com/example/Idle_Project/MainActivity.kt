@@ -82,7 +82,24 @@ class MainActivity : AppCompatActivity() {
             findNavController(R.id.nav_host_fragment).navigate(R.id.nav_contact_page)
             drawer.closeDrawer(navView)
         }
-
+        // 회원정보수정 화면1 (마이페이지 버튼)
+        val nav_member_update_page1: TextView = findViewById(R.id.nav_member_update_page1)
+        nav_member_update_page1.setOnClickListener{
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_member_update_page)
+            drawer.closeDrawer(navView)
+        }
+        // 회원정보수정 화면2 (회원정보수정 버튼)
+        val nav_member_update_page2: TextView = findViewById(R.id.nav_member_update_page2)
+        nav_member_update_page2.setOnClickListener{
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_member_update_page)
+            drawer.closeDrawer(navView)
+        }
+        // 포인트현황 화면
+        val nav_member_point_page: TextView = findViewById(R.id.nav_member_point_page)
+        nav_member_point_page.setOnClickListener{
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_member_point_page)
+            drawer.closeDrawer(navView)
+        }
 
     }
 }

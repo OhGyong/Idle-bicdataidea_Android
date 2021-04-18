@@ -37,6 +37,16 @@
         android:name="com.example.Idle_Project.ui.contact_page.Contact_Page_Fragment"
         android:label="contact_page"
         tools:layout="@layout/fragment_contact_page" />
+    <fragment
+        android:id="@+id/nav_member_update_page"
+        android:name="com.example.Idle_Project.ui.mypage.member_update_page.Member_Update_Page_Fragment"
+        android:label="member_update_page"
+        tools:layout="@layout/fragment_member_update_page" />
+    <fragment
+        android:id="@+id/nav_member_point_page"
+        android:name="com.example.Idle_Project.ui.mypage.member_point_page.Member_Point_Page_Fragment"
+        android:label="member_point_page"
+        tools:layout="@layout/fragment_member_point_page" />
 
 
 </navigation>
