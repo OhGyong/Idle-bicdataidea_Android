@@ -100,6 +100,12 @@ class MainActivity : AppCompatActivity() {
             findNavController(R.id.nav_host_fragment).navigate(R.id.nav_member_point_page)
             drawer.closeDrawer(navView)
         }
+        // 내 아이디어 화면
+        val nav_member_idea_page: TextView = findViewById(R.id.nav_member_idea_page)
+        nav_member_idea_page.setOnClickListener{
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_member_idea_page)
+            drawer.closeDrawer(navView)
+        }
 
     }
 }

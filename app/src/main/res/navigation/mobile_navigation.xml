@@ -47,6 +47,12 @@
         android:name="com.example.Idle_Project.ui.mypage.member_point_page.Member_Point_Page_Fragment"
         android:label="member_point_page"
         tools:layout="@layout/fragment_member_point_page" />
+    <fragment
+        android:id="@+id/nav_member_idea_page"
+        android:name="com.example.Idle_Project.ui.mypage.member_idea_page.Member_Idea_Page_Fragment"
+        android:label="member_idea_page"
+        tools:layout="@layout/fragment_idea_page" />
+
 
 
 </navigation>
