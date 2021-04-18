@@ -112,6 +112,11 @@ class MainActivity : AppCompatActivity() {
             findNavController(R.id.nav_host_fragment).navigate(R.id.nav_member_anno_page)
             drawer.closeDrawer(navView)
         }
-
+        // 로그인 화면
+        val nav_login_page: TextView = findViewById(R.id.nav_login_page)
+        nav_login_page.setOnClickListener{
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_login_page)
+            drawer.closeDrawer(navView)
+        }
     }
 }

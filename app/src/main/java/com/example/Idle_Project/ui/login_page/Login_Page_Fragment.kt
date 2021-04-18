@@ -1,4 +1,4 @@
-package com.example.Idle_Project.ui.mypage.member_anno_page
+package com.example.Idle_Project.ui.login_page
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -9,22 +9,22 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import com.example.Idle_Project.R
-import com.example.Idle_Project.ui.mypage.member_idea_page.MemberIdeaViewModel
+import com.example.Idle_Project.ui.mypage.member_anno_page.MemberAnnoViewModel
 
-class Member_Anno_Page_Fragment : Fragment() {
+class Login_Page_Fragment : Fragment() {
 
-    private lateinit var member_anno_page_model: MemberAnnoViewModel
+    private lateinit var login_page_model: LoginViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        member_anno_page_model =
-            ViewModelProvider(this).get(MemberAnnoViewModel::class.java)
+        login_page_model =
+            ViewModelProvider(this).get(LoginViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_anno_page, container, false)
         val textView: TextView = root.findViewById(R.id.text_anno)
-        member_anno_page_model.text.observe(viewLifecycleOwner, Observer {
+        login_page_model.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

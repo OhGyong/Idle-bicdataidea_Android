@@ -57,6 +57,11 @@
         android:name="com.example.Idle_Project.ui.mypage.member_anno_page.Member_Anno_Page_Fragment"
         android:label="member_anno_page"
         tools:layout="@layout/fragment_anno_page" />
+    <fragment
+        android:id="@+id/nav_login_page"
+        android:name="com.example.Idle_Project.ui.login_page.Login_Page_Fragment"
+        android:label="nav_login_page"
+        tools:layout="@layout/fragment_login_page" />
 
 
 
