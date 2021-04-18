@@ -1,4 +1,4 @@
-package com.example.Idle_Project.ui.anno_board
+package com.example.Idle_Project.ui.anno_page
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

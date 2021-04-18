@@ -33,85 +33,84 @@
                 android:text="홈"
                 android:textSize="25dp"/>
             <TextView
-                android:id="@+id/nav_idea_board"
+                android:id="@+id/nav_idea_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="아이디어 플랫폼"
                 android:textSize="25dp"/>
             <TextView
-                android:id="@+id/nav_anno_board"
+                android:id="@+id/nav_anno_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="공고정보 게시판"
                 android:textSize="25dp"/>
             <TextView
-                android:id="@+id/nav_notice_board1"
+                android:id="@+id/nav_notice_page1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="게시판"
                 android:textSize="25dp"/>
             <TextView
-                android:id="@+id/nav_notice_board2"
+                android:id="@+id/nav_notice_page2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="      공지사항"
                 android:textSize="20dp"/>
             <TextView
-                android:id="@+id/nav_cs_board"
+                android:id="@+id/nav_cs_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="      문의게시판"
                 android:textSize="20dp"/>
             <TextView
-                android:id="@+id/nav_contact_board"
+                android:id="@+id/nav_contact_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="고객센터"
                 android:textSize="25dp"/>
             <TextView
-                android:id="@+id/nav_mypage"
+                android:id="@+id/nav_member_update_page1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="마이페이지"
                 android:textSize="25dp"/>
             <TextView
-                android:id="@+id/nav_member_update"
+                android:id="@+id/nav_member_update_page2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="      회원정보수정"
                 android:textSize="20dp"/>
             <TextView
-                android:id="@+id/nav_member_point"
+                android:id="@+id/nav_member_point_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="      포인트현황"
                 android:textSize="20dp"/>
             <TextView
-                android:id="@+id/nav_member_idea"
+                android:id="@+id/nav_member_idea_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="      내 아이디어"
                 android:textSize="20dp"/>
             <TextView
-                android:id="@+id/nav_member_anno"
+                android:id="@+id/nav_member_anno_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="      관심 사업"
                 android:textSize="20dp"/>
 
             <TextView
-                android:id="@+id/nav_login"
+                android:id="@+id/nav_login_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="로그인"
                 android:textSize="25dp"/>
             <TextView
-                android:id="@+id/nav_logout"
+                android:id="@+id/nav_logout_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="로그아웃"
                 android:textSize="25dp"/>
-
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

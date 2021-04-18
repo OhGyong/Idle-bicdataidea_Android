@@ -1,4 +1,4 @@
-package com.example.Idle_Project.ui.notice_cs_board.cs
+package com.example.Idle_Project.ui.notice_cs_page.cs_page
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

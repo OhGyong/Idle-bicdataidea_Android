@@ -42,38 +42,44 @@ class MainActivity : AppCompatActivity() {
             drawer.closeDrawer(navView) // drawer 에서 항목 클릭 시 닫게 만들기
         }
         // 아이디어 플랫폼 화면
-        val navIdea_board: TextView = findViewById(R.id.nav_idea_board)
-        navIdea_board.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_idea_board, Bundle().apply {
+        val navIdea_page: TextView = findViewById(R.id.nav_idea_page)
+        navIdea_page.setOnClickListener {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_idea_page, Bundle().apply {
             })
             drawer.closeDrawer(navView)
         }
         // 공고정보 게시판 화면
-        val navAnno_board: TextView = findViewById(R.id.nav_anno_board)
-        navAnno_board.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_anno_board, Bundle().apply {
+        val navAnno_page: TextView = findViewById(R.id.nav_anno_page)
+        navAnno_page.setOnClickListener {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_anno_page, Bundle().apply {
             })
             drawer.closeDrawer(navView)
         }
         // 공지사항 화면1 (게시판 버튼)
-        val navNotice_board1: TextView = findViewById(R.id.nav_notice_board1)
-        navNotice_board1.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_board, Bundle().apply {
+        val navNotice_page1: TextView = findViewById(R.id.nav_notice_page1)
+        navNotice_page1.setOnClickListener {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_page, Bundle().apply {
             })
             drawer.closeDrawer(navView)
         }
         // 공지사항 화면2 (공지사항 버튼)
-        val navNotice_board2: TextView = findViewById(R.id.nav_notice_board2)
-        navNotice_board2.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_board, Bundle().apply {
+        val navNotice_page2: TextView = findViewById(R.id.nav_notice_page2)
+        navNotice_page2.setOnClickListener {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_page, Bundle().apply {
             })
             drawer.closeDrawer(navView)
         }
         // 문의게시판 화면
-        val navCs_board: TextView = findViewById(R.id.nav_cs_board)
-        navCs_board.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_cs_board, Bundle().apply {
+        val navCs_page: TextView = findViewById(R.id.nav_cs_page)
+        navCs_page.setOnClickListener {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_cs_page, Bundle().apply {
             })
+            drawer.closeDrawer(navView)
+        }
+        // 고객센터 화면
+        val navContact_page: TextView = findViewById(R.id.nav_contact_page)
+        navContact_page.setOnClickListener{
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_contact_page)
             drawer.closeDrawer(navView)
         }
 

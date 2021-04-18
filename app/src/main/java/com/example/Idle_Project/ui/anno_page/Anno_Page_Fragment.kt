@@ -1,4 +1,4 @@
-package com.example.Idle_Project.ui.anno_board
+package com.example.Idle_Project.ui.anno_page
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.Idle_Project.R
 
-class Anno_Board_Fragment : Fragment() {
+class Anno_Page_Fragment : Fragment() {
 
-    private lateinit var anno_board_model: AnnoViewModel
+    private lateinit var anno_page_model: AnnoViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        anno_board_model =
+        anno_page_model =
                 ViewModelProvider(this).get(AnnoViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_anno_board, container, false)
+        val root = inflater.inflate(R.layout.fragment_anno_page, container, false)
         val textView: TextView = root.findViewById(R.id.text_anno)
-        anno_board_model.text.observe(viewLifecycleOwner, Observer {
+        anno_page_model.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

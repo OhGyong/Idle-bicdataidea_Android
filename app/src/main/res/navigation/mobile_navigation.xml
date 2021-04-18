@@ -12,26 +12,31 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_idea_board"
-        android:name="com.example.Idle_Project.ui.idea_board.Idea_Board_Fragment"
-        android:label="idea_board"
-        tools:layout="@layout/fragment_idea_board" />
+        android:id="@+id/nav_idea_page"
+        android:name="com.example.Idle_Project.ui.idea_page.Idea_Page_Fragment"
+        android:label="idea_page"
+        tools:layout="@layout/fragment_idea_page" />
 
     <fragment
-        android:id="@+id/nav_anno_board"
-        android:name="com.example.Idle_Project.ui.anno_board.Anno_Board_Fragment"
-        android:label="anno_board"
-        tools:layout="@layout/fragment_anno_board" />
+        android:id="@+id/nav_anno_page"
+        android:name="com.example.Idle_Project.ui.anno_page.Anno_Page_Fragment"
+        android:label="anno_page"
+        tools:layout="@layout/fragment_anno_page" />
     <fragment
-        android:id="@+id/nav_notice_board"
-        android:name="com.example.Idle_Project.ui.notice_cs_board.notice.Notice_Board_Fragment"
-        android:label="notice_board"
-        tools:layout="@layout/fragment_notice_board" />
+        android:id="@+id/nav_notice_page"
+        android:name="com.example.Idle_Project.ui.notice_cs_page.notice_page.Notice_Page_Fragment"
+        android:label="notice_page"
+        tools:layout="@layout/fragment_notice_page" />
     <fragment
-        android:id="@+id/nav_cs_board"
-        android:name="com.example.Idle_Project.ui.notice_cs_board.cs.Cs_Board_Fragment"
-        android:label="notice_board"
-        tools:layout="@layout/fragment_notice_board" />
+        android:id="@+id/nav_cs_page"
+        android:name="com.example.Idle_Project.ui.notice_cs_page.cs_page.Cs_Page_Fragment"
+        android:label="notice_page"
+        tools:layout="@layout/fragment_notice_page" />
+    <fragment
+        android:id="@+id/nav_contact_page"
+        android:name="com.example.Idle_Project.ui.contact_page.Contact_Page_Fragment"
+        android:label="contact_page"
+        tools:layout="@layout/fragment_contact_page" />
 
 
 </navigation>

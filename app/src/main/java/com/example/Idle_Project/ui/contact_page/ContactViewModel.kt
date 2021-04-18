@@ -1,12 +1,12 @@
-package com.example.Idle_Project.ui.notice_cs_board.notice
+package com.example.Idle_Project.ui.contact_page
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NoticeViewModel : ViewModel(){
+class ContactViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
-        value = "공지사항 화면"
+        value = "고객센터 화면"
     }
     val text: LiveData<String> = _text
 }
