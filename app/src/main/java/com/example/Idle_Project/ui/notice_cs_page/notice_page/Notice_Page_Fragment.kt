@@ -22,10 +22,10 @@ class Notice_Page_Fragment : Fragment() {
         notice_page_model =
             ViewModelProvider(this).get(NoticeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_notice_page, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notice)
-        notice_page_model.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+//        val textView: TextView = root.findViewById(R.id.text_notice)
+//        notice_page_model.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 }
