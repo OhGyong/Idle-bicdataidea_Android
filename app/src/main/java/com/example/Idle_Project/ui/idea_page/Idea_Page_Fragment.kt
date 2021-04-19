@@ -22,10 +22,10 @@ class Idea_Page_Fragment : Fragment() {
         idea_page_model =
                 ViewModelProvider(this).get(IdeaViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_idea_page, container, false)
-        val textView: TextView = root.findViewById(R.id.text_idea)
-        idea_page_model.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+//        val textView: TextView = root.findViewById(R.id.text_idea)
+//        idea_page_model.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 }
