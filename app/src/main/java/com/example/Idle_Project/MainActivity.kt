@@ -2,7 +2,9 @@ package com.example.Idle_Project
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.ActionBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -23,12 +25,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 상단 toolbar
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+//        val toolbar: Toolbar = findViewById(R.id.toolbar)
+//        setSupportActionBar(toolbar)
 
         val drawer: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
+
+        // 타이틀 홈 화면 이동
+        val title_name: LinearLayout = findViewById(R.id.title_name)
+        title_name.setOnClickListener {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_home, Bundle().apply {
+            })
+        }
 
         /*
         * 각 페이지 fragment 띄우기
