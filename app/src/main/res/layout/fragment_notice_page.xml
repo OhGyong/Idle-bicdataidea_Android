@@ -13,10 +13,10 @@
 
         <ImageView
             android:id="@+id/notice1"
-            android:layout_width="414dp"
+            android:layout_width="match_parent"
             android:layout_height="142dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/book"
+            android:src="@drawable/idea_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -36,30 +36,34 @@
 
         <Button
             android:id="@+id/notice_bt1"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/radius"
             android:text="공지사항"
-            android:textSize="12dp"
             android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/notice2" />
 
         <Button
             android:id="@+id/notice_bt2"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="56dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="97dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/radius"
             android:text="문의게시판"
-            android:textSize="12dp"
             android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toEndOf="@+id/notice_bt1"
             app:layout_constraintTop_toBottomOf="@+id/notice2" />
 
         <TextView

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.example.Idle_Project.ui.notice_cs_page.cs_page.Cs_Page_Fragment">
+    tools:context="com.example.Idle_Project.ui.notice_cs_page.cs_page.Cs_Page_Fragment"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,10 +14,10 @@
 
         <ImageView
             android:id="@+id/cs1"
-            android:layout_width="414dp"
+            android:layout_width="match_parent"
             android:layout_height="142dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/book"
+            android:src="@drawable/idea_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,27 +36,32 @@
             app:layout_constraintTop_toTopOf="@+id/cs1" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="16dp"
+            android:id="@+id/cs_bt1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/radius"
+            app:backgroundTint="@null"
             android:text="공지사항"
             android:textSize="12dp"
             android:textColor="@color/black"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cs2" />
 
         <Button
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="56dp"
-            android:layout_marginTop="16dp"
+            android:id="@+id/cs_bt2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="97dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/radius"
+            app:backgroundTint="@null"
             android:text="문의게시판"
             android:textSize="12dp"
             android:textColor="@color/black"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +77,7 @@
             android:textSize="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
+            app:layout_constraintTop_toBottomOf="@+id/cs_bt2" />
 
         <TextView
             android:layout_width="wrap_content"
