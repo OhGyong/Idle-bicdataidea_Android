@@ -22,11 +22,11 @@ class Member_Update_Page_Fragment : Fragment() {
     ): View? {
         member_update_page_model =
             ViewModelProvider(this).get(MemberUpdateViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_anno_page, container, false)
-        val textView: TextView = root.findViewById(R.id.text_anno)
-        member_update_page_model.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val root = inflater.inflate(R.layout.fragment_member_update_page, container, false)
+//        val textView: TextView = root.findViewById(R.id.text_anno)
+//        member_update_page_model.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 }

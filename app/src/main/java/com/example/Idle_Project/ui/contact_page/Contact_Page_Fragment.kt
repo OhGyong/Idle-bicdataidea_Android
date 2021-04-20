@@ -22,11 +22,11 @@ class Contact_Page_Fragment : Fragment() {
     ): View? {
         contact_page_model =
             ViewModelProvider(this).get(ContactViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_anno_page, container, false)
-        val textView: TextView = root.findViewById(R.id.text_anno)
-        contact_page_model.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val root = inflater.inflate(R.layout.fragment_contact_page, container, false)
+//        val textView: TextView = root.findViewById(R.id.text_anno)
+//        contact_page_model.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 }

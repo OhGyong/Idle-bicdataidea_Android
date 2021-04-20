@@ -21,11 +21,11 @@ class Cs_Page_Fragment : Fragment() {
     ): View? {
         cs_page_model =
             ViewModelProvider(this).get(CsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_anno_page, container, false)
-        val textView: TextView = root.findViewById(R.id.text_anno)
-        cs_page_model.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val root = inflater.inflate(R.layout.fragment_cs_page, container, false)
+//        val textView: TextView = root.findViewById(R.id.text_anno)
+//        cs_page_model.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 }

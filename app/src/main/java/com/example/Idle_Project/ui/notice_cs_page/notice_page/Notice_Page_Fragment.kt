@@ -6,26 +6,37 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.Idle_Project.R
 
 class Notice_Page_Fragment : Fragment() {
-
-    private lateinit var notice_page_model: NoticeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        notice_page_model =
-            ViewModelProvider(this).get(NoticeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_notice_page, container, false)
-//        val textView: TextView = root.findViewById(R.id.text_notice)
-//        notice_page_model.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
+
+        val notice_btn: Button = root.findViewById(R.id.notice_bt)
+
+        notice_btn.setOnClickListener {
+            println("11111")
+            findNavController().navigate(R.id.nav_cs_page)
+        }
+
+        val cs_btn: Button = root.findViewById(R.id.notice_cs_bt)
+        cs_btn.setOnClickListener {
+            findNavController().navigate(R.id.nav_cs_page)
+        }
+
         return root
     }
 }

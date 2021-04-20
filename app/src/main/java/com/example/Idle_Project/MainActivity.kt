@@ -2,6 +2,8 @@ package com.example.Idle_Project
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
@@ -32,11 +34,31 @@ class MainActivity : AppCompatActivity() {
         val navView: NavigationView = findViewById(R.id.nav_view)
 
         // 타이틀 홈 화면 이동
-        val title_name: LinearLayout = findViewById(R.id.title_name)
-        title_name.setOnClickListener {
+        val main1: TextView = findViewById(R.id.main1)
+        main1.setOnClickListener {
             findNavController(R.id.nav_host_fragment).navigate(R.id.nav_home, Bundle().apply {
             })
         }
+        val main2: TextView = findViewById(R.id.main2)
+        main2.setOnClickListener {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_home, Bundle().apply {
+            })
+        }
+
+        val nav_view: NavigationView = findViewById(R.id.nav_view)
+        val nav_header=nav_view.getHeaderView(0)
+        nav_header.findViewById<LinearLayout>(R.id.nav_header).setOnClickListener{
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_home, Bundle().apply {
+            })
+            drawer.closeDrawer(navView)
+        }
+
+        // nav_drawer 열기
+        val nav_icon: ImageView = findViewById(R.id.nav_icon)
+        nav_icon.setOnClickListener{
+            drawer.openDrawer(navView)
+        }
+
 
         /*
         * 각 페이지 fragment 띄우기

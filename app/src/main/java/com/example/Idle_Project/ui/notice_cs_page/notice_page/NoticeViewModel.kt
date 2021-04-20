@@ -1,5 +1,6 @@
 package com.example.Idle_Project.ui.notice_cs_page.notice_page
 
+import android.widget.Button
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

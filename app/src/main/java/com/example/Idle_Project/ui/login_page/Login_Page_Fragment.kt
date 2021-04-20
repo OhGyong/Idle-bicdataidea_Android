@@ -22,11 +22,11 @@ class Login_Page_Fragment : Fragment() {
     ): View? {
         login_page_model =
             ViewModelProvider(this).get(LoginViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_anno_page, container, false)
-        val textView: TextView = root.findViewById(R.id.text_anno)
-        login_page_model.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val root = inflater.inflate(R.layout.fragment_login_page, container, false)
+//        val textView: TextView = root.findViewById(R.id.text_anno)
+//        login_page_model.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 }
