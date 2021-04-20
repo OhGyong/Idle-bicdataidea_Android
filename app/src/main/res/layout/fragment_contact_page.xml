@@ -33,17 +33,6 @@
             app:layout_constraintStart_toStartOf="@+id/contact1"
             app:layout_constraintTop_toTopOf="@+id/contact1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
-            android:text="고객센터"
-            android:textColor="@color/black"
-            android:textSize="50dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contact1" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
