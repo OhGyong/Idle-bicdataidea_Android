@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.example.Idle_Project.ui.notice_cs_page.notice_page.Notice_Page_Fragment">
+    tools:context="com.example.Idle_Project.ui.notice_cs_page.cs_page.Cs_Page_Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -35,44 +35,44 @@
             app:layout_constraintTop_toTopOf="@+id/notice1" />
 
         <Button
-            android:id="@+id/notice_bt"
+            android:id="@+id/notice_bt1"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/radius"
             android:text="공지사항"
-            android:textColor="@color/black"
             android:textSize="12dp"
+            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/notice2" />
 
         <Button
-            android:id="@+id/notice_cs_bt"
+            android:id="@+id/notice_bt2"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_marginTop="12dp"
             android:layout_marginEnd="56dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/radius"
             android:text="문의게시판"
-            android:textColor="@color/black"
             android:textSize="12dp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/notice_bt"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/notice2" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="84dp"
+            android:layout_marginTop="76dp"
             android:text="공지사항"
             android:textColor="@color/black"
             android:textSize="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/notice_cs_bt" />
+            app:layout_constraintTop_toBottomOf="@+id/notice2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -84,5 +84,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

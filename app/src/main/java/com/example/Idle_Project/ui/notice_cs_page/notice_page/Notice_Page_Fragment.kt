@@ -25,16 +25,10 @@ class Notice_Page_Fragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_notice_page, container, false)
 
-        val notice_btn: Button = root.findViewById(R.id.notice_bt)
-
-        notice_btn.setOnClickListener {
-            println("11111")
-            findNavController().navigate(R.id.nav_cs_page)
-        }
-
-        val cs_btn: Button = root.findViewById(R.id.notice_cs_bt)
+        val cs_btn: Button = root.findViewById(R.id.notice_bt2)
         cs_btn.setOnClickListener {
             findNavController().navigate(R.id.nav_cs_page)
+//            cs_btn.
         }
 
         return root
