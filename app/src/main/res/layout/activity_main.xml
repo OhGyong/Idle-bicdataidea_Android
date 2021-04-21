@@ -126,6 +126,13 @@
                 android:text="로그아웃"
                 android:textSize="25dp"
                 android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/nav_about_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="정보"
+                android:textSize="25dp"
+                android:textColor="@color/black"/>
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>
