@@ -26,6 +26,19 @@ private const val ARG_PARAM2 = "param2"
  */
 class Notice_Cs_Page_Fragment : Fragment() {
 
+    var index = 0
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        arguments?.let {
+            it.getInt(
+                "index"
+            )
+            index=it.getInt("index")
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,8 +56,24 @@ class Notice_Cs_Page_Fragment : Fragment() {
 
 
         // tab button에 customview 세팅
-        for (i in 0..tabs.tabCount) {
-            tabs.getTabAt(i)?.customView = sectionsPagerAdapter.getTabView(i)
+        for (i in 0 until tabs.tabCount) {
+            val view_tabs = sectionsPagerAdapter.getTabView(i)
+
+            if(i == 0 && index == 0){
+                view_tabs.setBackgroundColor(0xFF8345F1.toInt())
+                (view_tabs as TextView).setTextColor(Color.WHITE)
+            }else if(i == 0 && index == 1){
+                view_tabs.setBackgroundColor(0xFFECEAEA.toInt())
+                (view_tabs as TextView).setTextColor(Color.BLACK)
+            }
+            else if(i == 1 && index == 0){
+                view_tabs.setBackgroundColor(0xFFECEAEA.toInt())
+                (view_tabs as TextView).setTextColor(Color.BLACK)
+            }else if( i == 1 && index == 1){
+                view_tabs.setBackgroundColor(0xFF8345F1.toInt())
+                (view_tabs as TextView).setTextColor(Color.WHITE)
+            }
+            tabs.getTabAt(i)?.customView = view_tabs
         }
 
         // tab select시 select된 버튼의 색상을 바꿔주는 리스너
@@ -54,12 +83,16 @@ class Notice_Cs_Page_Fragment : Fragment() {
                 }
                 override fun onTabUnselected(tab: TabLayout.Tab?) {
                     if (tab?.customView is TextView) {
-                        (tab.customView as TextView).background = ColorDrawable(Color.BLACK)
+//                        tab?.customView?.setBackgroundColor(0xFFECEAEA.toInt())
+                        tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
+                        (tab.customView as TextView).setTextColor(Color.BLACK)
                     }
                 }
                 override fun onTabSelected(tab: TabLayout.Tab) {
                     if (tab.customView is TextView) {
-                        (tab.customView as TextView).background = ColorDrawable(Color.RED)
+                        //(tab.customView as TextView).background = ColorDrawable(Color.RED)
+                        tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
+                        (tab.customView as TextView).setTextColor(Color.WHITE)
                     }
                 }
             })

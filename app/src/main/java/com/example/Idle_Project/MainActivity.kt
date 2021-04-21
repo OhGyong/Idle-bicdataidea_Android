@@ -88,6 +88,7 @@ class MainActivity : AppCompatActivity() {
         val navNotice_page1: TextView = findViewById(R.id.nav_notice_page1)
         navNotice_page1.setOnClickListener {
             findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_cs_view, Bundle().apply {
+                this.putInt("index",0)
             })
             drawer.closeDrawer(navView)
         }
@@ -95,6 +96,7 @@ class MainActivity : AppCompatActivity() {
         val navNotice_page2: TextView = findViewById(R.id.nav_notice_page2)
         navNotice_page2.setOnClickListener {
             findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_cs_view, Bundle().apply {
+                this.putInt("index",0)
             })
             drawer.closeDrawer(navView)
         }
@@ -102,6 +104,7 @@ class MainActivity : AppCompatActivity() {
         val navCs_page: TextView = findViewById(R.id.nav_cs_page)
         navCs_page.setOnClickListener {
             findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_cs_view, Bundle().apply {
+                this.putInt("index",1)
             })
             drawer.closeDrawer(navView)
         }
