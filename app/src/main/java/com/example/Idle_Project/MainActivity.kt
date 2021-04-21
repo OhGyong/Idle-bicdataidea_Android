@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
             findNavController(R.id.nav_host_fragment).navigate(R.id.nav_home, Bundle().apply {
             })
         }
-
         val nav_view: NavigationView = findViewById(R.id.nav_view)
         val nav_header=nav_view.getHeaderView(0)
         nav_header.findViewById<LinearLayout>(R.id.nav_header).setOnClickListener{
@@ -88,21 +87,21 @@ class MainActivity : AppCompatActivity() {
         // 공지사항 화면1 (게시판 버튼)
         val navNotice_page1: TextView = findViewById(R.id.nav_notice_page1)
         navNotice_page1.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_page, Bundle().apply {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_cs_view, Bundle().apply {
             })
             drawer.closeDrawer(navView)
         }
         // 공지사항 화면2 (공지사항 버튼)
         val navNotice_page2: TextView = findViewById(R.id.nav_notice_page2)
         navNotice_page2.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_page, Bundle().apply {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_cs_view, Bundle().apply {
             })
             drawer.closeDrawer(navView)
         }
         // 문의게시판 화면
         val navCs_page: TextView = findViewById(R.id.nav_cs_page)
         navCs_page.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_cs_page, Bundle().apply {
+            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_notice_cs_view, Bundle().apply {
             })
             drawer.closeDrawer(navView)
         }

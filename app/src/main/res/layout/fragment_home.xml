@@ -13,219 +13,215 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginTop="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:id="@+id/home1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/home1"
+                <TextView
+                    android:id="@+id/home2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="70dp"
-                    android:orientation="horizontal"
+                    android:text="idea"
+                    android:textColor="#0BB3A2"
+                    android:textSize="45dp"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/home2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="idea"
-                        android:textColor="#0BB3A2"
-                        android:textSize="45dp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" platform"
-                        android:textColor="#582CA5"
-                        android:textSize="45dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/home3"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toEndOf="@+id/home2" />
-
-                    <TextView
-                        android:id="@+id/home3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Share your ideas"
-                        android:textColor="@color/black"
-                        android:textSize="25dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/home2" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="-1dp"
-                        android:text="to create a new business."
-                        android:textColor="@color/black"
-                        android:textSize="25dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/home3" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/home4"
-                    android:layout_width="match_parent"
-                    android:layout_height="176dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="5dp"
-                    android:background="#17D3C3"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" platform"
+                    android:textColor="#582CA5"
+                    android:textSize="45dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/home3"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/home2" />
+
+                <TextView
+                    android:id="@+id/home3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share your ideas"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/home1">
+                    app:layout_constraintTop_toBottomOf="@+id/home2" />
 
-                    <TextView
-                        android:id="@+id/home5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="25dp"
-                        android:layout_marginTop="20dp"
-                        android:text="온라인 아이디어 콘테스트, 아이디어 플랫폼"
-                        android:textColor="@color/white"
-                        android:textSize="8dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/home6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="머릿속에 가지고있는 아이디어들"
-                        android:textColor="@color/white"
-                        app:layout_constraintStart_toStartOf="@+id/home5"
-                        app:layout_constraintTop_toBottomOf="@+id/home5" />
-
-                    <TextView
-                        android:id="@+id/home7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="현실로 만들어 질 수 없을까?"
-                        android:textColor="@color/white"
-                        app:layout_constraintStart_toStartOf="@+id/home6"
-                        app:layout_constraintTop_toBottomOf="@+id/home6" />
-
-                    <TextView
-                        android:id="@+id/home8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="고민하지말고 함께 토론해보자!"
-                        android:textColor="@color/white"
-                        app:layout_constraintStart_toStartOf="@+id/home7"
-                        app:layout_constraintTop_toBottomOf="@+id/home7" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="아이디어플랫폼"
-                        android:textColor="#371970"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@+id/home8"
-                        app:layout_constraintTop_toBottomOf="@+id/home8" />
-
-                    <ImageView
-                        android:layout_width="156dp"
-                        android:layout_height="85dp"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginBottom="32dp"
-                        android:src="@drawable/communication"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="176dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:background="#371970"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
+                    android:text="to create a new business."
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/home4">
+                    app:layout_constraintTop_toBottomOf="@+id/home3" />
 
-                    <TextView
-                        android:id="@+id/home9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="25dp"
-                        android:layout_marginTop="20dp"
-                        android:text="온라인 아이디어 콘테스트, 아이디어 플랫폼"
-                        android:textColor="@color/white"
-                        android:textSize="8dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/home10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="무수히 쏟아지는 공공정보"
-                        android:textColor="@color/white"
-                        app:layout_constraintStart_toStartOf="@+id/home9"
-                        app:layout_constraintTop_toBottomOf="@+id/home9" />
-
-                    <TextView
-                        android:id="@+id/home11"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="나에게 필요한 정보만,"
-                        android:textColor="@color/white"
-                        app:layout_constraintStart_toStartOf="@+id/home10"
-                        app:layout_constraintTop_toBottomOf="@+id/home10" />
-
-                    <TextView
-                        android:id="@+id/home12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="필요한 정보 조회하세요."
-                        android:textColor="@color/white"
-                        app:layout_constraintStart_toStartOf="@+id/home11"
-                        app:layout_constraintTop_toBottomOf="@+id/home11" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="공고정보게시판"
-                        android:textColor="#17D3C3"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@+id/home12"
-                        app:layout_constraintTop_toBottomOf="@+id/home12" />
-
-                    <ImageView
-                        android:layout_width="183dp"
-                        android:layout_height="108dp"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginBottom="32dp"
-                        android:src="@drawable/imformation"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeToidea_bt"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="#17D3C3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home1">
+
+                <TextView
+                    android:id="@+id/home5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="온라인 아이디어 콘테스트, 아이디어 플랫폼"
+                    android:textColor="@color/white"
+                    android:textSize="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/home6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="머릿속에 가지고있는 아이디어들"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/home5"
+                    app:layout_constraintTop_toBottomOf="@+id/home5" />
+
+                <TextView
+                    android:id="@+id/home7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="현실로 만들어 질 수 없을까?"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/home6"
+                    app:layout_constraintTop_toBottomOf="@+id/home6" />
+
+                <TextView
+                    android:id="@+id/home8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고민하지말고 함께 토론해보자!"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/home7"
+                    app:layout_constraintTop_toBottomOf="@+id/home7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="아이디어플랫폼"
+                    android:textColor="#371970"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/home8"
+                    app:layout_constraintTop_toBottomOf="@+id/home8" />
+
+                <ImageView
+                    android:layout_width="156dp"
+                    android:layout_height="85dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="32dp"
+                    android:src="@drawable/communication"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeToanno_bt"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#371970"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeToidea_bt"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/home9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="온라인 아이디어 콘테스트, 아이디어 플랫폼"
+                    android:textColor="@color/white"
+                    android:textSize="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/home10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="무수히 쏟아지는 공공정보"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/home9"
+                    app:layout_constraintTop_toBottomOf="@+id/home9" />
+
+                <TextView
+                    android:id="@+id/home11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="나에게 필요한 정보만,"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/home10"
+                    app:layout_constraintTop_toBottomOf="@+id/home10" />
+
+                <TextView
+                    android:id="@+id/home12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="필요한 정보 조회하세요."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="@+id/home11"
+                    app:layout_constraintTop_toBottomOf="@+id/home11" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="공고정보게시판"
+                    android:textColor="#17D3C3"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/home12"
+                    app:layout_constraintTop_toBottomOf="@+id/home12" />
+
+                <ImageView
+                    android:layout_width="183dp"
+                    android:layout_height="108dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="32dp"
+                    android:src="@drawable/imformation"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

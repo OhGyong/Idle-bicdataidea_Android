@@ -58,9 +58,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/drawer_button" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main"/>
