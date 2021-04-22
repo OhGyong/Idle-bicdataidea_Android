@@ -14,11 +14,6 @@ import com.example.Idle_Project.R
 import com.example.Idle_Project.ui.notice_cs_page.view.SectionsPagerAdapter
 import com.google.android.material.tabs.TabLayout
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
 /**
  * A simple [Fragment] subclass.
  * Use the [Notice_Cs_Page_Fragment.newInstance] factory method to
@@ -27,7 +22,6 @@ private const val ARG_PARAM2 = "param2"
 class Notice_Cs_Page_Fragment : Fragment() {
 
     var index = 0
-//    var cs_title: TextView =
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +47,12 @@ class Notice_Cs_Page_Fragment : Fragment() {
 
         val tabs: TabLayout = root.findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+
+        //drawer에서 선택한 항목으로 타이틀 이름 변경
+        val notice_cs_title = root.findViewById<TextView>(R.id.notice_cs_title_name)
+        if(index==1){
+            notice_cs_title.setText("문의게시판")
+        }
 
         //drawer에서 선택한 항목으로 이동
         viewPager.setCurrentItem(index)
@@ -94,6 +94,11 @@ class Notice_Cs_Page_Fragment : Fragment() {
                     if (tab.customView is TextView) {
                         tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                         (tab.customView as TextView).setTextColor(Color.WHITE)
+                        if((tab.customView as TextView).text == "공지사항"){
+                            notice_cs_title.setText("공지사항")
+                        }else{
+                            notice_cs_title.setText("문의게시판")
+                        }
                     }
                 }
             })

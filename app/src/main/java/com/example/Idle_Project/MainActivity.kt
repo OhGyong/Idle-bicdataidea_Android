@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity() {
         // 공지사항 화면2 (공지사항 버튼)
         val navNotice_page2: TextView = findViewById(R.id.nav_notice_page2)
         navNotice_page2.setOnClickListener {
-            if (STATUS == "NOTICE" || LAST_STATUS == 2131231046) {
+            if (STATUS == "NOTICE" || LAST_STATUS == 2131231034) {
                 drawer.closeDrawer(navView)
             } else {
                 STATUS = "NOTICE"
@@ -154,7 +154,7 @@ class MainActivity : AppCompatActivity() {
         // 문의게시판 화면
         val navCs_page: TextView = findViewById(R.id.nav_cs_page)
         navCs_page.setOnClickListener {
-            if (STATUS == "CS" || LAST_STATUS == 2131231046) {
+            if (STATUS == "CS" || LAST_STATUS == 2131231034) {
                 drawer.closeDrawer(navView)
             } else {
                 STATUS = "CS"
@@ -169,7 +169,7 @@ class MainActivity : AppCompatActivity() {
         // 고객센터 화면
         val navContact_page: TextView = findViewById(R.id.nav_contact_page)
         navContact_page.setOnClickListener {
-            if (STATUS == "CONTACT" || LAST_STATUS == 2131231029) {
+            if (STATUS == "CONTACT" || LAST_STATUS == 2131231017) {
                 drawer.closeDrawer(navView)
             } else {
                 STATUS = "CONTACT"
