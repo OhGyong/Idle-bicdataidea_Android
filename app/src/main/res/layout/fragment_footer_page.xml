@@ -38,43 +38,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/footer4"
         app:layout_constraintTop_toBottomOf="@+id/footer3"
-        app:layout_constraintVertical_bias="0.216" />
-
-    <TextView
-        android:id="@+id/footer1"
-        android:layout_width="225dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="292dp"
-        android:text="강원도 춘천시 춘천로 ??? 주식회사 아이들"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/footer2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:text="전화번호:033-???-????"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/footer1" />
-
-    <TextView
-        android:id="@+id/footer3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="12dp"
-        android:text="Copyright 아이디어~~~"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/footer2" />
+        app:layout_constraintVertical_bias="0.119" />
 
     <TextView
         android:id="@+id/footer4"
@@ -88,6 +52,42 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/footer3"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.119" />
+
+    <TextView
+        android:id="@+id/footer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:text="Copyright 아이디어~~~"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/footer2" />
+
+    <TextView
+        android:id="@+id/footer1"
+        android:layout_width="225dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="336dp"
+        android:text="강원도 춘천시 춘천로 ??? 주식회사 아이들"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/footer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:text="전화번호:033-???-????"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/footer1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
