@@ -32,25 +32,10 @@
         android:label="contact_page"
         tools:layout="@layout/fragment_contact_page" />
     <fragment
-        android:id="@+id/nav_member_update_page"
-        android:name="com.example.Idle_Project.ui.mypage.member_update_page.Member_Update_Page_Fragment"
-        android:label="member_update_page"
-        tools:layout="@layout/fragment_member_update_page" />
-    <fragment
-        android:id="@+id/nav_member_point_page"
-        android:name="com.example.Idle_Project.ui.mypage.member_point_page.Member_Point_Page_Fragment"
-        android:label="member_point_page"
-        tools:layout="@layout/fragment_member_point_page" />
-    <fragment
-        android:id="@+id/nav_member_idea_page"
-        android:name="com.example.Idle_Project.ui.mypage.member_idea_page.Member_Idea_Page_Fragment"
-        android:label="member_idea_page"
-        tools:layout="@layout/fragment_idea_page" />
-    <fragment
-        android:id="@+id/nav_member_anno_page"
-        android:name="com.example.Idle_Project.ui.mypage.member_anno_page.Member_Anno_Page_Fragment"
+        android:id="@+id/nav_mypage"
+        android:name="com.example.Idle_Project.ui.mypage.Mypage_Fragment"
         android:label="member_anno_page"
-        tools:layout="@layout/fragment_anno_page" />
+        tools:layout="@layout/fragment_mypage" />
     <fragment
         android:id="@+id/nav_login_page"
         android:name="com.example.Idle_Project.ui.login_page.Login_Page_Fragment"

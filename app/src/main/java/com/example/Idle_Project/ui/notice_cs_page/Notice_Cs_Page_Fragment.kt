@@ -27,10 +27,10 @@ private const val ARG_PARAM2 = "param2"
 class Notice_Cs_Page_Fragment : Fragment() {
 
     var index = 0
+//    var cs_title: TextView =
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         arguments?.let {
             it.getInt(
                 "index"
@@ -59,12 +59,14 @@ class Notice_Cs_Page_Fragment : Fragment() {
         for (i in 0 until tabs.tabCount) {
             val view_tabs = sectionsPagerAdapter.getTabView(i)
 
+            // index=0 공지사항이 눌린 경우, index=1 문의게시판이 눌린 경우
             if(i == 0 && index == 0){
                 view_tabs.setBackgroundColor(0xFF8345F1.toInt())
                 (view_tabs as TextView).setTextColor(Color.WHITE)
             }else if(i == 0 && index == 1){
                 view_tabs.setBackgroundColor(0xFFECEAEA.toInt())
                 (view_tabs as TextView).setTextColor(Color.BLACK)
+
             }
             else if(i == 1 && index == 0){
                 view_tabs.setBackgroundColor(0xFFECEAEA.toInt())

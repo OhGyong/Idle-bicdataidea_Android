@@ -22,3 +22,7 @@
 - `현재 페이지에서 같은 페이지로 이동 불가능하게, 마이페이지도 viewpager로 변환, footer에 대한 drawer와 fragment 추가`
 - 같은 페이지 이동 불가능 처리 `그래도 viewpager의 문제점이 남음(게시판 데이터 날라가는것도)`
 - 정보 페이지(footer) 생성
+
+**04*22**</br>
+- 뒤로가기 시 오류 처리 → onBackPressed() 사용
+- `drawer header와 main header 크기 안맞음`
