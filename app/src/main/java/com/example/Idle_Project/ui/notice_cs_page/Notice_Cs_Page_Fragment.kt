@@ -66,7 +66,6 @@ class Notice_Cs_Page_Fragment : Fragment() {
             }else if(i == 0 && index == 1){
                 view_tabs.setBackgroundColor(0xFFECEAEA.toInt())
                 (view_tabs as TextView).setTextColor(Color.BLACK)
-
             }
             else if(i == 1 && index == 0){
                 view_tabs.setBackgroundColor(0xFFECEAEA.toInt())
@@ -85,14 +84,12 @@ class Notice_Cs_Page_Fragment : Fragment() {
                 }
                 override fun onTabUnselected(tab: TabLayout.Tab?) {
                     if (tab?.customView is TextView) {
-//                        tab?.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                         tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                         (tab.customView as TextView).setTextColor(Color.BLACK)
                     }
                 }
                 override fun onTabSelected(tab: TabLayout.Tab) {
                     if (tab.customView is TextView) {
-                        //(tab.customView as TextView).background = ColorDrawable(Color.RED)
                         tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                         (tab.customView as TextView).setTextColor(Color.WHITE)
                     }

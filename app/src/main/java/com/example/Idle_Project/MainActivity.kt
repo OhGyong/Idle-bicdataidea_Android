@@ -180,7 +180,7 @@ class MainActivity : AppCompatActivity() {
         // 회원정보수정 화면1 (마이페이지 버튼)
         val nav_member_update_page1: TextView = findViewById(R.id.nav_member_update_page1)
         nav_member_update_page1.setOnClickListener {
-            if (STATUS == "MEMBER_UPDATE") {
+            if (STATUS == "MEMBER_UPDATE" || LAST_STATUS == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
                 STATUS = "MEMBER_UPDATE"
@@ -191,7 +191,7 @@ class MainActivity : AppCompatActivity() {
         // 회원정보수정 화면2 (회원정보수정 버튼)
         val nav_member_update_page2: TextView = findViewById(R.id.nav_member_update_page2)
         nav_member_update_page2.setOnClickListener {
-            if (STATUS == "MEMBER_UPDATE") {
+            if (STATUS == "MEMBER_UPDATE" || LAST_STATUS == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
                 STATUS = "MEMBER_UPDATE"
@@ -202,33 +202,48 @@ class MainActivity : AppCompatActivity() {
         // 포인트현황 화면
         val nav_member_point_page: TextView = findViewById(R.id.nav_member_point_page)
         nav_member_point_page.setOnClickListener {
-            if (STATUS == "MEMBER_POINT") {
+            if (STATUS == "MEMBER_POINT" || LAST_STATUS == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
                 STATUS == "MEMBER_POINT"
-                findNavController(R.id.nav_host_fragment).navigate(R.id.nav_mypage)
+                findNavController(R.id.nav_host_fragment).navigate(
+                    R.id.nav_mypage,
+                    Bundle().apply {
+                        this.putInt("index", 1)
+                    }
+                )
                 drawer.closeDrawer(navView)
             }
         }
         // 내 아이디어 화면
         val nav_member_idea_page: TextView = findViewById(R.id.nav_member_idea_page)
         nav_member_idea_page.setOnClickListener {
-            if (STATUS == "MEMBER_IDEA") {
+            if (STATUS == "MEMBER_IDEA" || LAST_STATUS == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
                 STATUS = "MEMBER_IDEA"
-                findNavController(R.id.nav_host_fragment).navigate(R.id.nav_mypage)
+                findNavController(R.id.nav_host_fragment).navigate(
+                    R.id.nav_mypage,
+                    Bundle().apply {
+                        this.putInt("index", 2)
+                    }
+                )
                 drawer.closeDrawer(navView)
             }
         }
         // 관심 사업 화면
         val nav_member_anno_page: TextView = findViewById(R.id.nav_member_anno_page)
         nav_member_anno_page.setOnClickListener {
-            if (STATUS == "MEMBER_ANNO") {
+            if (STATUS == "MEMBER_ANNO" || LAST_STATUS == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
                 STATUS = "MEMBER_ANNO"
-                findNavController(R.id.nav_host_fragment).navigate(R.id.nav_mypage)
+                findNavController(R.id.nav_host_fragment).navigate(
+                    R.id.nav_mypage,
+                    Bundle().apply {
+                        this.putInt("index", 3)
+                    }
+                )
                 drawer.closeDrawer(navView)
             }
         }

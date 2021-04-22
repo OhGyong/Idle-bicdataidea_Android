@@ -26,3 +26,4 @@
 **04*22**</br>
 - 뒤로가기 시 오류 처리 → onBackPressed() 사용
 - `drawer header와 main header 크기 안맞음`
+- `각 페이지 이미지 사이즈 늘리기`
