@@ -54,6 +54,8 @@ class Notice_Cs_Page_Fragment : Fragment() {
         val tabs: TabLayout = root.findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
 
+        //drawer에서 선택한 항목으로 이동
+        viewPager.setCurrentItem(index)
 
         // tab button에 customview 세팅
         for (i in 0 until tabs.tabCount) {

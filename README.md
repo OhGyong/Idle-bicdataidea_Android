@@ -27,3 +27,4 @@
 - 뒤로가기 시 오류 처리 → onBackPressed() 사용
 - `drawer header와 main header 크기 안맞음`
 - `각 페이지 이미지 사이즈 늘리기`
+- `view pager 에서 destination 값이 서로 같기 때문에 게시판이나 마이페이지에서 옮겨지지 않는다.`
