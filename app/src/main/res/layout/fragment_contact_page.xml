@@ -14,7 +14,7 @@
         <ImageView
             android:id="@+id/contact1"
             android:layout_width="match_parent"
-            android:layout_height="142dp"
+            android:layout_height="170dp"
             android:scaleType="centerCrop"
             android:src="@drawable/idea_image"
             app:layout_constraintEnd_toEndOf="parent"

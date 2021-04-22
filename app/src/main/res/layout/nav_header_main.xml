@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_header_name"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="20dp">
+    android:layout_marginTop="25dp">
 
     <LinearLayout
         android:id="@+id/nav_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:layout_height="70dp"
         android:gravity="center"
         android:orientation="horizontal">
+
         <TextView
+            android:id="@+id/drawer_header1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="idea"
             android:textAlignment="center"
             android:textColor="#0BB3A2"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
+
         <TextView
+            android:id="@+id/drawer_header2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" platform"
             android:textAlignment="center"
             android:textColor="#582CA5"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="5px"
-        android:background="@color/black"
-        android:layout_marginTop="16dp"/>
+        android:background="@color/black" />
 
 </LinearLayout>

@@ -1,23 +1,15 @@
 package com.example.Idle_Project
 
+import android.graphics.Rect
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
-import android.view.textclassifier.ConversationAction
+import android.view.Window
 import android.widget.*
-import androidx.appcompat.app.ActionBar
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import androidx.core.view.marginTop
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,6 +62,16 @@ class MainActivity : AppCompatActivity() {
                 drawer.closeDrawer(navView)
             }
         }
+
+        // 상태바 길이 구하기
+//        val rect = Rect()
+//        val window: Window = window
+//        window.getDecorView().getWindowVisibleDisplayFrame(rect)
+//
+//
+//
+//        val nav_header_name: LinearLayout = findViewById(R.id.nav_header_name)
+//        nav_header_name.marginTop()
 
         // nav_drawer 열기
         val nav_icon: ImageView = findViewById(R.id.nav_icon)
