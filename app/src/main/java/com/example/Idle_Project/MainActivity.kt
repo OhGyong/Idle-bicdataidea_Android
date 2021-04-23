@@ -250,13 +250,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 로그인 화면
-        val nav_login_page: TextView = findViewById(R.id.nav_login_page)
+        val nav_login_page: TextView = findViewById(R.id.nav_sign_in_page)
         nav_login_page.setOnClickListener {
             if (STATUS == "LOGIN" || LAST_STATUS == 2131231038) {
                 drawer.closeDrawer(navView)
             } else {
                 STATUS = "LOGIN"
-                findNavController(R.id.nav_host_fragment).navigate(R.id.nav_login_page)
+                findNavController(R.id.nav_host_fragment).navigate(R.id.nav_sign_in_page)
                 drawer.closeDrawer(navView)
             }
         }
@@ -271,18 +271,15 @@ class MainActivity : AppCompatActivity() {
                 drawer.closeDrawer(navView)
             }
         }
-
         // 로그아웃 버튼
-        val nav_logout_page: TextView = findViewById(R.id.nav_logout_page)
+        val nav_logout_page: TextView = findViewById(R.id.nav_sign_out_page)
         nav_logout_page.setOnClickListener {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.nav_logout_page)
             drawer.closeDrawer(navView)
         }
     }
 
     override fun onBackPressed() {
         STATUS = ""
-
         super.onBackPressed()
     }
 }

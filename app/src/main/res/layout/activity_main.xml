@@ -113,14 +113,14 @@
                 android:textColor="@color/black"/>
 
             <TextView
-                android:id="@+id/nav_login_page"
+                android:id="@+id/nav_sign_in_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="로그인"
                 android:textSize="25dp"
                 android:textColor="@color/black"/>
             <TextView
-                android:id="@+id/nav_logout_page"
+                android:id="@+id/nav_sign_out_page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="로그아웃"
