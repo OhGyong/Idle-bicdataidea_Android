@@ -8,14 +8,17 @@
 **CMS**
 
 **2021**</br>
-**04-16**</br>
-- nav_drawerLayout 이해, 페이지 별 drawerLayout 이동
 
-**04-19**</br>
-- 페이지 별 drawerLayout 마무리, home 화면 UI 추가
+**04-23**</br>
+- 마이페이지 viewpager 적용
+- 회원가입, 로그인 UI 추가
+- `회원가입 textview 이용약관에서 스크롤이 안되는 현상 → NestedScrollView 사용 ( 스크롤이 되지만 테두리 선 문제)`
 
-**04-20**</br>
-- 모든 페이지 UI 추가 및 보완/ 게시판 버튼 이벤트
+**04-22**</br>
+- 뒤로가기 시 오류 처리 → onBackPressed() 사용
+- `drawer header와 main header 크기 안맞음`
+- `각 페이지 이미지 사이즈 늘리기`
+- `view pager 에서 destination 값이 서로 같기 때문에 게시판이나 마이페이지에서 옮겨지지 않는다.`
 
 **04-21**</br>
 - 홈 화면에서 아이디어플랫폼, 공고정보게시판으로 이동, 게시판 부분 viewpager로 변환 탭 설정
@@ -23,8 +26,15 @@
 - 같은 페이지 이동 불가능 처리 `그래도 viewpager의 문제점이 남음(게시판 데이터 날라가는것도)`
 - 정보 페이지(footer) 생성
 
-**04*22**</br>
-- 뒤로가기 시 오류 처리 → onBackPressed() 사용
-- `drawer header와 main header 크기 안맞음`
-- `각 페이지 이미지 사이즈 늘리기`
-- `view pager 에서 destination 값이 서로 같기 때문에 게시판이나 마이페이지에서 옮겨지지 않는다.`
+**04-20**</br>
+- 모든 페이지 UI 추가 및 보완/ 게시판 버튼 이벤트
+
+**04-19**</br>
+- 페이지 별 drawerLayout 마무리, home 화면 UI 추가
+
+**04-16**</br>
+- nav_drawerLayout 이해, 페이지 별 drawerLayout 이동
+
+
+
+
