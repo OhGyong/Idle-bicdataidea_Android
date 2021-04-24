@@ -45,10 +45,21 @@
         android:id="@+id/nav_about_page"
         android:name="com.example.Idle_Project.ui.about_page.Footer_Page_Fragment"
         android:label="nav_about_page"
-        tools:layout="@layout/fragment_footer_page" />
+        tools:layout="@layout/fragment_inform_page" />
     <fragment
         android:id="@+id/nav_sign_up_agree_page"
         android:name="com.example.Idle_Project.ui.sign_up_page.Sign_up_Agree_Fragement"
         android:label="nav_sign_up_agree_page"
         tools:layout="@layout/fragment_sign_up_agree" />
+    <fragment
+        android:id="@+id/nav_sign_up_page"
+        android:name="com.example.Idle_Project.ui.sign_up_page.Sign_up_Page_Fragment"
+        android:label="nav_sign_up_page"
+        tools:layout="@layout/fragment_sign_up_page" />
+    <fragment
+        android:id="@+id/nav_find_password_page"
+        android:name="com.example.Idle_Project.ui.find_password.Find_Password_Page_Fragment"
+        android:label="nav_find_password_page"
+        tools:layout="@layout/fragment_find_password_page" />
+
 </navigation>

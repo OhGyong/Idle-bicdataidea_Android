@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name= "sate_array">
+    <string-array name="state_array">
+        <item>시도를 선택해주세요</item>
         <item>서울특별시</item>
         <item>부산광역시</item>
         <item>대구광역시</item>
