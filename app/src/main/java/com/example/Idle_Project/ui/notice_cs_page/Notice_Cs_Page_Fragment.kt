@@ -49,7 +49,7 @@ class Notice_Cs_Page_Fragment : Fragment() {
         tabs.setupWithViewPager(viewPager)
 
         //drawer에서 선택한 항목으로 타이틀 이름 변경
-        val notice_cs_title = root.findViewById<TextView>(R.id.notice_cs_title_name)
+        val notice_cs_title = root.findViewById<TextView>(R.id.notice_cs_title)
         if(index==1){
             notice_cs_title.setText("문의게시판")
         }
