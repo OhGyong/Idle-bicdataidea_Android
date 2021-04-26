@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/sign_up_image"
@@ -50,7 +51,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.12"
+                app:layout_constraintHorizontal_bias="0.096"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
@@ -61,8 +62,8 @@
                 android:layout_height="5px"
                 android:background="@color/purple_500"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.108"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView_signup"
                 app:layout_constraintTop_toBottomOf="@+id/textView_signup" />
 
             <View
@@ -70,9 +71,7 @@
                 android:layout_width="320dp"
                 android:layout_height="2px"
                 android:background="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.395"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_signup"
                 app:layout_constraintTop_toBottomOf="@+id/textView_signup" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -104,6 +103,7 @@
                 android:id="@+id/scrollview_signup1"
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
+                android:background="@drawable/border_textview"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_argree1"
@@ -112,10 +112,10 @@
                     android:id="@+id/textview_signup1"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/border_textview"
                     android:scrollbars="vertical"
                     android:textAlignment="textStart"
                     android:text="@string/sign_up_text1"
+                    android:textColor="@color/black"
                     android:textSize="10dp"
                     app:layout_constraintStart_toStartOf="parent"/>
             </androidx.core.widget.NestedScrollView>
@@ -146,6 +146,7 @@
                 android:id="@+id/scrollview_signup2"
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
+                android:background="@drawable/border_textview"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_argree2"
@@ -154,10 +155,10 @@
                     android:id="@+id/textview_signup2"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/border_textview"
                     android:scrollbars="vertical"
                     android:textAlignment="textStart"
                     android:text="@string/sign_up_text2"
+                    android:textColor="@color/black"
                     android:textSize="10dp"
                     app:layout_constraintStart_toStartOf="parent"/>
             </androidx.core.widget.NestedScrollView>
@@ -188,6 +189,7 @@
                 android:id="@+id/scrollview_signup3"
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
+                android:background="@drawable/border_textview"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_argree3"
@@ -196,10 +198,10 @@
                     android:id="@+id/textview_signup3"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/border_textview"
                     android:scrollbars="vertical"
                     android:textAlignment="textStart"
                     android:text="@string/sign_up_text3"
+                    android:textColor="@color/black"
                     android:textSize="10dp"
                     app:layout_constraintStart_toStartOf="parent"/>
             </androidx.core.widget.NestedScrollView>

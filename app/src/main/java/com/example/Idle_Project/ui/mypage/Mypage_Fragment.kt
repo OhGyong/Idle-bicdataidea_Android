@@ -3,6 +3,7 @@ package com.example.Idle_Project.ui.mypage
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -64,7 +65,6 @@ class Mypage_Fragment : Fragment() {
                     else-> mypage_title_name.setText("회원정보수정")
 
                 }
-
                 // 선택한 항목의 탭 색 변경
                 when (index) {
                     1 ->

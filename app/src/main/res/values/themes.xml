@@ -23,4 +23,10 @@
     <style name="Theme.ViewPager_Test.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Nav_item.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- tab text size-->
+    <style name="tab_textsize" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">10sp</item>
+    </style>
+
 </resources>
