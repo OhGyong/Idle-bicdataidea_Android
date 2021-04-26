@@ -244,6 +244,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="남성"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_gender" />
@@ -254,6 +255,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="여성"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/sign_up_man_check"
                 app:layout_constraintTop_toBottomOf="@+id/textview_gender" />
@@ -362,7 +364,7 @@
                 android:background="@drawable/border_edittext"
                 android:dropDownWidth="150dp"
                 android:spinnerMode="dropdown"
-                android:entries="@array/state_array"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_state" />
 

@@ -1,7 +1,6 @@
 package com.example.Idle_Project.ui.mypage
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class Mypage_ViewPageAdapter(fragmentActivity: Mypage_Fragment) :
@@ -17,7 +16,7 @@ class Mypage_ViewPageAdapter(fragmentActivity: Mypage_Fragment) :
 
     override fun createFragment(position: Int): Fragment {
         if (position == 0) {
-            return Member_Update_Page_Fragment()
+            return MemberUpdatePageFragment()
         } else if (position == 1) {
             return Member_Point_Page_Fragment()
         } else if (position == 2) {
