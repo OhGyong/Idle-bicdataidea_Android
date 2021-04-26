@@ -16,7 +16,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class Mypage_Fragment : Fragment() {
 
-
     // 1. activity_main.xml 에 존재하는 viewPager2 뷰 객체 초기화를 액티비티 lifecycle에 맞게 지연시킴
     private lateinit var viewPager2: ViewPager2
 
@@ -31,7 +30,6 @@ class Mypage_Fragment : Fragment() {
             )
             index = it.getInt("index")
         }
-        println("bababab" + index)
     }
 
     override fun onCreateView(
@@ -42,7 +40,7 @@ class Mypage_Fragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_mypage, container, false)
 
         // 2. 초기화 지연시킨 viewPager2 객체를 여기서 초기화함
-        viewPager2 = root.findViewById(R.id.viewPager2)
+        viewPager2 = root.findViewById(R.id.viewPager2_mypage)
 
         // 3. viewPager2 뷰 객체에 어댑터 적용하기
         viewPager2.adapter = Mypage_ViewPageAdapter(this)
@@ -50,7 +48,7 @@ class Mypage_Fragment : Fragment() {
         // 타이틀 이름
         val mypage_title_name: TextView = root.findViewById(R.id.mypage_title_name)
 
-        val tabs: TabLayout = root.findViewById(R.id.tabs)
+        val tabs: TabLayout = root.findViewById(R.id.tabs_mypage)
         TabLayoutMediator(tabs, viewPager2) { tab, position ->
             tab.customView =
                 LayoutInflater.from(context).inflate(R.layout.tab_layout, null) as TextView

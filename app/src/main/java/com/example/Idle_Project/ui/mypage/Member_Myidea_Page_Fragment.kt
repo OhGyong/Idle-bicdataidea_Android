@@ -14,7 +14,7 @@ class Member_Myidea_Page_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        val view: View = inflater.inflate(R.layout.fragment_member__myidea__page, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_member_myidea_page, container, false)
         return view
     }
 }

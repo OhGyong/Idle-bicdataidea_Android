@@ -4,5 +4,8 @@
  
  https://user-images.githubusercontent.com/52282493/116099560-0cf57080-a6e7-11eb-803d-42ee4fc12885.mp4
  
- 처음 게시물 페이지로 이동시 문제가 없지만 다른 페이지로 이동 후 들어가면 text가 없어지고 tab의 이동도 이상해졌다.
+ 처음 게시물 페이지로 이동시 문제가 없지만 다른 페이지로 이동 후 들어가면 text가 없어지고 tab의 이동도 이상해졌다.</br>
+ 04/26 main/java/ui/notice_cs_page  |  res/layout/fragment_notice_cs_page, fragment_notice_cs_view
+ 
+ 
  

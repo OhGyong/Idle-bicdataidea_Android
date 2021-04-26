@@ -22,10 +22,10 @@
         android:label="anno_page"
         tools:layout="@layout/fragment_anno_page" />
     <fragment
-        android:id="@+id/nav_notice_cs_view"
+        android:id="@+id/nav_notice_cs_page"
         android:name="com.example.Idle_Project.ui.notice_cs_page.Notice_Cs_Page_Fragment"
         android:label="notice_cs_view"
-        tools:layout="@layout/fragment_notice_cs_view" />
+        tools:layout="@layout/fragment_notice_cs_page" />
     <fragment
         android:id="@+id/nav_contact_page"
         android:name="com.example.Idle_Project.ui.contact_page.Contact_Page_Fragment"

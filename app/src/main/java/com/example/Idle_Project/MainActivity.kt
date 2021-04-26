@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 STATUS = "NOTICE"
                 findNavController(R.id.nav_host_fragment).navigate(
-                    R.id.nav_notice_cs_view,
+                    R.id.nav_notice_cs_page,
                     Bundle().apply {
                         this.putInt("index", 0)
                     })
@@ -146,7 +146,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 STATUS = "NOTICE"
                 findNavController(R.id.nav_host_fragment).navigate(
-                    R.id.nav_notice_cs_view,
+                    R.id.nav_notice_cs_page,
                     Bundle().apply {
                         this.putInt("index", 0)
                     })
@@ -161,7 +161,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 STATUS = "CS"
                 findNavController(R.id.nav_host_fragment).navigate(
-                    R.id.nav_notice_cs_view,
+                    R.id.nav_notice_cs_page,
                     Bundle().apply {
                         this.putInt("index", 1)
                     })
