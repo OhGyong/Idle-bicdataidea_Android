@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.Idle_Project.R
 
 // 리스트 데이터를 넘겨받아야 한다.
-class Rank_Adapter (private var list: MutableList<RankData>): RecyclerView.Adapter<Rank_Adapter.ListItemViewHolder> () {
+class RankAdapter (private var list: MutableList<RankData>): RecyclerView.Adapter<RankAdapter.ListItemViewHolder> () {
 
     // inner class로 ViewHolder 정의
     inner class ListItemViewHolder(itemView: View?): RecyclerView.ViewHolder(itemView!!) {
@@ -30,7 +30,7 @@ class Rank_Adapter (private var list: MutableList<RankData>): RecyclerView.Adapt
 
     // ViewHolder에게 item을 보여줄 View로 쓰일 item_data_list.xml를 넘기면서 ViewHolder 생성
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListItemViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_rank_data, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_rank, parent, false)
         return ListItemViewHolder(view)
     }
 
@@ -39,7 +39,7 @@ class Rank_Adapter (private var list: MutableList<RankData>): RecyclerView.Adapt
     }
 
     // ViewHolder의 bind 메소드를 호출한다.
-    override fun onBindViewHolder(holder: Rank_Adapter.ListItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RankAdapter.ListItemViewHolder, position: Int) {
         Log.d("ListAdapter", "===== ===== ===== ===== onBindViewHolder ===== ===== ===== =====")
         holder.bind(list[position], position)
     }

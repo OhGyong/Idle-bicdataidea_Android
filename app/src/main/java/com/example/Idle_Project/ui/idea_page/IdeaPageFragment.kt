@@ -1,17 +1,10 @@
 package com.example.Idle_Project.ui.idea_page
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Idle_Project.R
 
@@ -46,9 +39,30 @@ class RankData(
     }
 }
 
+class IdeaData(
+    private var idea_title: String? = null,
+    private var idea_date: String? = null
+) {
+    fun getData1(): String? {
+        return idea_title
+    }
+
+    fun setData1(name: String) {
+        this.idea_title = idea_title
+    }
+
+    fun getData2(): String? {
+        return idea_date
+    }
+
+    fun setData2(address: String) {
+        this.idea_date = idea_date
+    }
+}
+
 class Idea_Page_Fragment : Fragment() {
 
-    var dataList: ArrayList<RankData> = arrayListOf(
+    var rankList: ArrayList<RankData> = arrayListOf(
         RankData("  1", "오기용", "91,500P"),
         RankData("  2", "김영조", "59,000P"),
         RankData("  3", "배산하", "38,500P"),
@@ -61,9 +75,25 @@ class Idea_Page_Fragment : Fragment() {
         RankData("10", "박도현", "8,000P")
     )
 
+    var ideaList: ArrayList<IdeaData> = arrayListOf(
+        IdeaData("아이디어 제안 1", "2021-04-27"),
+        IdeaData("아이디어 제안 2", "2021-04-27"),
+        IdeaData("아이디어 제안 3", "2021-04-28"),
+        IdeaData("아이디어 제안 4", "2021-04-28"),
+        IdeaData("아이디어 제안 5", "2021-04-28"),
+        IdeaData("아이디어 제안 6", "2021-04-28"),
+        IdeaData("아이디어 제안 7", "2021-04-29"),
+        IdeaData("아이디어 제안 8", "2021-04-29"),
+        IdeaData("아이디어 제안 9", "2021-04-29")
+    )
+
     // RecyclerView.adapter에 지정할 Adapter
-    private lateinit var listAdapter: Rank_Adapter
-    private var listView: RecyclerView? = null;
+    private lateinit var rankListAdapter: RankAdapter
+    private var rankListView: RecyclerView? = null;
+
+    private lateinit var ideaListAdapter: IdeaAdapter
+    private var ideaListView: RecyclerView? = null;
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -71,7 +101,8 @@ class Idea_Page_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_idea_page, container, false)
-        listView=root.findViewById(R.id.rank_recycler)
+        rankListView=root.findViewById(R.id.rank_recycler)
+        ideaListView=root.findViewById(R.id.idea_recycler)
         return root
     }
 
@@ -79,9 +110,11 @@ class Idea_Page_Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Fragment에서 전달받은 list를 넘기면서 ListAdapter 생성
-        listAdapter = Rank_Adapter(dataList)
+        rankListAdapter = RankAdapter(rankList)
+        ideaListAdapter = IdeaAdapter(ideaList)
         // RecyclerView.adapter에 지정
-        listView?.adapter = listAdapter
+        rankListView?.adapter = rankListAdapter
+        ideaListView?.adapter = ideaListAdapter
     }
 
 }
