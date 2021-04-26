@@ -9,22 +9,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.Idle_Project.R
 
 // 리스트 데이터를 넘겨받아야 한다.
-class Rank_Adapter (private var list: MutableList<TestData>): RecyclerView.Adapter<Rank_Adapter.ListItemViewHolder> () {
+class Rank_Adapter (private var list: MutableList<RankData>): RecyclerView.Adapter<Rank_Adapter.ListItemViewHolder> () {
 
     // inner class로 ViewHolder 정의
     inner class ListItemViewHolder(itemView: View?): RecyclerView.ViewHolder(itemView!!) {
 
-        var data1Text: TextView = itemView!!.findViewById(R.id.data1Text)
-        var data2Text: TextView = itemView!!.findViewById(R.id.data2Text)
-        var data3Text: TextView = itemView!!.findViewById(R.id.data3Text)
+        var member_rank: TextView = itemView!!.findViewById(R.id.member_rank)
+        var member_name: TextView = itemView!!.findViewById(R.id.member_rank_name)
+        var save_point: TextView = itemView!!.findViewById(R.id.member_save_point)
 
         // onBindViewHolder의 역할을 대신한다.
-        fun bind(data: TestData, position: Int) {
+        fun bind(data: RankData, position: Int) {
             Log.d("ListAdapter", "===== ===== ===== ===== bind ===== ===== ===== =====")
             Log.d("ListAdapter", data.getData1()+" "+data.getData2()+" "+data.getData3())
-            data1Text.text = data.getData1()
-            data2Text.text = data.getData2()
-            data3Text.text = data.getData3()
+            member_rank.text = data.getData1()
+            member_name.text = data.getData2()
+            save_point.text = data.getData3()
         }
     }
 

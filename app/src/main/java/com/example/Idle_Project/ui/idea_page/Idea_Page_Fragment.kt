@@ -16,49 +16,49 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.Idle_Project.R
 
 
-class TestData(
-    private var data1: String? = null,
-    private var data2: String? = null,
-    private var data3: String? = null
+class RankData(
+    private var member_rank: String? = null,
+    private var member_name: String? = null,
+    private var save_point: String? = null
 ) {
     fun getData1(): String? {
-        return data1
+        return member_rank
     }
 
     fun setData1(name: String) {
-        this.data1 = data1
+        this.member_rank = member_rank
     }
 
     fun getData2(): String? {
-        return data2
+        return member_name
     }
 
     fun setData2(address: String) {
-        this.data2 = data2
+        this.member_name = member_name
     }
 
     fun getData3(): String? {
-        return data3
+        return save_point
     }
 
     fun setData3(type: String) {
-        this.data3 = data3
+        this.save_point = save_point
     }
 }
 
 class Idea_Page_Fragment : Fragment() {
 
-    var dataList: ArrayList<TestData> = arrayListOf(
-        TestData("  1", "오기용", "91,500P"),
-        TestData("  2", "김영조", "59,000P"),
-        TestData("  3", "배산하", "38,500P"),
-        TestData("  4", "김진호", "12,500P"),
-        TestData("  5", "김호연", "8,000P"),
-        TestData("  6", "서서울", "8,000P"),
-        TestData("  7", "임유빈", "8,000P"),
-        TestData("  8", "이상혁", "8,000P"),
-        TestData("  9", "송태진", "8,000P"),
-        TestData("10", "박도현", "8,000P")
+    var dataList: ArrayList<RankData> = arrayListOf(
+        RankData("  1", "오기용", "91,500P"),
+        RankData("  2", "김영조", "59,000P"),
+        RankData("  3", "배산하", "38,500P"),
+        RankData("  4", "김진호", "12,500P"),
+        RankData("  5", "김호연", "8,000P"),
+        RankData("  6", "서서울", "8,000P"),
+        RankData("  7", "임유빈", "8,000P"),
+        RankData("  8", "이상혁", "8,000P"),
+        RankData("  9", "송태진", "8,000P"),
+        RankData("10", "박도현", "8,000P")
     )
 
     // RecyclerView.adapter에 지정할 Adapter
