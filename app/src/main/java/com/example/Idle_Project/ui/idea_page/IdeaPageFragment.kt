@@ -116,5 +116,4 @@ class Idea_Page_Fragment : Fragment() {
         rankListView?.adapter = rankListAdapter
         ideaListView?.adapter = ideaListAdapter
     }
-
 }
