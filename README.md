@@ -29,6 +29,7 @@ API 전송 시 정수값 이외에 표현 값들을 같이 넘겨주면 업데�
 - 아이디어 플랫폼, 공고정보게시판, 게시판 recyclerview 마무리 / 검색 edittext 및 이미지 추가
 - 마이페이지 recyclerview 마무리 / 검색 edittext 및 이미지 추가
 - `API 에서 값을 받아올 때 신경써야할 점`
+- 아이디어 등록 페이지 및 UI 추가 `내용 작성 부분 WYSIWYG LIBARARY 사용하자`
 
 
 **04-26**</br>
