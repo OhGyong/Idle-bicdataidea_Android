@@ -2,8 +2,6 @@ package com.example.Idle_Project.ui.mypage
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
-import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +12,7 @@ import com.example.Idle_Project.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class Mypage_Fragment : Fragment() {
+class MypageFragment : Fragment() {
 
     // 1. activity_main.xml 에 존재하는 viewPager2 뷰 객체 초기화를 액티비티 lifecycle에 맞게 지연시킴
     private lateinit var viewPager2: ViewPager2
@@ -43,7 +41,7 @@ class Mypage_Fragment : Fragment() {
         viewPager2 = root.findViewById(R.id.viewPager2_mypage)
 
         // 3. viewPager2 뷰 객체에 어댑터 적용하기
-        viewPager2.adapter = Mypage_ViewPageAdapter(this)
+        viewPager2.adapter = MypageViewPageAdapter(this)
 
         // 타이틀 이름
         val mypage_title_name: TextView = root.findViewById(R.id.mypage_title_name)

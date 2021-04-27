@@ -4,13 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Idle_Project.R
-import com.example.Idle_Project.ui.idea_page.IdeaData
 
 // 리스트 클래스 선언
 class AnnoData(
@@ -50,7 +46,7 @@ class Anno_Page_Fragment : Fragment() {
     )
 
     // 어댑터 연결, 리사이클러뷰에 연결을 위한 변수 선언
-    private lateinit var annoListAdapter: AnnoAdapter
+    private lateinit var annoListAdapter: AnnoPageAdapter
     private var annoListView: RecyclerView? = null
 
     override fun onCreateView(
@@ -66,7 +62,7 @@ class Anno_Page_Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        annoListAdapter = AnnoAdapter(annoList)
+        annoListAdapter = AnnoPageAdapter(annoList)
         annoListView?.adapter = annoListAdapter
     }
 }

@@ -33,7 +33,7 @@
         tools:layout="@layout/fragment_contact_page" />
     <fragment
         android:id="@+id/nav_mypage"
-        android:name="com.example.Idle_Project.ui.mypage.Mypage_Fragment"
+        android:name="com.example.Idle_Project.ui.mypage.MypageFragment"
         android:label="member_anno_page"
         tools:layout="@layout/fragment_mypage" />
     <fragment

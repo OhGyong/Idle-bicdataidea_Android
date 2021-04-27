@@ -1,4 +1,4 @@
-package com.example.Idle_Project.ui.anno_page
+package com.example.Idle_Project.ui.notice_cs_page
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,21 +7,21 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Idle_Project.R
 
-class AnnoAdapter(private var list: MutableList<AnnoData>): RecyclerView.Adapter<AnnoAdapter.ListItemViewHolder> () {
+class NoticePageAdapter(private var list: MutableList<NoticeData>): RecyclerView.Adapter<NoticePageAdapter.ListItemViewHolder> () {
 
     inner class ListItemViewHolder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
 
-        var anno_num: TextView = itemView!!.findViewById(R.id.anno_num)
-        var anno_title: TextView = itemView!!.findViewById(R.id.anno_title)
+        var notice_num: TextView = itemView!!.findViewById(R.id.notice_num)
+        var notice_title: TextView = itemView!!.findViewById(R.id.notice_title)
 
-        fun bind(data: AnnoData, position: Int){
-            anno_num.text=data.getData1()
-            anno_title.text=data.getData2()
+        fun bind(data: NoticeData, position: Int){
+            notice_num.text = data.getData1()
+            notice_title.text = data.getData2()
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListItemViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_anno, parent, false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_notice, parent, false)
         return ListItemViewHolder(view)
     }
 
