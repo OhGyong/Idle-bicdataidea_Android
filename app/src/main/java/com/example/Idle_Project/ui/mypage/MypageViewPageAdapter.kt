@@ -20,9 +20,9 @@ class MypageViewPageAdapter(fragmentActivity: MypageFragment) :
         } else if (position == 1) {
             return MemberPointPageFragment()
         } else if (position == 2) {
-            return MemberMyideaPageFragment()
+            return MemberMyIdeaPageFragment()
         } else {
-            return MemberInterannopageFragment()
+            return MemberInterAnnopageFragment()
         }
     }
 }
