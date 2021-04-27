@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.lifecycle.Observer
 import com.example.Idle_Project.R
-import com.example.Idle_Project.ui.anno_page.AnnoViewModel
 
 class Contact_Page_Fragment : Fragment() {
 
