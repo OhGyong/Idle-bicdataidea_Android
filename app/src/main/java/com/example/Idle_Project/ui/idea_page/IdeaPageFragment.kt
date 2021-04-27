@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Idle_Project.R
 
@@ -60,7 +62,7 @@ class IdeaData(
     }
 }
 
-class Idea_Page_Fragment : Fragment() {
+class IdeaPageFragment : Fragment() {
 
     var rankList: ArrayList<RankData> = arrayListOf(
         RankData("  1", "오기용", "91,500P"),
@@ -103,6 +105,13 @@ class Idea_Page_Fragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_idea_page, container, false)
         rankListView=root.findViewById(R.id.rank_recycler)
         ideaListView=root.findViewById(R.id.idea_recycler)
+
+        // 아이디어 등록버튼 눌렀을 때 처리, 아이디어 등록 페이지로 이동
+        val idea_regist_bt: Button = root.findViewById<Button>(R.id.idea_regist_bt)
+        idea_regist_bt.setOnClickListener {
+            findNavController().navigate(R.id.nav_idea_regist_page)
+        }
+
         return root
     }
 

@@ -247,6 +247,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/total_save_point_layout">
 
@@ -352,6 +354,28 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/use_list_chart">
             </androidx.recyclerview.widget.RecyclerView>
+
+            <EditText
+                android:id="@+id/use_point_search_text"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/use_point_recycler" />
+
+            <ImageView
+                android:id="@+id/use_point_search_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_image"
+                app:layout_constraintBottom_toBottomOf="@+id/use_point_search_text"
+                app:layout_constraintEnd_toEndOf="@+id/use_point_search_text"
+                app:layout_constraintTop_toTopOf="@+id/use_point_search_text" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -427,6 +451,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/save_list_chart">
             </androidx.recyclerview.widget.RecyclerView>
+
+            <EditText
+                android:id="@+id/save_point_search_text"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/save_point_recycler" />
+
+            <ImageView
+                android:id="@+id/save_point_search_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_image"
+                app:layout_constraintBottom_toBottomOf="@+id/save_point_search_text"
+                app:layout_constraintEnd_toEndOf="@+id/save_point_search_text"
+                app:layout_constraintTop_toTopOf="@+id/save_point_search_text" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

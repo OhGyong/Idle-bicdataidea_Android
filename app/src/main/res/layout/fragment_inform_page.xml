@@ -48,8 +48,8 @@
 
             <TextView
                 android:id="@+id/textview_inform1"
-                android:layout_width="225dp"
-                android:layout_height="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="강원도 춘천시 춘천로 ??? 주식회사 아이들"
                 android:textColor="@color/black"
                 android:textSize="15dp"

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Idle_Project.R
 import com.example.Idle_Project.ui.notice_cs_page.NoticeData
@@ -55,6 +57,13 @@ class MemberMyIdeaPageFragment : Fragment() {
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_member_myidea_page, container, false)
         myideaListView = view.findViewById(R.id.myidea_recycler)
+
+        // 아이디어 등록버튼 눌렀을 때 처리, 아이디어 등록 페이지로 이동
+        val idea_regist_bt: Button = view.findViewById<Button>(R.id.idea_regist_bt)
+        idea_regist_bt.setOnClickListener {
+            findNavController().navigate(R.id.nav_idea_regist_page)
+        }
+
         return view
     }
 
