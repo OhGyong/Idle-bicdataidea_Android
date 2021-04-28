@@ -7,7 +7,7 @@
     android:layout_weight="1"
     android:background="#EAE4E4"
     android:orientation="vertical"
-    tools:context="com.example.Idle_Project.ui.home.HomeFragment">
+    tools:context="com.example.idleProject.ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

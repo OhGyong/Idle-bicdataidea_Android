@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.example.Idle_Project.ui.contact_page.Contact_Page_Fragment">
+    tools:context="com.example.idleProject.ui.contact_page.Contact_Page_Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

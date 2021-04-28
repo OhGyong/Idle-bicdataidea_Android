@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="com.example.Idle_Project.ui.idea_page.IdeaPageFragment">
+    tools:context="com.example.idleProject.ui.idea_page.IdeaPageFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_idea1"

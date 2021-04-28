@@ -6,67 +6,67 @@
     app:startDestination="@+id/nav_home">
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.Idle_Project.ui.home.HomeFragment"
+        android:name="com.example.idleProject.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_idea_page"
-        android:name="com.example.Idle_Project.ui.idea_page.IdeaPageFragment"
+        android:name="com.example.idleProject.ui.idea_page.IdeaPageFragment"
         android:label="idea_page"
         tools:layout="@layout/fragment_idea_page" />
     <fragment
         android:id="@+id/nav_idea_regist_page"
-        android:name="com.example.Idle_Project.ui.idea_page.IdeaRegistPageFragment"
+        android:name="com.example.idleProject.ui.idea_page.IdeaRegistPageFragment"
         android:label="idea_regist_page"
         tools:layout="@layout/fragment_idea_regist_page" />
     <fragment
         android:id="@+id/nav_anno_page"
-        android:name="com.example.Idle_Project.ui.anno_page.Anno_Page_Fragment"
+        android:name="com.example.idleProject.ui.anno_page.Anno_Page_Fragment"
         android:label="anno_page"
         tools:layout="@layout/fragment_anno_page" />
     <fragment
         android:id="@+id/nav_notice_cs_page"
-        android:name="com.example.Idle_Project.ui.notice_cs_page.Notice_Cs_Page_Fragment"
+        android:name="com.example.idleProject.ui.notice_cs_page.Notice_Cs_Page_Fragment"
         android:label="notice_cs_view"
         tools:layout="@layout/fragment_notice_cs_page" />
     <fragment
         android:id="@+id/nav_cs_regist_page"
-        android:name="com.example.Idle_Project.ui.notice_cs_page.CsRegistPageFragment"
+        android:name="com.example.idleProject.ui.notice_cs_page.CsRegistPageFragment"
         android:label="cs_regist_page"
         tools:layout="@layout/fragment_cs_regist_page" />
     <fragment
         android:id="@+id/nav_contact_page"
-        android:name="com.example.Idle_Project.ui.contact_page.Contact_Page_Fragment"
+        android:name="com.example.idleProject.ui.contact_page.Contact_Page_Fragment"
         android:label="contact_page"
         tools:layout="@layout/fragment_contact_page" />
     <fragment
         android:id="@+id/nav_mypage"
-        android:name="com.example.Idle_Project.ui.mypage.MypageFragment"
+        android:name="com.example.idleProject.ui.mypage.MypageFragment"
         android:label="member_anno_page"
         tools:layout="@layout/fragment_mypage" />
     <fragment
         android:id="@+id/nav_sign_in_page"
-        android:name="com.example.Idle_Project.ui.sign_in_page.Sign_in_Page_Fragment"
+        android:name="com.example.idleProject.ui.sign_in_page.Sign_in_Page_Fragment"
         android:label="nav_sign_in_page"
         tools:layout="@layout/fragment_sign_in_page" />
     <fragment
         android:id="@+id/nav_about_page"
-        android:name="com.example.Idle_Project.ui.about_page.Footer_Page_Fragment"
+        android:name="com.example.idleProject.ui.about_page.Footer_Page_Fragment"
         android:label="nav_about_page"
         tools:layout="@layout/fragment_inform_page" />
     <fragment
         android:id="@+id/nav_sign_up_agree_page"
-        android:name="com.example.Idle_Project.ui.sign_up_page.Sign_up_Agree_Fragement"
+        android:name="com.example.idleProject.ui.sign_up_page.Sign_up_Agree_Fragement"
         android:label="nav_sign_up_agree_page"
         tools:layout="@layout/fragment_sign_up_agree" />
     <fragment
         android:id="@+id/nav_sign_up_page"
-        android:name="com.example.Idle_Project.ui.sign_up_page.Sign_up_Page_Fragment"
+        android:name="com.example.idleProject.ui.sign_up_page.Sign_up_Page_Fragment"
         android:label="nav_sign_up_page"
         tools:layout="@layout/fragment_sign_up_page" />
     <fragment
         android:id="@+id/nav_find_password_page"
-        android:name="com.example.Idle_Project.ui.find_password.Find_Password_Page_Fragment"
+        android:name="com.example.idleProject.ui.find_password.Find_Password_Page_Fragment"
         android:label="nav_find_password_page"
         tools:layout="@layout/fragment_find_password_page" />
 
