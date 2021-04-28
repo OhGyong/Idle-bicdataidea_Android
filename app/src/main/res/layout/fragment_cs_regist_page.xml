@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/image_idea_regist"
@@ -18,13 +18,12 @@
             android:src="@drawable/idea_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="TODO" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="아이디어 플랫폼"
+            android:text="문의게시판"
             android:textColor="@color/white"
             android:textSize="35dp"
             android:textStyle="bold"
@@ -46,7 +45,7 @@
                 android:id="@+id/textview_idea_regist1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="아이디어 등록"
+                android:text="문의 글 등록"
                 android:textColor="@color/black"
                 android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"

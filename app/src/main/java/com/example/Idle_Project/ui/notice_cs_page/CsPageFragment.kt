@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Idle_Project.R
 
@@ -53,6 +55,13 @@ class CsPageFragment : Fragment() {
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_cs_page, container, false)
         csListView=view.findViewById(R.id.cs_recycler)
+
+        //문의게시판 등록버튼 눌렀을 때
+        val cs_regist_page_bt: Button = view.findViewById<Button>(R.id.cs_regist_page_bt)
+        cs_regist_page_bt.setOnClickListener {
+            findNavController().navigate(R.id.nav_cs_regist_page)
+        }
+
         return view
     }
 

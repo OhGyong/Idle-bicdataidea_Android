@@ -16,7 +16,7 @@
         tools:layout="@layout/fragment_idea_page" />
     <fragment
         android:id="@+id/nav_idea_regist_page"
-        android:name="com.example.Idle_Project.ui.idea_page.IdeaRegistFragment"
+        android:name="com.example.Idle_Project.ui.idea_page.IdeaRegistPageFragment"
         android:label="idea_regist_page"
         tools:layout="@layout/fragment_idea_regist_page" />
     <fragment
@@ -29,6 +29,11 @@
         android:name="com.example.Idle_Project.ui.notice_cs_page.Notice_Cs_Page_Fragment"
         android:label="notice_cs_view"
         tools:layout="@layout/fragment_notice_cs_page" />
+    <fragment
+        android:id="@+id/nav_cs_regist_page"
+        android:name="com.example.Idle_Project.ui.notice_cs_page.CsRegistPageFragment"
+        android:label="cs_regist_page"
+        tools:layout="@layout/fragment_cs_regist_page" />
     <fragment
         android:id="@+id/nav_contact_page"
         android:name="com.example.Idle_Project.ui.contact_page.Contact_Page_Fragment"

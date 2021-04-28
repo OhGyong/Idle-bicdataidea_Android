@@ -2,21 +2,21 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_cs1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -46,14 +46,30 @@
                 android:background="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/textview_cs1"
                 app:layout_constraintTop_toBottomOf="@+id/textview_cs1" />
+
+            <Button
+                android:id="@+id/cs_regist_page_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/design_default_color_primary"
+                android:text="등록"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toEndOf="@+id/textview_cs1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.175"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraint_cs1">
 
@@ -101,8 +117,7 @@
                 android:background="@color/white"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="@+id/textview_cs2"
-                app:layout_constraintTop_toBottomOf="@+id/view3">
-            </androidx.recyclerview.widget.RecyclerView>
+                app:layout_constraintTop_toBottomOf="@+id/view3"></androidx.recyclerview.widget.RecyclerView>
 
             <EditText
                 android:id="@+id/cs_search_text"
