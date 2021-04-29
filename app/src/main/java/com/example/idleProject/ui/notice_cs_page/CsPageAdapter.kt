@@ -13,10 +13,14 @@ class CsPageAdapter(private var list: MutableList<CsData>): RecyclerView.Adapter
 
         var cs_num: TextView = itemView!!.findViewById(R.id.cs_num)
         var cs_title: TextView = itemView!!.findViewById(R.id.cs_title)
+        var cs_name: TextView = itemView!!.findViewById(R.id.cs_name)
+        var cs_date: TextView = itemView!!.findViewById(R.id.cs_date)
 
         fun bind(data: CsData, position: Int){
             cs_num.text=data.getData1()
             cs_title.text=data.getData2()
+            cs_name.text=data.getData3()
+            cs_date.text=data.getData4()
         }
     }
 

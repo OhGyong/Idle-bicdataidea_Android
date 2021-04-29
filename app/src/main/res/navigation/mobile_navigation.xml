@@ -36,7 +36,7 @@
         tools:layout="@layout/fragment_cs_regist_page" />
     <fragment
         android:id="@+id/nav_contact_page"
-        android:name="com.example.idleProject.ui.contact_page.Contact_Page_Fragment"
+        android:name="com.example.idleProject.ui.contact_page.ContactPageFragment"
         android:label="contact_page"
         tools:layout="@layout/fragment_contact_page" />
     <fragment

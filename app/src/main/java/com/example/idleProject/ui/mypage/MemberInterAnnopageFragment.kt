@@ -10,7 +10,8 @@ import com.example.idleProject.R
 
 class InterAnnoData(
     private var interAnnoNum: String? = null,
-    private var interAnnoTitle: String? = null
+    private var interAnnoTitle: String? = null,
+    private var interAnnoDate: String? = null
 ){
     fun getData1(): String? {
         return interAnnoNum
@@ -27,20 +28,28 @@ class InterAnnoData(
     fun setData2(address: String) {
         this.interAnnoTitle = interAnnoTitle
     }
+
+    fun getData3(): String? {
+        return interAnnoDate
+    }
+
+    fun setData3(address: String) {
+        this.interAnnoDate = interAnnoDate
+    }
 }
 
 class MemberInterAnnopageFragment : Fragment() {
 
     var interAnnoList: ArrayList<InterAnnoData> = arrayListOf(
-        InterAnnoData("9", "관심사업 제목9"),
-        InterAnnoData("8", "관심사업 제목8"),
-        InterAnnoData("7", "관심사업 제목7"),
-        InterAnnoData("6", "관심사업 제목6"),
-        InterAnnoData("5", "관심사업 제목5"),
-        InterAnnoData("4", "관심사업 제목4"),
-        InterAnnoData("3", "관심사업 제목3"),
-        InterAnnoData("2", "관심사업 제목2"),
-        InterAnnoData("1", "관심사업 제목1")
+        InterAnnoData("9", "관심사업 제목9", "2021-04-30"),
+        InterAnnoData("8", "관심사업 제목8", "2021-04-30"),
+        InterAnnoData("7", "관심사업 제목7", "2021-04-30"),
+        InterAnnoData("6", "관심사업 제목6", "2021-04-30"),
+        InterAnnoData("5", "관심사업 제목5", "2021-04-30"),
+        InterAnnoData("4", "관심사업 제목4", "2021-04-30"),
+        InterAnnoData("3", "관심사업 제목3", "2021-04-30"),
+        InterAnnoData("2", "관심사업 제목2", "2021-04-30"),
+        InterAnnoData("1", "관심사업 제목1", "2021-04-30")
     )
 
     private lateinit var interAnnoListAdapter: InterAnnoPageAdapter
@@ -52,7 +61,7 @@ class MemberInterAnnopageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_member_interanno_page, container, false)
-        interAnnoListView = view.findViewById(R.id.interanno_recycler)
+        interAnnoListView = view.findViewById(R.id.interAnnoRecycler)
         return view
     }
 

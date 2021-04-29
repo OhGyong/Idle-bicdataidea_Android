@@ -1,211 +1,327 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context="com.example.idleProject.ui.contact_page.Contact_Page_Fragment">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+<layout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/image_contact"
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/idea_image"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="고객센터"
-            android:textColor="@color/white"
-            android:textSize="35dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/image_contact"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/image_contact"
-            app:layout_constraintTop_toTopOf="@+id/image_contact" />
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="com.example.idleProject.ui.contact_page.ContactPageFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_contact1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_contact">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_contact"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/idea_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textview_contact1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="고객센터"
-                android:textColor="@color/black"
-                android:textSize="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/image_contact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/image_contact"
+                app:layout_constraintTop_toTopOf="@+id/image_contact" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_contact1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="68dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/image_contact">
 
-            <View
-                android:id="@+id/view_contact1"
-                android:layout_width="80dp"
-                android:layout_height="5px"
-                android:background="@color/purple_500"
-                app:layout_constraintStart_toStartOf="@+id/textview_contact1"
-                app:layout_constraintTop_toBottomOf="@+id/textview_contact1" />
+                <TextView
+                    android:id="@+id/textview_contact1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고객센터"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:id="@+id/view_contact2"
-                android:layout_width="320dp"
-                android:layout_height="2px"
-                android:background="@color/black"
-                app:layout_constraintStart_toStartOf="@+id/view_contact1"
-                app:layout_constraintTop_toBottomOf="@+id/view_contact1" />
+                <View
+                    android:id="@+id/view_contact1"
+                    android:layout_width="80dp"
+                    android:layout_height="5px"
+                    android:background="@color/purple_500"
+                    app:layout_constraintStart_toStartOf="@+id/textview_contact1"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_contact1" />
 
-            <TextView
-                android:id="@+id/contact_regist_bt"
+                <View
+                    android:id="@+id/view_contact2"
+                    android:layout_width="320dp"
+                    android:layout_height="2px"
+                    android:background="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/view_contact1"
+                    app:layout_constraintTop_toBottomOf="@+id/view_contact1" />
+
+                <TextView
+                    android:id="@+id/contact_regist_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:text="등록"
+                    android:textColor="@color/purple_200"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textview_contact1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.588" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/contact_cancel_bt"
+                    app:layout_constraintStart_toEndOf="@+id/contact_regist_bt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/contact_cancel_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="취소"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/contact_regist_bt"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.529" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_contact2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:text="등록"
-                android:textColor="@color/purple_200"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textview_contact1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.588" />
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_contact1">
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="30dp"
-                android:background="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/contact_cancel_bt"
-                app:layout_constraintStart_toEndOf="@+id/contact_regist_bt"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textview_contact2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="이메일"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/contact_cancel_bt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:text="취소"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/contact_regist_bt"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.529" />
+                <EditText
+                    android:id="@+id/edittext_contact1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edittext"
+                    android:ems="14"
+                    android:hint="mail@example.com"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="#BAB6B6"
+                    app:layout_constraintStart_toStartOf="@+id/textview_contact2"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_contact2" />
+
+                <View
+                    android:id="@+id/view_contact3"
+                    android:layout_width="320dp"
+                    android:layout_height="2px"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edittext_contact1" />
+
+                <TextView
+                    android:id="@+id/textview_contact3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="제목"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_contact3" />
+
+                <EditText
+                    android:id="@+id/edittext_contact2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edittext"
+                    android:ems="14"
+                    android:hint="제목을 입력해주세요"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="#BAB6B6"
+                    app:layout_constraintStart_toStartOf="@+id/textview_contact3"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_contact3" />
+
+                <View
+                    android:id="@+id/view_contact4"
+                    android:layout_width="320dp"
+                    android:layout_height="2px"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edittext_contact2" />
+
+                <TextView
+                    android:id="@+id/textview_contact4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="내용"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_contact4" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_contact3"
+                    android:layout_width="360dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_regist"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@+id/textview_contact4"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_contact4">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_regist"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/action_undo"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_baseline_undo_24" />
+
+                            <ImageButton
+                                android:id="@+id/action_redo"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_baseline_redo_24" />
+
+                            <ImageButton
+                                android:id="@+id/action_List_Bullet"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_baseline_format_list_bulleted_24" />
+
+                            <ImageButton
+                                android:id="@+id/action_subScription"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_baseline_format_indent_increase_24" />
+
+                            <ImageButton
+                                android:id="@+id/action_head"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_baseline_title_24" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/action_bold"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_baseline_format_bold_24" />
+
+                            <ImageButton
+                                android:id="@+id/action_italic"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_baseline_format_italic_24" />
+
+                            <ImageButton
+                                android:id="@+id/action_underline"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_baseline_format_underlined_24" />
+
+                            <ImageButton
+                                android:id="@+id/action_strikethrough"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_baseline_strikethrough_s_24" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <jp.wasabeef.richeditor.RichEditor
+                        android:id="@+id/editor_contact_regist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_contact2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraint_contact1">
 
-            <TextView
-                android:id="@+id/textview_contact2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="이메일"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/edittext_contact1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border_edittext"
-                android:ems="14"
-                android:hint="mail@example.com"
-                android:inputType="textEmailAddress"
-                android:lines="1"
-                android:textColor="@color/black"
-                android:textColorHint="#BAB6B6"
-                app:layout_constraintStart_toStartOf="@+id/textview_contact2"
-                app:layout_constraintTop_toBottomOf="@+id/textview_contact2" />
-
-            <View
-                android:id="@+id/view_contact3"
-                android:layout_width="320dp"
-                android:layout_height="2px"
-                android:layout_marginTop="16dp"
-                android:background="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edittext_contact1" />
-
-            <TextView
-                android:id="@+id/textview_contact3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="제목"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view_contact3" />
-
-            <EditText
-                android:id="@+id/edittext_contact2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border_edittext"
-                android:ems="14"
-                android:hint="제목을 입력해주세요"
-                android:lines="1"
-                android:textColor="@color/black"
-                android:textColorHint="#BAB6B6"
-                app:layout_constraintStart_toStartOf="@+id/textview_contact3"
-                app:layout_constraintTop_toBottomOf="@+id/textview_contact3" />
-
-            <View
-                android:id="@+id/view_contact4"
-                android:layout_width="320dp"
-                android:layout_height="2px"
-                android:layout_marginTop="16dp"
-                android:background="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edittext_contact2" />
-
-            <TextView
-                android:id="@+id/textview_contact4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="내용"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view_contact4" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</ScrollView>
+    </ScrollView>
+</layout>

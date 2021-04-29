@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_cs1"
+            android:id="@+id/constraint1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -50,15 +50,15 @@
             <Button
                 android:id="@+id/cs_regist_page_bt"
                 android:layout_width="wrap_content"
-                android:layout_height="31dp"
+                android:layout_height="32dp"
                 android:layout_marginStart="84dp"
-                android:layout_marginTop="4dp"
                 android:background="@color/design_default_color_primary"
                 android:text="등록"
                 android:textColor="@color/white"
                 android:textSize="10dp"
                 android:textStyle="bold"
                 app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textview_cs1"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,78 +66,110 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:id="@+id/constraint2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraint_cs1">
+            app:layout_constraintTop_toBottomOf="@+id/constraint1">
 
             <TextView
-                android:id="@+id/textview_cs2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:id="@+id/textview1"
+                android:layout_width="@dimen/recycler_two_word_w"
+                android:layout_height="@dimen/recycler_word_h"
                 android:text="번호"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textview_cs3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="70dp"
+                android:id="@+id/textview2"
+                android:layout_width="@dimen/recycler_two_word_w"
+                android:layout_height="@dimen/recycler_word_h"
                 android:text="제목"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textview_cs2"
+                app:layout_constraintEnd_toStartOf="@+id/textview3"
+                app:layout_constraintStart_toEndOf="@+id/textview1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="@dimen/recycler_three_word_w"
+                android:layout_height="25dp"
+                android:text="작성자"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toEndOf="@+id/textview1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="@dimen/recycler_three_word_w"
+                android:layout_height="25dp"
+                android:text="작성일"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.673"
+                app:layout_constraintStart_toEndOf="@+id/textview3"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <View
                 android:id="@+id/view3"
-                android:layout_width="320dp"
-                android:layout_height="3px"
+                android:layout_width="0dp"
+                android:layout_height="2px"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:background="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textview4"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_cs3" />
+                app:layout_constraintStart_toStartOf="@+id/notice_recycler"
+                app:layout_constraintTop_toBottomOf="@+id/textview1" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cs_recycler"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@color/white"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintStart_toStartOf="@+id/textview_cs2"
-                app:layout_constraintTop_toBottomOf="@+id/view3"></androidx.recyclerview.widget.RecyclerView>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textview1"
+                app:layout_constraintTop_toBottomOf="@+id/textview2">
+            </androidx.recyclerview.widget.RecyclerView>
 
             <EditText
-                android:id="@+id/cs_search_text"
+                android:id="@+id/notice_search_text"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cs_recycler" />
 
             <ImageView
-                android:id="@+id/cs_search_image"
+                android:id="@+id/notice_search_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
                 android:src="@drawable/search_image"
-                app:layout_constraintBottom_toBottomOf="@+id/cs_search_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/cs_search_text" />
+                app:layout_constraintBottom_toBottomOf="@+id/notice_search_text"
+                app:layout_constraintEnd_toEndOf="@+id/notice_search_text"
+                app:layout_constraintTop_toTopOf="@+id/notice_search_text"
+                app:layout_constraintVertical_bias="0.2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

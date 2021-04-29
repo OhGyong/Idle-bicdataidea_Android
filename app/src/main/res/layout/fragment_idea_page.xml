@@ -91,7 +91,7 @@
             <TextView
                 android:id="@+id/textview_idea2"
                 android:layout_width="@dimen/recycler_two_word_w"
-                android:layout_height="@dimen/recycler_two_word_h"
+                android:layout_height="@dimen/recycler_word_h"
                 android:text="순위"
                 android:textColor="@color/black"
                 android:textSize="20dp"
@@ -195,8 +195,10 @@
                 app:backgroundTint="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintHorizontal_bias="0.837"
                 app:layout_constraintStart_toEndOf="@+id/textView_idea5"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.571" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -210,7 +212,7 @@
             <TextView
                 android:id="@+id/textview_idea6"
                 android:layout_width="@dimen/recycler_two_word_w"
-                android:layout_height="@dimen/recycler_two_word_h"
+                android:layout_height="@dimen/recycler_word_h"
                 android:text="제목"
                 android:textColor="@color/black"
                 android:textSize="20dp"
@@ -262,11 +264,10 @@
                 android:id="@+id/idea_search_text"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/idea_recycler"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/idea_recycler" />
 
@@ -281,7 +282,5 @@
                 app:layout_constraintVertical_bias="0.2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

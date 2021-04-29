@@ -6,7 +6,8 @@
     <dimen name="nav_header_height">100dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
-    <dimen name="recycler_two_word_w">37dp</dimen>
-    <dimen name="recycler_two_word_h">25dp</dimen>
+    <dimen name="recycler_two_word_w">38dp</dimen>
+    <dimen name="recycler_three_word_w">56dp</dimen>
+    <dimen name="recycler_word_h">25dp</dimen>
     <dimen name="recycler_line_margin">3dp</dimen>
 </resources>

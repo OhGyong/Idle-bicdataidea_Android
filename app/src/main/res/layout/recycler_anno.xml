@@ -18,7 +18,7 @@
         <TextView
             android:id="@+id/anno_num"
             android:layout_width="@dimen/recycler_two_word_w"
-            android:layout_height="@dimen/recycler_two_word_h"
+            android:layout_height="@dimen/recycler_word_h"
             android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -88,7 +88,7 @@
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="@dimen/recycler_two_word_w"
-                android:layout_height="@dimen/recycler_two_word_h"
+                android:layout_height="@dimen/recycler_word_h"
                 android:text="번호"
                 android:textColor="@color/black"
                 android:textSize="20dp"
@@ -101,7 +101,7 @@
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="@dimen/recycler_two_word_w"
-                android:layout_height="@dimen/recycler_two_word_h"
+                android:layout_height="@dimen/recycler_word_h"
                 android:text="제목"
                 android:textColor="@color/black"
                 android:textSize="20dp"
