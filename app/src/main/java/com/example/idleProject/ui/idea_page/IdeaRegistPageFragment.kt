@@ -15,11 +15,10 @@ class IdeaRegistPageFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        val root = inflater.inflate(R.layout.fragment_idea_regist_page, container, false)
 
         var binding = DataBindingUtil.inflate<FragmentIdeaRegistPageBinding>(inflater, R.layout.fragment_idea_regist_page, container, false)
 
-        var mEditor = binding.editor
+        var mEditor = binding.editorIdeaRegist
 
         mEditor.setPlaceholder("내용을 작성하세요")
 

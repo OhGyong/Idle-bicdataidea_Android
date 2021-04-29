@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import com.example.idleProject.R
+import com.example.idleProject.databinding.FragmentCsRegistPageBinding
+import com.example.idleProject.databinding.FragmentIdeaRegistPageBinding
 
 class CsRegistPageFragment: Fragment() {
     override fun onCreateView(
@@ -13,7 +16,43 @@ class CsRegistPageFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_cs_regist_page, container, false)
-        return root
+        var binding = DataBindingUtil.inflate<FragmentCsRegistPageBinding>(inflater, R.layout.fragment_cs_regist_page, container, false)
+
+        var mEditor = binding.editorCsRegist
+
+        mEditor.setPlaceholder("내용을 작성하세요")
+
+        binding.actionUndo.setOnClickListener {
+            mEditor!!.undo()
+        }
+        binding.actionRedo.setOnClickListener {
+            mEditor!!.redo()
+        }
+        binding.actionBold.setOnClickListener {
+            mEditor!!.setBold()
+        }
+        binding.actionUnderline.setOnClickListener {
+            mEditor!!.setUnderline()
+        }
+        binding.actionItalic.setOnClickListener {
+            mEditor!!.setItalic()
+        }
+        binding.actionHead.setOnClickListener {
+            mEditor!!.setHeading(1)
+        }
+        binding.actionHead.setOnClickListener {
+            mEditor!!.setHeading(1)
+        }
+        binding.actionStrikethrough.setOnClickListener {
+            mEditor!!.setStrikeThrough()
+        }
+        binding.actionListBullet.setOnClickListener {
+            mEditor!!.setBullets()
+        }
+        binding.actionSubScription.setOnClickListener {
+            mEditor!!.setBlockquote()
+        }
+
+        return binding.root
     }
 }
