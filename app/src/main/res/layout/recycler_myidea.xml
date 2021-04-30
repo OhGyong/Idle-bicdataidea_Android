@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/storeItemLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -11,12 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/myIdeaTitle"
-            android:layout_width="250sp"
+            android:layout_width="@dimen/recycler_title"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="14dp"
@@ -28,21 +28,22 @@
             android:id="@+id/myIdeaDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:textColor="@color/black"
             android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/myIdeaTitle"
+            app:layout_constraintEnd_toEndOf="@+id/view7"
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
-            android:layout_width="500dp"
+            android:id="@+id/view7"
+            android:layout_width="match_parent"
             android:layout_height="2px"
             android:layout_marginTop="@dimen/recycler_line_margin"
+            android:layout_marginEnd="40dp"
             android:layout_marginBottom="@dimen/recycler_line_margin"
             android:background="#EAE4E4"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/myIdeaTitle"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/myIdeaTitle" />
 

@@ -54,10 +54,10 @@ class MemberMyIdeaPageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_member_myidea_page, container, false)
-        myideaListView = view.findViewById(R.id.myidea_recycler)
+        myideaListView = view.findViewById(R.id.myIdeaRecycler)
 
         // 아이디어 등록버튼 눌렀을 때 처리, 아이디어 등록 페이지로 이동
-        val idea_regist_bt: Button = view.findViewById<Button>(R.id.idea_regist_bt)
+        val idea_regist_bt: Button = view.findViewById<Button>(R.id.myIdeaRegistPageBt)
         idea_regist_bt.setOnClickListener {
             findNavController().navigate(R.id.nav_idea_regist_page)
         }

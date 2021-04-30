@@ -45,7 +45,7 @@
                 android:id="@+id/view2"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginEnd="20dp"
                 android:background="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -63,7 +62,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraint1">
 
             <TextView
-                android:id="@+id/textview1"
+                android:id="@+id/textView5"
                 android:layout_width="@dimen/recycler_two_word_w"
                 android:layout_height="@dimen/recycler_word_h"
                 android:text="번호"
@@ -76,65 +75,51 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textview2"
+                android:id="@+id/textView6"
                 android:layout_width="@dimen/recycler_two_word_w"
                 android:layout_height="@dimen/recycler_word_h"
                 android:text="제목"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/textview3"
-                app:layout_constraintStart_toEndOf="@+id/textview1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textview3"
-                android:layout_width="@dimen/recycler_three_word_w"
-                android:layout_height="25dp"
-                android:text="작성일"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.9"
-                app:layout_constraintStart_toEndOf="@+id/textview1"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <View
-                android:id="@+id/view3"
+                android:id="@+id/view5"
                 android:layout_width="0dp"
                 android:layout_height="2px"
-                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
                 android:background="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/textview3"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/notice_recycler"
-                app:layout_constraintTop_toBottomOf="@+id/textview1" />
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/notice_recycler"
+                android:id="@+id/noticeRecycler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@color/white"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/textview1"
-                app:layout_constraintTop_toBottomOf="@+id/textview2">
-            </androidx.recyclerview.widget.RecyclerView>
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/view5"></androidx.recyclerview.widget.RecyclerView>
 
             <EditText
                 android:id="@+id/notice_search_text"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/notice_recycler" />
+                app:layout_constraintTop_toBottomOf="@+id/noticeRecycler" />
 
             <ImageView
                 android:id="@+id/notice_search_image"
@@ -144,7 +129,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/notice_search_text"
                 app:layout_constraintEnd_toEndOf="@+id/notice_search_text"
                 app:layout_constraintTop_toTopOf="@+id/notice_search_text"
-                app:layout_constraintVertical_bias="0.2" />
+                app:layout_constraintVertical_bias="0.285" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

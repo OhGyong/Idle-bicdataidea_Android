@@ -313,7 +313,7 @@
                     android:id="@+id/textview_use_point"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="100dp"
+                    android:layout_marginStart="95dp"
                     android:text="포인트"
                     android:textColor="@color/black"
                     android:textSize="15dp"
@@ -324,7 +324,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
+                    android:layout_marginStart="50dp"
                     android:text="일시"
                     android:textColor="@color/black"
                     android:textSize="15dp"
@@ -334,9 +334,11 @@
 
                 <View
                     android:id="@+id/view3"
-                    android:layout_width="350dp"
+                    android:layout_width="match_parent"
                     android:layout_height="3px"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -345,12 +347,12 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/use_point_recycler"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/white"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/use_list_chart">
             </androidx.recyclerview.widget.RecyclerView>
@@ -359,7 +361,7 @@
                 android:id="@+id/use_point_search_text"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -382,7 +384,8 @@
             android:id="@+id/save_point_list_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="30sp"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/use_point_list_layout">
 
@@ -410,7 +413,7 @@
                     android:id="@+id/textview_save_point"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="100dp"
+                    android:layout_marginStart="95dp"
                     android:text="포인트"
                     android:textColor="@color/black"
                     android:textSize="15dp"
@@ -421,7 +424,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
+                    android:layout_marginStart="50dp"
                     android:text="일시"
                     android:textColor="@color/black"
                     android:textSize="15dp"
@@ -431,9 +434,11 @@
 
                 <View
                     android:id="@+id/view4"
-                    android:layout_width="350dp"
+                    android:layout_width="match_parent"
                     android:layout_height="3px"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -442,12 +447,12 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/save_point_recycler"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/white"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/save_list_chart">
             </androidx.recyclerview.widget.RecyclerView>
@@ -456,7 +461,7 @@
                 android:id="@+id/save_point_search_text"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -472,8 +477,8 @@
                 app:layout_constraintBottom_toBottomOf="@+id/save_point_search_text"
                 app:layout_constraintEnd_toEndOf="@+id/save_point_search_text"
                 app:layout_constraintTop_toTopOf="@+id/save_point_search_text" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,12 +13,10 @@ class NoticePageAdapter(private var list: MutableList<NoticeData>): RecyclerView
 
         var notice_num: TextView = itemView!!.findViewById(R.id.notice_num)
         var notice_title: TextView = itemView!!.findViewById(R.id.notice_title)
-        var notice_date: TextView = itemView!!.findViewById(R.id.notice_date)
 
         fun bind(data: NoticeData, position: Int){
             notice_num.text = data.getData1()
             notice_title.text = data.getData2()
-            notice_date.text = data.getData3()
         }
     }
 

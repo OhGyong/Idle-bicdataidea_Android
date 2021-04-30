@@ -1,7 +1,10 @@
 package com.example.idleProject
 
+import android.hardware.input.InputManager
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
@@ -10,19 +13,20 @@ import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    var STATUS: String = ""
-    var LAST_STATUS: Int = 0
+    var STATUS: String = "" //
+    var LAST_STATUS: Int = 0 //
+
+    var imm: InputMethodManager? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val toolbar: Toolbar = findViewById(R.id.toolbar)
-//        setSupportActionBar(toolbar)
-
+        // nav_drawer
         val drawer: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
 
+        //nav controller
         findNavController(R.id.nav_host_fragment).addOnDestinationChangedListener { controller, destination, arguments ->
             Log.e("dest", "${destination.id}")
             LAST_STATUS = destination.id
@@ -59,16 +63,6 @@ class MainActivity : AppCompatActivity() {
                 drawer.closeDrawer(navView)
             }
         }
-
-        // 상태바 길이 구하기
-//        val rect = Rect()
-//        val window: Window = window
-//        window.getDecorView().getWindowVisibleDisplayFrame(rect)
-//
-//
-//
-//        val nav_header_name: LinearLayout = findViewById(R.id.nav_header_name)
-//        nav_header_name.marginTop()
 
         // nav_drawer 열기
         val nav_icon: ImageView = findViewById(R.id.nav_icon)
@@ -273,7 +267,19 @@ class MainActivity : AppCompatActivity() {
         nav_logout_page.setOnClickListener {
             drawer.closeDrawer(navView)
         }
+
+
+        imm=getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+
+
     }
+
+    fun hideKeyboard(v: View){
+        if(v!==null){
+            imm?.hideSoftInputFromWindow(v.windowToken, 0)
+        }
+    }
+
 
     override fun onBackPressed() {
         STATUS = ""

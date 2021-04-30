@@ -12,7 +12,8 @@
         <activity
             android:name="com.example.idleProject.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Nav_item.NoActionBar">
+            android:theme="@style/Theme.Nav_item.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

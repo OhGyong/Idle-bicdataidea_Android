@@ -55,7 +55,7 @@ class Anno_Page_Fragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_anno_page, container, false)
-        annoListView=root.findViewById(R.id.anno_recycler) // 데이터가 위치할 리사이클러 뷰 위치 연결
+        annoListView=root.findViewById(R.id.annoRecycler) // 데이터가 위치할 리사이클러 뷰 위치 연결
         return root
     }
 

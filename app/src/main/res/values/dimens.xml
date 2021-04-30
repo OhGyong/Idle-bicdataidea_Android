@@ -9,5 +9,6 @@
     <dimen name="recycler_two_word_w">38dp</dimen>
     <dimen name="recycler_three_word_w">56dp</dimen>
     <dimen name="recycler_word_h">25dp</dimen>
+    <dimen name="recycler_title">260dp</dimen>
     <dimen name="recycler_line_margin">3dp</dimen>
 </resources>

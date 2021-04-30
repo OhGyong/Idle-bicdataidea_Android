@@ -19,7 +19,7 @@
             android:layout_width="@dimen/recycler_two_word_w"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="10dp"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
@@ -28,45 +28,25 @@
 
         <TextView
             android:id="@+id/cs_title"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/recycler_title"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
             android:textColor="@color/black"
-            android:textSize="10dp"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/cs_num"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/cs_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:textColor="@color/black"
-            android:textSize="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cs_title"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/cs_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:textColor="@color/black"
-            android:textSize="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cs_name"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <View
-            android:layout_width="500dp"
+            android:layout_width="match_parent"
             android:layout_height="2px"
             android:layout_marginTop="@dimen/recycler_line_margin"
+            android:layout_marginEnd="40dp"
             android:layout_marginBottom="@dimen/recycler_line_margin"
             android:background="#EAE4E4"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/cs_num"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cs_num" />
 
