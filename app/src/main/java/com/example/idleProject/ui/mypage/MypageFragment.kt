@@ -44,7 +44,7 @@ class MypageFragment : Fragment() {
         viewPager2.adapter = MypageViewPageAdapter(this)
 
         // 타이틀 이름
-        val mypage_title_name: TextView = root.findViewById(R.id.mypage_title_name)
+        val myPageTitleName: TextView = root.findViewById(R.id.mypage_title_name)
 
         val tabs: TabLayout = root.findViewById(R.id.tabs_mypage)
         TabLayoutMediator(tabs, viewPager2) { tab, position ->
@@ -55,10 +55,10 @@ class MypageFragment : Fragment() {
                 //선택한 항목으로 타이틀 이름 변경 및 선택한 항목으로 이동
                 viewPager2.setCurrentItem(index)
                 when(index){
-                    1-> mypage_title_name.setText("포인트현황")
-                    2-> mypage_title_name.setText("내아이디어")
-                    3-> mypage_title_name.setText("관심사업")
-                    else-> mypage_title_name.setText("회원정보수정")
+                    1-> myPageTitleName.setText("포인트현황")
+                    2-> myPageTitleName.setText("내아이디어")
+                    3-> myPageTitleName.setText("관심사업")
+                    else-> myPageTitleName.setText("회원정보수정")
 
                 }
                 // 선택한 항목의 탭 색 변경
@@ -159,10 +159,10 @@ class MypageFragment : Fragment() {
                         tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                         (tab.customView as TextView).setTextColor(Color.WHITE)
                         when((tab.customView as TextView).text){
-                            "회원정보수정"->mypage_title_name.setText("회원정보수정")
-                            "포인트현황"->mypage_title_name.setText("포인트현황")
-                            "내아이디어"->mypage_title_name.setText("내아이디어")
-                            "관심사업"->mypage_title_name.setText("관심사업")
+                            "회원정보수정"->myPageTitleName.setText("회원정보수정")
+                            "포인트현황"->myPageTitleName.setText("포인트현황")
+                            "내아이디어"->myPageTitleName.setText("내아이디어")
+                            "관심사업"->myPageTitleName.setText("관심사업")
                         }
                     }
                 }

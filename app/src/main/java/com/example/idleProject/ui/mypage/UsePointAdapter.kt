@@ -19,8 +19,6 @@ class UsePointAdapter (private var list: MutableList<UsePointData>): RecyclerVie
 
         // onBindViewHolder의 역할을 대신한다.
         fun bind(data: UsePointData, position: Int) {
-            Log.d("ListAdapter", "===== ===== ===== ===== bind ===== ===== ===== =====")
-            Log.d("ListAdapter", data.getData1()+" "+data.getData2()+" "+data.getData3())
             usePointContents.text = data.getData1()
             usePoint.text = data.getData2()
             usePointDate.text = data.getData3()
@@ -39,7 +37,6 @@ class UsePointAdapter (private var list: MutableList<UsePointData>): RecyclerVie
 
     // ViewHolder의 bind 메소드를 호출한다.
     override fun onBindViewHolder(holder: UsePointAdapter.ListItemViewHolder, position: Int) {
-        Log.d("ListAdapter", "===== ===== ===== ===== onBindViewHolder ===== ===== ===== =====")
         holder.bind(list[position], position)
     }
 

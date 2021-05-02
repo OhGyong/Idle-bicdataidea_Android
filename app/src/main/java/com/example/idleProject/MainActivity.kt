@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
                 STATUS = "HOME"
             }
         }
-        val nav_header = navView.getHeaderView(0)
-        nav_header.findViewById<LinearLayout>(R.id.nav_header).setOnClickListener {
+        val navHeader = navView.getHeaderView(0)
+        navHeader.findViewById<LinearLayout>(R.id.nav_header).setOnClickListener {
             if (STATUS == "HOME" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -65,8 +65,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         // nav_drawer 열기
-        val nav_icon: ImageView = findViewById(R.id.nav_icon)
-        nav_icon.setOnClickListener {
+        val navIcon: ImageView = findViewById(R.id.nav_icon)
+        navIcon.setOnClickListener {
             drawer.openDrawer(navView)
         }
 
@@ -87,8 +87,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 아이디어 플랫폼 화면
-        val navIdea_page: TextView = findViewById(R.id.nav_idea_page)
-        navIdea_page.setOnClickListener {
+        val navIdeaPage: TextView = findViewById(R.id.nav_idea_page)
+        navIdeaPage.setOnClickListener {
             if (STATUS == "IDEA" || tabLastStatus == 2131231037) {
                 drawer.closeDrawer(navView)
             } else {
@@ -101,8 +101,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 공고정보 게시판 화면
-        val navAnno_page: TextView = findViewById(R.id.nav_anno_page)
-        navAnno_page.setOnClickListener {
+        val navAnnoPage: TextView = findViewById(R.id.nav_anno_page)
+        navAnnoPage.setOnClickListener {
             if (STATUS == "ANNO" || tabLastStatus == 2131231028) {
                 drawer.closeDrawer(navView)
             } else {
@@ -115,8 +115,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 공지사항 화면1 (게시판 버튼)
-        val navNotice_page1: TextView = findViewById(R.id.nav_notice_page1)
-        navNotice_page1.setOnClickListener {
+        val navNoticePage1: TextView = findViewById(R.id.nav_notice_page1)
+        navNoticePage1.setOnClickListener {
             if (STATUS == "NOTICE" || tabLastStatus == 2131231046) {
                 drawer.closeDrawer(navView)
             } else {
@@ -130,8 +130,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 공지사항 화면2 (공지사항 버튼)
-        val navNotice_page2: TextView = findViewById(R.id.nav_notice_page2)
-        navNotice_page2.setOnClickListener {
+        val navNoticePage2: TextView = findViewById(R.id.nav_notice_page2)
+        navNoticePage2.setOnClickListener {
             if (STATUS == "NOTICE" || tabLastStatus == 2131231034) {
                 drawer.closeDrawer(navView)
             } else {
@@ -145,8 +145,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 문의게시판 화면
-        val navCs_page: TextView = findViewById(R.id.nav_cs_page)
-        navCs_page.setOnClickListener {
+        val navCsPage: TextView = findViewById(R.id.nav_cs_page)
+        navCsPage.setOnClickListener {
             if (STATUS == "CS" || tabLastStatus == 2131231034) {
                 drawer.closeDrawer(navView)
             } else {
@@ -160,8 +160,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 고객센터 화면
-        val navContact_page: TextView = findViewById(R.id.nav_contact_page)
-        navContact_page.setOnClickListener {
+        val navContactPage: TextView = findViewById(R.id.nav_contact_page)
+        navContactPage.setOnClickListener {
             if (STATUS == "CONTACT" || tabLastStatus == 2131231017) {
                 drawer.closeDrawer(navView)
             } else {
@@ -171,8 +171,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 회원정보수정 화면1 (마이페이지 버튼)
-        val nav_member_update_page1: TextView = findViewById(R.id.nav_member_update_page1)
-        nav_member_update_page1.setOnClickListener {
+        val navMemberUpdatePage1: TextView = findViewById(R.id.nav_member_update_page1)
+        navMemberUpdatePage1.setOnClickListener {
             if (STATUS == "MEMBER_UPDATE" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -182,8 +182,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 회원정보수정 화면2 (회원정보수정 버튼)
-        val nav_member_update_page2: TextView = findViewById(R.id.nav_member_update_page2)
-        nav_member_update_page2.setOnClickListener {
+        val navMemberUpdatePage2: TextView = findViewById(R.id.nav_member_update_page2)
+        navMemberUpdatePage2.setOnClickListener {
             if (STATUS == "MEMBER_UPDATE" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -193,8 +193,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 포인트현황 화면
-        val nav_member_point_page: TextView = findViewById(R.id.nav_member_point_page)
-        nav_member_point_page.setOnClickListener {
+        val navMemberPointPage: TextView = findViewById(R.id.nav_member_point_page)
+        navMemberPointPage.setOnClickListener {
             if (STATUS == "MEMBER_POINT" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -209,8 +209,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 내 아이디어 화면
-        val nav_member_idea_page: TextView = findViewById(R.id.nav_member_idea_page)
-        nav_member_idea_page.setOnClickListener {
+        val navMemberIdeaPage: TextView = findViewById(R.id.nav_member_idea_page)
+        navMemberIdeaPage.setOnClickListener {
             if (STATUS == "MEMBER_IDEA" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -225,8 +225,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 관심 사업 화면
-        val nav_member_anno_page: TextView = findViewById(R.id.nav_member_anno_page)
-        nav_member_anno_page.setOnClickListener {
+        val navMemberAnnoPage: TextView = findViewById(R.id.nav_member_anno_page)
+        navMemberAnnoPage.setOnClickListener {
             if (STATUS == "MEMBER_ANNO" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -241,8 +241,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 로그인 화면
-        val nav_login_page: TextView = findViewById(R.id.nav_sign_in_page)
-        nav_login_page.setOnClickListener {
+        val navLoginPage: TextView = findViewById(R.id.nav_sign_in_page)
+        navLoginPage.setOnClickListener {
             if (STATUS == "LOGIN" || tabLastStatus == 2131231038) {
                 drawer.closeDrawer(navView)
             } else {
@@ -252,8 +252,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 정보 화면(footer)
-        val nav_about_page: TextView = findViewById(R.id.nav_about_page)
-        nav_about_page.setOnClickListener {
+        val navAboutPage: TextView = findViewById(R.id.nav_about_page)
+        navAboutPage.setOnClickListener {
             if (STATUS == "ABOUT" || tabLastStatus == 2131231027) {
                 drawer.closeDrawer(navView)
             } else {
@@ -263,20 +263,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 로그아웃 버튼
-        val nav_logout_page: TextView = findViewById(R.id.nav_sign_out_page)
-        nav_logout_page.setOnClickListener {
+        val navLogoutPage: TextView = findViewById(R.id.nav_sign_out_page)
+        navLogoutPage.setOnClickListener {
             drawer.closeDrawer(navView)
         }
-
-        var view: View? = this.getCurrentFocus();
-        if (view != null) {
-            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0)
-        }
-
     }
-
-
 
     override fun onBackPressed() {
         STATUS = ""

@@ -11,12 +11,12 @@ class MyIdeaPageAdapter(private var list: MutableList<MyIdeaData>): RecyclerView
 
     inner class ListItemViewHolder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
 
-        var myidea_title: TextView = itemView!!.findViewById(R.id.myIdeaTitle)
-        var myidea_date: TextView = itemView!!.findViewById(R.id.myIdeaDate)
+        var myIdeaTitle: TextView = itemView!!.findViewById(R.id.myIdeaTitle)
+        var myIdeaDate: TextView = itemView!!.findViewById(R.id.myIdeaDate)
 
         fun bind(data: MyIdeaData, position: Int){
-            myidea_title.text = data.getData1()
-            myidea_date.text = data.getData2()
+            myIdeaTitle.text = data.getData1()
+            myIdeaDate.text = data.getData2()
         }
     }
 

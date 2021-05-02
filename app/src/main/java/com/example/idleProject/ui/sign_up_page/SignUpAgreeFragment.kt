@@ -24,8 +24,8 @@ class Sign_up_Agree_Fragement : Fragment() {
         var textView: TextView = root.findViewById(R.id.textview_signup1)
         textView.setMovementMethod(ScrollingMovementMethod())
 
-        var sign_up_agree_bt: Button = root.findViewById(R.id.sign_up_agree_bt)
-        sign_up_agree_bt.setOnClickListener{
+        var signUpAgreeBt: Button = root.findViewById(R.id.sign_up_agree_bt)
+        signUpAgreeBt.setOnClickListener{
             findNavController().navigate(R.id.nav_sign_up_page)
         }
         return root

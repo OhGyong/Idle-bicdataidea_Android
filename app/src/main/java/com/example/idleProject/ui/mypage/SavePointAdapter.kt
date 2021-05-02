@@ -19,8 +19,6 @@ class SavePointAdapter (private var list: MutableList<SavePointData>): RecyclerV
 
         // onBindViewHolder의 역할을 대신한다.
         fun bind(data: SavePointData, position: Int) {
-            Log.d("ListAdapter", "===== ===== ===== ===== bind ===== ===== ===== =====")
-            Log.d("ListAdapter", data.getData1()+" "+data.getData2()+" "+data.getData3())
             savePointContents.text = data.getData1()
             savePoint.text = data.getData2()
             savePointDate.text = data.getData3()
@@ -39,7 +37,6 @@ class SavePointAdapter (private var list: MutableList<SavePointData>): RecyclerV
 
     // ViewHolder의 bind 메소드를 호출한다.
     override fun onBindViewHolder(holder: SavePointAdapter.ListItemViewHolder, position: Int) {
-        Log.d("ListAdapter", "===== ===== ===== ===== onBindViewHolder ===== ===== ===== =====")
         holder.bind(list[position], position)
     }
 

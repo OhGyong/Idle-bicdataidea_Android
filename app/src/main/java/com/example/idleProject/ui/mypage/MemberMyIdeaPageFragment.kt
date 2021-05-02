@@ -11,29 +11,29 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.idleProject.R
 
 class MyIdeaData(
-    private var myidea_title: String? = null,
-    private var myidea_date: String? = null
+    private var myIdeaTitle: String? = null,
+    private var myIdeaDate: String? = null
 ){
     fun getData1(): String? {
-        return myidea_title
+        return myIdeaTitle
     }
 
     fun setData1(name: String) {
-        this.myidea_title = myidea_title
+        this.myIdeaTitle = myIdeaTitle
     }
 
     fun getData2(): String? {
-        return myidea_date
+        return myIdeaDate
     }
 
     fun setData2(address: String) {
-        this.myidea_date = myidea_date
+        this.myIdeaDate = myIdeaDate
     }
 }
 
 class MemberMyIdeaPageFragment : Fragment() {
 
-    var myideaList: ArrayList<MyIdeaData> = arrayListOf(
+    var myIdeaList: ArrayList<MyIdeaData> = arrayListOf(
         MyIdeaData("내 아이디어 제목9", "2021-05-02"),
         MyIdeaData("내 아이디어 제목8", "2021-05-02"),
         MyIdeaData("내 아이디어 제목7", "2021-05-02"),
@@ -45,8 +45,8 @@ class MemberMyIdeaPageFragment : Fragment() {
         MyIdeaData("내 아이디어 제목1", "2021-04-27")
     )
 
-    private lateinit var myideaListAdapter: MyIdeaPageAdapter
-    private var myideaListView: RecyclerView? = null
+    private lateinit var myIdeaListAdapter: MyIdeaPageAdapter
+    private var myIdeaListView: RecyclerView? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,21 +54,19 @@ class MemberMyIdeaPageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_member_myidea_page, container, false)
-        myideaListView = view.findViewById(R.id.myIdeaRecycler)
+        myIdeaListView = view.findViewById(R.id.myIdeaRecycler)
 
         // 아이디어 등록버튼 눌렀을 때 처리, 아이디어 등록 페이지로 이동
-        val idea_regist_bt: Button = view.findViewById<Button>(R.id.myIdeaRegistPageBt)
-        idea_regist_bt.setOnClickListener {
+        val ideaRegistBt: Button = view.findViewById<Button>(R.id.myIdeaRegistPageBt)
+        ideaRegistBt.setOnClickListener {
             findNavController().navigate(R.id.nav_idea_regist_page)
         }
-
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        myideaListAdapter = MyIdeaPageAdapter(myideaList)
-        myideaListView?.adapter = myideaListAdapter
+        myIdeaListAdapter = MyIdeaPageAdapter(myIdeaList)
+        myIdeaListView?.adapter = myIdeaListAdapter
     }
 }

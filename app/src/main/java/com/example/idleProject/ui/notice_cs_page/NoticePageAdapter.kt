@@ -11,12 +11,12 @@ class NoticePageAdapter(private var list: MutableList<NoticeData>): RecyclerView
 
     inner class ListItemViewHolder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
 
-        var notice_num: TextView = itemView!!.findViewById(R.id.notice_num)
-        var notice_title: TextView = itemView!!.findViewById(R.id.notice_title)
+        var noticeNum: TextView = itemView!!.findViewById(R.id.notice_num)
+        var noticeTitle: TextView = itemView!!.findViewById(R.id.notice_title)
 
         fun bind(data: NoticeData, position: Int){
-            notice_num.text = data.getData1()
-            notice_title.text = data.getData2()
+            noticeNum.text = data.getData1()
+            noticeTitle.text = data.getData2()
         }
     }
 

@@ -10,27 +10,27 @@ import com.example.idleProject.R
 
 // 리스트 클래스 선언
 class AnnoData(
-    private var anno_num: String? = null,
-    private var anno_title: String? = null
+    private var annoNum: String? = null,
+    private var annoTitle: String? = null
 ){
     fun getData1(): String? {
-        return anno_num
+        return annoNum
     }
 
     fun setData1(name: String) {
-        this.anno_num = anno_num
+        this.annoNum = annoNum
     }
 
     fun getData2(): String? {
-        return anno_title
+        return annoTitle
     }
 
     fun setData2(address: String) {
-        this.anno_title = anno_title
+        this.annoTitle = annoTitle
     }
 }
 
-class Anno_Page_Fragment : Fragment() {
+class AnnoPageFragment : Fragment() {
 
     // 리스트에 값 삽입
     var annoList: ArrayList<AnnoData> = arrayListOf(

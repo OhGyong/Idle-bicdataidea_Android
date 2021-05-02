@@ -23,8 +23,8 @@ class SignInPageFragment : Fragment() {
         var root = inflater.inflate(R.layout.fragment_sign_in_page, container, false)
 
         // 회원가입 버튼
-        val sign_up_bt: Button = root.findViewById(R.id.sign_up_go_bt)
-        sign_up_bt.setOnClickListener {
+        val signUpBt: Button = root.findViewById(R.id.sign_up_go_bt)
+        signUpBt.setOnClickListener {
             findNavController().navigate(R.id.nav_sign_up_agree_page)
         }
 

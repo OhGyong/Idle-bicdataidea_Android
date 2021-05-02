@@ -115,11 +115,11 @@ class MemberPointPageFragment : Fragment() {
         savePointListView=view.findViewById(R.id.save_point_recycler)
 
         // 처음 들어갈때 사용내역과 적립내역 안보이도록 설정
-        val mypoint_state_layout: ConstraintLayout = view.findViewById(R.id.mypoint_state_layout)
-        val usepointLayout: ConstraintLayout = view.findViewById(R.id.use_point_list_layout)
-        val savepointLayout: ConstraintLayout = view.findViewById(R.id.save_point_list_layout)
-        usepointLayout.visibility = View.GONE
-        savepointLayout.visibility = View.GONE
+        val myPointStateLayout: ConstraintLayout = view.findViewById(R.id.mypoint_state_layout)
+        val usePointLayout: ConstraintLayout = view.findViewById(R.id.use_point_list_layout)
+        val savePointLayout: ConstraintLayout = view.findViewById(R.id.save_point_list_layout)
+        usePointLayout.visibility = View.GONE
+        savePointLayout.visibility = View.GONE
 
         // 현황, 사용내역, 적립내역 버튼 변수 위젯에 연결
         val pointStateTextView:TextView = view.findViewById(R.id.textview_pointstate)
@@ -128,9 +128,9 @@ class MemberPointPageFragment : Fragment() {
 
         // 현황 클릭 시, 현황만 보이도록 / 현황 검정색 나머지 옅은 회색
         pointStateTextView.setOnClickListener {
-            mypoint_state_layout.visibility = View.VISIBLE
-            usepointLayout.visibility = View.GONE
-            savepointLayout.visibility = View.GONE
+            myPointStateLayout.visibility = View.VISIBLE
+            usePointLayout.visibility = View.GONE
+            savePointLayout.visibility = View.GONE
 
             pointStateTextView.setTextColor(Color.BLACK)
             usePointListTextView.setTextColor(0XFFDAD8D8.toInt())
@@ -138,9 +138,9 @@ class MemberPointPageFragment : Fragment() {
         }
         // 사용내역 클릭 시, 사용내역만 보이도록 / 사용내역 검정색 나머지 옅은 회색
         usePointListTextView.setOnClickListener {
-            mypoint_state_layout.visibility = View.GONE
-            usepointLayout.visibility = View.VISIBLE
-            savepointLayout.visibility = View.GONE
+            myPointStateLayout.visibility = View.GONE
+            usePointLayout.visibility = View.VISIBLE
+            savePointLayout.visibility = View.GONE
 
             pointStateTextView.setTextColor(0XFFDAD8D8.toInt())
             usePointListTextView.setTextColor(Color.BLACK)
@@ -148,9 +148,9 @@ class MemberPointPageFragment : Fragment() {
         }
         // 적립내역 클릭 시, 적립내역만 보이도록 / 적립내역 검정색 나머지 옅은 회색
         savePointListTextView.setOnClickListener {
-            mypoint_state_layout.visibility = View.GONE
-            usepointLayout.visibility = View.GONE
-            savepointLayout.visibility = View.VISIBLE
+            myPointStateLayout.visibility = View.GONE
+            usePointLayout.visibility = View.GONE
+            savePointLayout.visibility = View.VISIBLE
 
             pointStateTextView.setTextColor(0XFFDAD8D8.toInt())
             usePointListTextView.setTextColor(0XFFDAD8D8.toInt())

@@ -12,53 +12,53 @@ import com.example.idleProject.R
 
 
 class RankData(
-    private var member_rank: String? = null,
-    private var member_name: String? = null,
-    private var save_point: String? = null
+    private var memberRank: String? = null,
+    private var memberName: String? = null,
+    private var savePoint: String? = null
 ) {
     fun getData1(): String? {
-        return member_rank
+        return memberRank
     }
 
     fun setData1(name: String) {
-        this.member_rank = member_rank
+        this.memberRank = memberRank
     }
 
     fun getData2(): String? {
-        return member_name
+        return memberName
     }
 
     fun setData2(address: String) {
-        this.member_name = member_name
+        this.memberName = memberName
     }
 
     fun getData3(): String? {
-        return save_point
+        return savePoint
     }
 
     fun setData3(type: String) {
-        this.save_point = save_point
+        this.savePoint = savePoint
     }
 }
 
 class IdeaData(
-    private var idea_title: String? = null,
-    private var idea_date: String? = null
+    private var ideaTitle: String? = null,
+    private var ideaDate: String? = null
 ) {
     fun getData1(): String? {
-        return idea_title
+        return ideaTitle
     }
 
     fun setData1(name: String) {
-        this.idea_title = idea_title
+        this.ideaTitle = ideaTitle
     }
 
     fun getData2(): String? {
-        return idea_date
+        return ideaDate
     }
 
     fun setData2(address: String) {
-        this.idea_date = idea_date
+        this.ideaDate = ideaDate
     }
 }
 
@@ -107,11 +107,10 @@ class IdeaPageFragment : Fragment() {
         ideaListView=root.findViewById(R.id.ideaRecyler)
 
         // 아이디어 등록버튼 눌렀을 때 처리, 아이디어 등록 페이지로 이동
-        val idea_regist_bt: Button = root.findViewById<Button>(R.id.ideaRegistPageBt)
-        idea_regist_bt.setOnClickListener {
+        val ideaRegistBt: Button = root.findViewById<Button>(R.id.ideaRegistPageBt)
+        ideaRegistBt.setOnClickListener {
             findNavController().navigate(R.id.nav_idea_regist_page)
         }
-
         return root
     }
 

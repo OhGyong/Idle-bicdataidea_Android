@@ -11,8 +11,6 @@ import com.example.idleProject.R
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -21,17 +19,16 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
         // 홈에서 아이디어 플랫폼으로 이동하는 뷰
-        val homeToidea: ConstraintLayout = root.findViewById(R.id.homeToidea_bt)
-        homeToidea.setOnClickListener {
+        val homeToIdea: ConstraintLayout = root.findViewById(R.id.homeToidea_bt)
+        homeToIdea.setOnClickListener {
             findNavController().navigate(R.id.nav_idea_page)
         }
 
         // 홈에서 공고정보 게시판으로 이동하는 뷰
-        val homeToanno: ConstraintLayout = root.findViewById(R.id.homeToanno_bt)
-        homeToanno.setOnClickListener {
+        val homeToAnno: ConstraintLayout = root.findViewById(R.id.homeToanno_bt)
+        homeToAnno.setOnClickListener {
             findNavController().navigate(R.id.nav_anno_page)
         }
-
         return root
     }
 }

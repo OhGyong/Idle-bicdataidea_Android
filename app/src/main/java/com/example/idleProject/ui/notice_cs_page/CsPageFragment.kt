@@ -11,23 +11,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.idleProject.R
 
 class CsData(
-    private var cs_num: String? = null,
-    private var cs_title: String? = null
+    private var csNum: String? = null,
+    private var csTitle: String? = null
 ){
     fun getData1(): String? {
-        return cs_num
+        return csNum
     }
 
     fun setData1(name: String) {
-        this.cs_num = cs_num
+        this.csNum = csNum
     }
 
     fun getData2(): String? {
-        return cs_title
+        return csTitle
     }
 
     fun setData2(address: String) {
-        this.cs_title = cs_title
+        this.csTitle = csTitle
     }
 }
 
@@ -57,11 +57,10 @@ class CsPageFragment : Fragment() {
         csListView=view.findViewById(R.id.csRecycler)
 
         //문의게시판 등록버튼 눌렀을 때
-        val cs_regist_page_bt: Button = view.findViewById<Button>(R.id.cs_regist_page_bt)
-        cs_regist_page_bt.setOnClickListener {
+        val csRegistPageBt: Button = view.findViewById<Button>(R.id.cs_regist_page_bt)
+        csRegistPageBt.setOnClickListener {
             findNavController().navigate(R.id.nav_cs_regist_page)
         }
-
         return view
     }
 

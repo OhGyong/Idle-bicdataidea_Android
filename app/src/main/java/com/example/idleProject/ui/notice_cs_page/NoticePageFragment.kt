@@ -9,23 +9,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.idleProject.R
 
 class NoticeData(
-    private var notice_num: String? = null,
-    private var notice_title: String? = null
+    private var noticeNum: String? = null,
+    private var noticeTitle: String? = null
 ){
     fun getData1(): String? {
-        return notice_num
+        return noticeNum
     }
 
     fun setData1(name: String) {
-        this.notice_num = notice_num
+        this.noticeNum = noticeNum
     }
 
     fun getData2(): String? {
-        return notice_title
+        return noticeTitle
     }
 
     fun setData2(address: String) {
-        this.notice_title = notice_title
+        this.noticeTitle = noticeTitle
     }
 }
 
@@ -52,9 +52,9 @@ class NoticePageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        val view: View = inflater.inflate(R.layout.fragment_notice_page, container, false)
-        noticeListView = view.findViewById(R.id.noticeRecycler)
-        return view
+        val root: View = inflater.inflate(R.layout.fragment_notice_page, container, false)
+        noticeListView = root.findViewById(R.id.noticeRecycler)
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

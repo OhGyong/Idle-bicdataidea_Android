@@ -14,17 +14,15 @@ class RankAdapter (private var list: MutableList<RankData>): RecyclerView.Adapte
     // inner class로 ViewHolder 정의
     inner class ListItemViewHolder(itemView: View?): RecyclerView.ViewHolder(itemView!!) {
 
-        var member_rank: TextView = itemView!!.findViewById(R.id.member_rank)
-        var member_name: TextView = itemView!!.findViewById(R.id.member_rank_name)
-        var save_point: TextView = itemView!!.findViewById(R.id.member_save_point)
+        var memberRank: TextView = itemView!!.findViewById(R.id.member_rank)
+        var memberName: TextView = itemView!!.findViewById(R.id.member_rank_name)
+        var savePoint: TextView = itemView!!.findViewById(R.id.member_save_point)
 
         // onBindViewHolder의 역할을 대신한다.
         fun bind(data: RankData, position: Int) {
-            Log.d("ListAdapter", "===== ===== ===== ===== bind ===== ===== ===== =====")
-            Log.d("ListAdapter", data.getData1()+" "+data.getData2()+" "+data.getData3())
-            member_rank.text = data.getData1()
-            member_name.text = data.getData2()
-            save_point.text = data.getData3()
+            memberRank.text = data.getData1()
+            memberName.text = data.getData2()
+            savePoint.text = data.getData3()
         }
     }
 
@@ -40,7 +38,6 @@ class RankAdapter (private var list: MutableList<RankData>): RecyclerView.Adapte
 
     // ViewHolder의 bind 메소드를 호출한다.
     override fun onBindViewHolder(holder: RankAdapter.ListItemViewHolder, position: Int) {
-        Log.d("ListAdapter", "===== ===== ===== ===== onBindViewHolder ===== ===== ===== =====")
         holder.bind(list[position], position)
     }
 

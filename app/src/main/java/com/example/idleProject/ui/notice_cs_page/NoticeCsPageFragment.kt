@@ -12,7 +12,7 @@ import com.example.idleProject.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class Notice_Cs_Page_Fragment : Fragment() {
+class NoticeCsPageFragment : Fragment() {
 
     private lateinit var viewPager2: ViewPager2
 
@@ -44,7 +44,7 @@ class Notice_Cs_Page_Fragment : Fragment() {
         viewPager2.adapter = Notice_Cs_ViewPageAdapter(this)
 
         // 타이틀 이름
-        val notice_cs_title: TextView = root.findViewById(R.id.notice_cs_title)
+        val noticeCsTitle: TextView = root.findViewById(R.id.notice_cs_title)
 
         val tabs: TabLayout = root.findViewById(R.id.tabs_notice_cs)
         TabLayoutMediator(tabs, viewPager2) { tab, position ->
@@ -55,8 +55,8 @@ class Notice_Cs_Page_Fragment : Fragment() {
                 //선택한 항목으로 타이틀 이름 변경 및 선택한 항목으로 이동
                 viewPager2.setCurrentItem(index)
                 when(index){
-                    1-> notice_cs_title.setText("문의게시판")
-                    else-> notice_cs_title.setText("공지사항")
+                    1-> noticeCsTitle.setText("문의게시판")
+                    else-> noticeCsTitle.setText("공지사항")
 
                 }
                 // 선택한 항목의 탭 색 변경
@@ -103,8 +103,8 @@ class Notice_Cs_Page_Fragment : Fragment() {
                         tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                         (tab.customView as TextView).setTextColor(Color.WHITE)
                         when((tab.customView as TextView).text){
-                            "공지사항"->notice_cs_title.setText("공지사항")
-                            "문의게시판"->notice_cs_title.setText("문의게시판")
+                            "공지사항"->noticeCsTitle.setText("공지사항")
+                            "문의게시판"->noticeCsTitle.setText("문의게시판")
                         }
                     }
                 }

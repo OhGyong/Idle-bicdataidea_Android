@@ -11,7 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.idleProject.R
 
-class Sign_up_Page_Fragment : Fragment() {
+class SignUpPageFragment : Fragment() {
 
     @SuppressLint("ResourceType")
     override fun onCreateView(

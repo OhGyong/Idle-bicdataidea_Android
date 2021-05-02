@@ -11,18 +11,18 @@ class AnnoPageAdapter(private var list: MutableList<AnnoData>): RecyclerView.Ada
 
     inner class ListItemViewHolder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
 
-        var anno_num: TextView = itemView!!.findViewById(R.id.anno_num)
-        var anno_title: TextView = itemView!!.findViewById(R.id.anno_title)
+        var annoNum: TextView = itemView!!.findViewById(R.id.anno_num)
+        var annoTitle: TextView = itemView!!.findViewById(R.id.anno_title)
 
         fun bind(data: AnnoData, position: Int){
-            anno_num.text=data.getData1()
-            anno_title.text=data.getData2()
+            annoNum.text=data.getData1()
+            annoTitle.text=data.getData2()
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListItemViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_anno, parent, false)
-        return ListItemViewHolder(view)
+        val root = LayoutInflater.from(parent.context).inflate(R.layout.recycler_anno, parent, false)
+        return ListItemViewHolder(root)
     }
 
     override fun getItemCount(): Int {

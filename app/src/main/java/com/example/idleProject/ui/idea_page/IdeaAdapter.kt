@@ -19,8 +19,6 @@ class IdeaAdapter (private var list: MutableList<IdeaData>): RecyclerView.Adapte
 
         // onBindViewHolder의 역할을 대신한다.
         fun bind(data: IdeaData, position: Int) {
-            Log.d("ListAdapter", "===== ===== ===== ===== bind ===== ===== ===== =====")
-            Log.d("ListAdapter", data.getData1()+" "+data.getData2())
             ideaTitle.text = data.getData1()
             ideaDate.text = data.getData2()
         }
@@ -38,7 +36,6 @@ class IdeaAdapter (private var list: MutableList<IdeaData>): RecyclerView.Adapte
 
     // ViewHolder의 bind 메소드를 호출한다.
     override fun onBindViewHolder(holder: IdeaAdapter.ListItemViewHolder, position: Int) {
-        Log.d("ListAdapter", "===== ===== ===== ===== onBindViewHolder ===== ===== ===== =====")
         holder.bind(list[position], position)
     }
 
