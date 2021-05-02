@@ -36,9 +36,8 @@ https://user-images.githubusercontent.com/52282493/116803593-1e5dd300-ab54-11eb-
 ```
         var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         (binding.ideaRegistScrollview).setOnClickListener {
-            imm.hideSoftInputFromWindow((binding.ideaRegistTitle).getWindowToken(), 0)
+            imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
         }
-
 ```
 
 해결

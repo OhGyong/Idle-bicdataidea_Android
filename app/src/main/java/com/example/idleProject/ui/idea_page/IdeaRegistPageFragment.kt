@@ -60,9 +60,10 @@ class IdeaRegistPageFragment: Fragment() {
             mEditor!!.setBlockquote()
         }
 
+        // 키보드 내리기
         var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        (binding.ideaRegistScrollview).setOnClickListener {
-            imm.hideSoftInputFromWindow((binding.ideaRegistTitle).getWindowToken(), 0)
+        (binding.ideaPageLayout).setOnClickListener {
+            imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
         }
 
         return binding.root
