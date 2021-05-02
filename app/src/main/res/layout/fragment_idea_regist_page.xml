@@ -9,6 +9,7 @@
         android:background="@color/white">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/idea_regist_scrollview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -179,7 +180,7 @@
                     app:layout_constraintTop_toTopOf="@+id/view_contact3" />
 
                 <EditText
-                    android:id="@+id/edittext_contact2"
+                    android:id="@+id/ideaRegistTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -203,8 +204,8 @@
                     android:layout_marginEnd="10dp"
                     android:background="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/edittext_contact2"
-                    app:layout_constraintTop_toBottomOf="@+id/edittext_contact2" />
+                    app:layout_constraintStart_toStartOf="@+id/ideaRegistTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/ideaRegistTitle" />
 
                 <TextView
                     android:id="@+id/textview_contact4"

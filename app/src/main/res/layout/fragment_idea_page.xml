@@ -181,7 +181,7 @@
 
             <Button
                 android:id="@+id/ideaRegistPageBt"
-                android:layout_width="116dp"
+                android:layout_width="120dp"
                 android:layout_height="35sp"
                 android:background="@color/design_default_color_primary"
                 android:text="아이디어 등록하기"
