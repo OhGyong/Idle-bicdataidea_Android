@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.ScrollView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.idleProject.R
@@ -59,8 +60,10 @@ class IdeaRegistPageFragment: Fragment() {
             mEditor!!.setBlockquote()
         }
 
-
-
+        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        (binding.ideaRegistScrollview).setOnClickListener {
+            imm.hideSoftInputFromWindow((binding.ideaRegistTitle).getWindowToken(), 0)
+        }
 
         return binding.root
     }
