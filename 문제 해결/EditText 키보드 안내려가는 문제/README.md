@@ -11,5 +11,6 @@ EditText 등 키보드가 올라온 상태에서 다른 레이아웃을 클릭�
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0)
         }
 `</br>
+
 https://user-images.githubusercontent.com/52282493/116803593-1e5dd300-ab54-11eb-8754-2987d2144871.mp4
 
