@@ -357,6 +357,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/white"
+                android:nestedScrollingEnabled="false"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/use_list_chart">
@@ -460,6 +461,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/white"
+                android:nestedScrollingEnabled="false"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/save_list_chart">
