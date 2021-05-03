@@ -19,9 +19,9 @@ class MemberUpdatePageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        val view: View = inflater.inflate(R.layout.fragment_member_update_page, container, false)
+        val root: View = inflater.inflate(R.layout.fragment_member_update_page, container, false)
 
-        val spinner: Spinner = view.findViewById(R.id.sign_up_state)
+        val spinner: Spinner = root.findViewById(R.id.sign_up_state)
         ArrayAdapter.createFromResource(
             requireContext(),
             R.array.state_array,
@@ -34,10 +34,10 @@ class MemberUpdatePageFragment : Fragment() {
 
         // 키보드 내리기
         var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        (view.findViewById<ConstraintLayout>(R.id.member_upate_layout)).setOnClickListener {
-            imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
+        (root.findViewById<ConstraintLayout>(R.id.member_update_layout)).setOnClickListener {
+            imm.hideSoftInputFromWindow(root?.getWindowToken(), 0)
         }
 
-        return view
+        return root
     }
 }

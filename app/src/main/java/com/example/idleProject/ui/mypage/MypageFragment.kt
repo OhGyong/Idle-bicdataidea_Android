@@ -1,12 +1,15 @@
 package com.example.idleProject.ui.mypage
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.example.idleProject.R
 import com.google.android.material.tabs.TabLayout
@@ -167,6 +170,13 @@ class MypageFragment : Fragment() {
                     }
                 }
             })
+
+        // 키보드 내리기
+        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        (root.findViewById<ConstraintLayout>(R.id.mypage_header)).setOnClickListener {
+            imm.hideSoftInputFromWindow(root?.getWindowToken(), 0)
+        }
+
         return root
     }
 }

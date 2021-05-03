@@ -1,9 +1,12 @@
 package com.example.idleProject.ui.notice_cs_page
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idleProject.R
@@ -32,7 +35,7 @@ class NoticeData(
 class NoticePageFragment : Fragment() {
 
     var noticeList: ArrayList<NoticeData> = arrayListOf(
-        NoticeData("9", "공지사항 제목9"),
+        NoticeData("9", "글자 크기 14인TextView의 길이가 어느정도인지 테스트하는 중 입니다."),
         NoticeData("8", "공지사항 제목8"),
         NoticeData("7", "공지사항 제목7"),
         NoticeData("6", "공지사항 제목6"),
@@ -54,6 +57,13 @@ class NoticePageFragment : Fragment() {
         super.onCreateView(inflater, container, savedInstanceState)
         val root: View = inflater.inflate(R.layout.fragment_notice_page, container, false)
         noticeListView = root.findViewById(R.id.noticeRecycler)
+
+        // 키보드 내리기
+        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        (root.findViewById<ConstraintLayout>(R.id.notice_page_layout)).setOnClickListener {
+            imm.hideSoftInputFromWindow(root?.getWindowToken(), 0)
+        }
+
         return root
     }
 

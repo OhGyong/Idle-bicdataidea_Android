@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.idleProject.R
 
-class Sign_up_Agree_Fragement : Fragment() {
+class SignUpAgreeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

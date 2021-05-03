@@ -28,17 +28,20 @@
 
         <TextView
             android:id="@+id/interAnnotitle"
-            android:layout_width="@dimen/recycler_title"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
             android:textColor="@color/black"
             android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/view8"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/interAnnoNum"
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
+            android:id="@+id/view8"
             android:layout_width="match_parent"
             android:layout_height="2px"
             android:layout_marginTop="@dimen/recycler_line_margin"

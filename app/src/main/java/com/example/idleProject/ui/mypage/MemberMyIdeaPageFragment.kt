@@ -1,11 +1,14 @@
 package com.example.idleProject.ui.mypage
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idleProject.R
@@ -34,7 +37,7 @@ class MyIdeaData(
 class MemberMyIdeaPageFragment : Fragment() {
 
     var myIdeaList: ArrayList<MyIdeaData> = arrayListOf(
-        MyIdeaData("내 아이디어 제목9", "2021-05-02"),
+        MyIdeaData("글자 크기 14인TextView의 길이가 어느정도인지 테스트하는 중 입니다.", "2021-05-02"),
         MyIdeaData("내 아이디어 제목8", "2021-05-02"),
         MyIdeaData("내 아이디어 제목7", "2021-05-02"),
         MyIdeaData("내 아이디어 제목6", "2021-04-29"),
@@ -53,15 +56,22 @@ class MemberMyIdeaPageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_member_myidea_page, container, false)
-        myIdeaListView = view.findViewById(R.id.myIdeaRecycler)
+        val root: View = inflater.inflate(R.layout.fragment_member_myidea_page, container, false)
+        myIdeaListView = root.findViewById(R.id.myIdeaRecycler)
 
         // 아이디어 등록버튼 눌렀을 때 처리, 아이디어 등록 페이지로 이동
-        val ideaRegistBt: Button = view.findViewById<Button>(R.id.myIdeaRegistPageBt)
+        val ideaRegistBt: Button = root.findViewById<Button>(R.id.myIdeaRegistPageBt)
         ideaRegistBt.setOnClickListener {
             findNavController().navigate(R.id.nav_idea_regist_page)
         }
-        return view
+
+        // 키보드 내리기
+        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        (root.findViewById<ConstraintLayout>(R.id.myidea_layout)).setOnClickListener {
+            imm.hideSoftInputFromWindow(root?.getWindowToken(), 0)
+        }
+
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

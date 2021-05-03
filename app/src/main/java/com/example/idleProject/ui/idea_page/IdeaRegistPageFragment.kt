@@ -62,7 +62,7 @@ class IdeaRegistPageFragment: Fragment() {
 
         // 키보드 내리기
         var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        (binding.ideaPageLayout).setOnClickListener {
+        (binding.ideaRegistPageLayout).setOnClickListener {
             imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
         }
 

@@ -28,6 +28,10 @@ API 전송 시 정수값 이외에 표현 값들을 같이 넘겨주면 업데�
 
 **2021**</br>
 
+**05-03**</br>
+- `MainActivity 바인딩해주자`
+- 아이디어 리스트 제목 글자 수 지정, constraintlayout으로 반응형 
+
 **04-30**</br>
 - 모든 화면 반응형 마무리(app:layout_constraintWidth_percent 사용)
 

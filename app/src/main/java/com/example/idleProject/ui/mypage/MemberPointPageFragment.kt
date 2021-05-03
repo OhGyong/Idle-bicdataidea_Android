@@ -74,7 +74,7 @@ class SavePointData(
 class MemberPointPageFragment : Fragment() {
 
     var usePointList: ArrayList<UsePointData> = arrayListOf(
-        UsePointData("상품권 교환9", "1000", "2021-04-29"),
+        UsePointData("글자 크기 14인 TextView의 길이가 어느정도인지 테스트하는 중 입니다.", "1000", "2021-04-29"),
         UsePointData("상품권 교환8", "5000", "2021-04-29"),
         UsePointData("상품권 교환7", "10000", "2021-04-29"),
         UsePointData("상품권 교환6", "1000", "2021-04-28"),
@@ -86,7 +86,7 @@ class MemberPointPageFragment : Fragment() {
     )
 
     var savePointList: ArrayList<SavePointData> = arrayListOf(
-        SavePointData("아이디어 등록9", "1000", "2021-04-29"),
+        SavePointData("글자 크기 14인 TextView의 길이가 어느정도인지 테스트하는 중 입니다.", "1000", "2021-04-29"),
         SavePointData("아이디어 등록8", "1000", "2021-04-29"),
         SavePointData("아이디어 등록7", "1000", "2021-04-29"),
         SavePointData("아이디어 등록6", "1000", "2021-04-28"),

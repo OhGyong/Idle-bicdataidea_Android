@@ -7,6 +7,7 @@
     android:background="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myidea_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -93,12 +94,13 @@
                 android:id="@+id/textView6"
                 android:layout_width="@dimen/recycler_three_word_w"
                 android:layout_height="@dimen/recycler_word_h"
-                android:layout_marginEnd="20dp"
                 android:text="작성일"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.92"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <View

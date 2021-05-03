@@ -1,12 +1,15 @@
 package com.example.idleProject.ui.notice_cs_page
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.example.idleProject.R
 import com.google.android.material.tabs.TabLayout
@@ -21,6 +24,7 @@ class NoticeCsPageFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
             it.getInt(
                 "index"
@@ -28,7 +32,6 @@ class NoticeCsPageFragment : Fragment() {
             index = it.getInt("index")
         }
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,7 +44,7 @@ class NoticeCsPageFragment : Fragment() {
         viewPager2 = root.findViewById(R.id.viewPager2_notice_cs)
 
         // 3. viewPager2 뷰 객체에 어댑터 적용하기
-        viewPager2.adapter = Notice_Cs_ViewPageAdapter(this)
+        viewPager2.adapter = NoticeCsViewPageAdapter(this)
 
         // 타이틀 이름
         val noticeCsTitle: TextView = root.findViewById(R.id.notice_cs_title)
@@ -54,9 +57,9 @@ class NoticeCsPageFragment : Fragment() {
 
                 //선택한 항목으로 타이틀 이름 변경 및 선택한 항목으로 이동
                 viewPager2.setCurrentItem(index)
-                when(index){
-                    1-> noticeCsTitle.setText("문의게시판")
-                    else-> noticeCsTitle.setText("공지사항")
+                when (index) {
+                    1 -> noticeCsTitle.setText("문의게시판")
+                    else -> noticeCsTitle.setText("공지사항")
 
                 }
                 // 선택한 항목의 탭 색 변경
@@ -102,13 +105,21 @@ class NoticeCsPageFragment : Fragment() {
                     if (tab?.customView is TextView) {
                         tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                         (tab.customView as TextView).setTextColor(Color.WHITE)
-                        when((tab.customView as TextView).text){
-                            "공지사항"->noticeCsTitle.setText("공지사항")
-                            "문의게시판"->noticeCsTitle.setText("문의게시판")
+                        when ((tab.customView as TextView).text) {
+                            "공지사항" -> noticeCsTitle.setText("공지사항")
+                            "문의게시판" -> noticeCsTitle.setText("문의게시판")
                         }
                     }
                 }
             })
+
+        // 키보드 내리기
+        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        (root.findViewById<ConstraintLayout>(R.id.notice_cs_header)).setOnClickListener {
+            imm.hideSoftInputFromWindow(root?.getWindowToken(), 0)
+        }
+
+
         return root
     }
 }

@@ -1,10 +1,13 @@
 package com.example.idleProject.ui.mypage
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idleProject.R
 
@@ -33,7 +36,7 @@ class InterAnnoData(
 class MemberInterAnnopageFragment : Fragment() {
 
     var interAnnoList: ArrayList<InterAnnoData> = arrayListOf(
-        InterAnnoData("9", "관심사업 제목9"),
+        InterAnnoData("9", "글자 크기 14인 TextView의 길이가 어느정도인지 테스트하는 중 입니다."),
         InterAnnoData("8", "관심사업 제목8"),
         InterAnnoData("7", "관심사업 제목7"),
         InterAnnoData("6", "관심사업 제목6"),
@@ -52,14 +55,20 @@ class MemberInterAnnopageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_member_interanno_page, container, false)
-        interAnnoListView = view.findViewById(R.id.interAnnoRecycler)
-        return view
+        val root: View = inflater.inflate(R.layout.fragment_member_interanno_page, container, false)
+        interAnnoListView = root.findViewById(R.id.interAnnoRecycler)
+
+        // 키보드 내리기
+        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        (root.findViewById<ConstraintLayout>(R.id.interanno_layout)).setOnClickListener {
+            imm.hideSoftInputFromWindow(root?.getWindowToken(), 0)
+        }
+
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         interAnnoListAdapter = InterAnnoPageAdapter(interAnnoList)
         interAnnoListView?.adapter = interAnnoListAdapter
     }

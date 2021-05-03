@@ -1,10 +1,13 @@
 package com.example.idleProject.ui.contact_page
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import com.example.idleProject.R
 import com.example.idleProject.databinding.FragmentContactPageBinding
@@ -52,6 +55,12 @@ class ContactPageFragment : Fragment() {
         }
         binding.actionSubScription.setOnClickListener {
             mEditor!!.setBlockquote()
+        }
+
+        // 키보드 내리기
+        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        (binding.contactLayout).setOnClickListener {
+            imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
         }
 
         return binding.root

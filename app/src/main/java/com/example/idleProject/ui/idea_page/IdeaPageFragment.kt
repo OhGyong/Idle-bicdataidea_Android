@@ -1,10 +1,13 @@
 package com.example.idleProject.ui.idea_page
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -111,6 +114,13 @@ class IdeaPageFragment : Fragment() {
         ideaRegistBt.setOnClickListener {
             findNavController().navigate(R.id.nav_idea_regist_page)
         }
+
+        // 키보드 내리기
+        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        (root.findViewById<ConstraintLayout>(R.id.idea_page_layout)).setOnClickListener {
+            imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
+        }
+
         return root
     }
 

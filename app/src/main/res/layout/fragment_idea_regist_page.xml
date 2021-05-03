@@ -9,7 +9,7 @@
         android:background="@color/white">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/idea_page_layout"
+            android:id="@+id/idea_regist_page_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 

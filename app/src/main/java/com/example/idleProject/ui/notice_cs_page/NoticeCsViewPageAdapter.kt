@@ -3,7 +3,7 @@ package com.example.idleProject.ui.notice_cs_page
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class Notice_Cs_ViewPageAdapter(fragmentActivity: NoticeCsPageFragment) :
+class NoticeCsViewPageAdapter(fragmentActivity: NoticeCsPageFragment) :
     FragmentStateAdapter(fragmentActivity) {
     companion object {
         // 페이지 개수를 정적 변수로 선언

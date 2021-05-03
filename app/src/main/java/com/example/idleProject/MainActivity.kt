@@ -23,6 +23,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var imm: InputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+        // 헤더 레이아웃 클릭시 키보드 내리기
+        var titleLayout: ConstraintLayout = findViewById(R.id.title_name)
+        titleLayout.setOnClickListener {
+            imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+        }
+
         // nav_drawer
         val drawer: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
@@ -36,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         // 타이틀 홈 화면 이동
         val main1: TextView = findViewById(R.id.main1)
         main1.setOnClickListener {
+            imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
             if (tabLastStatus == 2131231033) {
             } else {
                 findNavController(R.id.nav_host_fragment).navigate(R.id.nav_home, Bundle().apply {
@@ -45,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
         val main2: TextView = findViewById(R.id.main2)
         main2.setOnClickListener {
+            imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
             if (tabLastStatus == 2131231033) {
             } else {
                 findNavController(R.id.nav_host_fragment).navigate(R.id.nav_home, Bundle().apply {
@@ -54,6 +65,7 @@ class MainActivity : AppCompatActivity() {
         }
         val navHeader = navView.getHeaderView(0)
         navHeader.findViewById<LinearLayout>(R.id.nav_header).setOnClickListener {
+            imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
             if (STATUS == "HOME" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -67,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         // nav_drawer 열기
         val navIcon: ImageView = findViewById(R.id.nav_icon)
         navIcon.setOnClickListener {
+            imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
             drawer.openDrawer(navView)
         }
 
