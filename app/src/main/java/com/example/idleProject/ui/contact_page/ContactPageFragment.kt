@@ -19,46 +19,43 @@ class ContactPageFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        var binding = DataBindingUtil.inflate<FragmentContactPageBinding>(inflater, R.layout.fragment_contact_page, container, false)
+    ): View {
+        val binding = DataBindingUtil.inflate<FragmentContactPageBinding>(inflater, R.layout.fragment_contact_page, container, false)
 
-        var mEditor = binding.editorContactRegist
+        val mEditor = binding.editorContactRegist
 
         mEditor.setPlaceholder("내용을 작성하세요")
 
         binding.actionUndo.setOnClickListener {
-            mEditor!!.undo()
+            mEditor.undo() // 되돌리기
         }
         binding.actionRedo.setOnClickListener {
-            mEditor!!.redo()
+            mEditor.redo() // 되돌리기 취소
         }
         binding.actionBold.setOnClickListener {
-            mEditor!!.setBold()
+            mEditor.setBold() // 진하게
         }
         binding.actionUnderline.setOnClickListener {
-            mEditor!!.setUnderline()
+            mEditor.setUnderline() // 밑줄
         }
         binding.actionItalic.setOnClickListener {
-            mEditor!!.setItalic()
+            mEditor.setItalic() // 기울임
         }
         binding.actionHead.setOnClickListener {
-            mEditor!!.setHeading(1)
-        }
-        binding.actionHead.setOnClickListener {
-            mEditor!!.setHeading(1)
+            mEditor.setHeading(1) // 헤더
         }
         binding.actionStrikethrough.setOnClickListener {
-            mEditor!!.setStrikeThrough()
+            mEditor.setStrikeThrough() // 글씨 가운데 줄 긋기
         }
         binding.actionListBullet.setOnClickListener {
-            mEditor!!.setBullets()
+            mEditor.setBullets() // 들여쓰기 점
         }
         binding.actionSubScription.setOnClickListener {
-            mEditor!!.setBlockquote()
+            mEditor.setBlockquote() // 들여쓰기
         }
 
         // 키보드 내리기
-        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        val imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         (binding.contactLayout).setOnClickListener {
             imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
         }

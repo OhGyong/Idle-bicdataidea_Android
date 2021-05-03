@@ -24,6 +24,7 @@
             app:headerLayout="@layout/nav_header_main">
 
             <LinearLayout
+                android:id="@+id/menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
