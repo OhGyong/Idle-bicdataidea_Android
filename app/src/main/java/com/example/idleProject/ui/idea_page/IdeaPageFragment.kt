@@ -78,7 +78,7 @@ class IdeaPageFragment : Fragment() {
     )
 
     var ideaList: ArrayList<IdeaData> = arrayListOf(
-        IdeaData("아이디어 제안 1", "2021-04-27"),
+        IdeaData("아이디어 제안 1asdasdasdasdasdasdasdasdasdasdasdsadasdasd", "2021-04-27"),
         IdeaData("아이디어 제안 2", "2021-04-27"),
         IdeaData("아이디어 제안 3", "2021-04-28"),
         IdeaData("아이디어 제안 4", "2021-04-28"),
