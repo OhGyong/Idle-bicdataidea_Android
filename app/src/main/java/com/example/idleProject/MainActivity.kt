@@ -10,8 +10,11 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat.getSystemService
+import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
+import com.example.idleProject.databinding.ActivityMainBinding
+import com.example.idleProject.databinding.FragmentContactPageBinding
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -21,8 +24,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
+        // 바인딩 선언
+        var binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
+        //키보드를 내리기 위한 설정
         var imm: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
@@ -38,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         // 이동한 nav_page 값 가져오기
         findNavController(R.id.nav_host_fragment).addOnDestinationChangedListener { controller, destination, arguments ->
-            Log.e("dest", "${destination.id}")
             tabLastStatus = destination.id
         }
 
@@ -63,6 +68,7 @@ class MainActivity : AppCompatActivity() {
                 STATUS = "HOME"
             }
         }
+        // nav의 헤더를 따로 불러줘야함
         val navHeader = navView.getHeaderView(0)
         navHeader.findViewById<LinearLayout>(R.id.nav_header).setOnClickListener {
             imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
@@ -87,8 +93,7 @@ class MainActivity : AppCompatActivity() {
         * 각 페이지 fragment 띄우기
         * */
         // 홈 화면
-        val navHome: TextView = findViewById(R.id.nav_home)
-        navHome.setOnClickListener {
+        (binding.navHome).setOnClickListener {
             // nav_host_fragment -> layout/content_main.xml 파일(메인에 프래그먼트 띄우는 부분)
             if (STATUS == "HOME" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
@@ -100,8 +105,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 아이디어 플랫폼 화면
-        val navIdeaPage: TextView = findViewById(R.id.nav_idea_page)
-        navIdeaPage.setOnClickListener {
+        (binding.navIdeaPage).setOnClickListener {
             if (STATUS == "IDEA" || tabLastStatus == 2131231037) {
                 drawer.closeDrawer(navView)
             } else {
@@ -114,8 +118,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 공고정보 게시판 화면
-        val navAnnoPage: TextView = findViewById(R.id.nav_anno_page)
-        navAnnoPage.setOnClickListener {
+        (binding.navAnnoPage).setOnClickListener {
             if (STATUS == "ANNO" || tabLastStatus == 2131231028) {
                 drawer.closeDrawer(navView)
             } else {
@@ -128,8 +131,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 공지사항 화면1 (게시판 버튼)
-        val navNoticePage1: TextView = findViewById(R.id.nav_notice_page1)
-        navNoticePage1.setOnClickListener {
+        (binding.navNoticePage1).setOnClickListener {
             if (STATUS == "NOTICE" || tabLastStatus == 2131231046) {
                 drawer.closeDrawer(navView)
             } else {
@@ -143,8 +145,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 공지사항 화면2 (공지사항 버튼)
-        val navNoticePage2: TextView = findViewById(R.id.nav_notice_page2)
-        navNoticePage2.setOnClickListener {
+        (binding.navNoticePage2).setOnClickListener {
             if (STATUS == "NOTICE" || tabLastStatus == 2131231034) {
                 drawer.closeDrawer(navView)
             } else {
@@ -158,8 +159,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 문의게시판 화면
-        val navCsPage: TextView = findViewById(R.id.nav_cs_page)
-        navCsPage.setOnClickListener {
+        (binding.navCsPage).setOnClickListener {
             if (STATUS == "CS" || tabLastStatus == 2131231034) {
                 drawer.closeDrawer(navView)
             } else {
@@ -173,8 +173,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 고객센터 화면
-        val navContactPage: TextView = findViewById(R.id.nav_contact_page)
-        navContactPage.setOnClickListener {
+        (binding.navContactPage).setOnClickListener {
             if (STATUS == "CONTACT" || tabLastStatus == 2131231017) {
                 drawer.closeDrawer(navView)
             } else {
@@ -185,7 +184,7 @@ class MainActivity : AppCompatActivity() {
         }
         // 회원정보수정 화면1 (마이페이지 버튼)
         val navMemberUpdatePage1: TextView = findViewById(R.id.nav_member_update_page1)
-        navMemberUpdatePage1.setOnClickListener {
+        (binding.navMemberUpdatePage1).setOnClickListener {
             if (STATUS == "MEMBER_UPDATE" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -195,8 +194,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 회원정보수정 화면2 (회원정보수정 버튼)
-        val navMemberUpdatePage2: TextView = findViewById(R.id.nav_member_update_page2)
-        navMemberUpdatePage2.setOnClickListener {
+        (binding.navMemberUpdatePage2).setOnClickListener {
             if (STATUS == "MEMBER_UPDATE" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -206,8 +204,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 포인트현황 화면
-        val navMemberPointPage: TextView = findViewById(R.id.nav_member_point_page)
-        navMemberPointPage.setOnClickListener {
+        (binding.navMemberPointPage).setOnClickListener {
             if (STATUS == "MEMBER_POINT" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -222,8 +219,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 내 아이디어 화면
-        val navMemberIdeaPage: TextView = findViewById(R.id.nav_member_idea_page)
-        navMemberIdeaPage.setOnClickListener {
+        (binding.navMemberIdeaPage).setOnClickListener {
             if (STATUS == "MEMBER_IDEA" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -238,8 +234,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 관심 사업 화면
-        val navMemberAnnoPage: TextView = findViewById(R.id.nav_member_anno_page)
-        navMemberAnnoPage.setOnClickListener {
+        (binding.navMemberAnnoPage).setOnClickListener {
             if (STATUS == "MEMBER_ANNO" || tabLastStatus == 2131231033) {
                 drawer.closeDrawer(navView)
             } else {
@@ -254,8 +249,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 로그인 화면
-        val navLoginPage: TextView = findViewById(R.id.nav_sign_in_page)
-        navLoginPage.setOnClickListener {
+        (binding.navSignInPage).setOnClickListener {
             if (STATUS == "LOGIN" || tabLastStatus == 2131231038) {
                 drawer.closeDrawer(navView)
             } else {
@@ -265,8 +259,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 정보 화면(footer)
-        val navAboutPage: TextView = findViewById(R.id.nav_about_page)
-        navAboutPage.setOnClickListener {
+        (binding.navAboutPage).setOnClickListener {
             if (STATUS == "ABOUT" || tabLastStatus == 2131231027) {
                 drawer.closeDrawer(navView)
             } else {
@@ -276,8 +269,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // 로그아웃 버튼
-        val navLogoutPage: TextView = findViewById(R.id.nav_sign_out_page)
-        navLogoutPage.setOnClickListener {
+        (binding.navSignOutPage).setOnClickListener {
             drawer.closeDrawer(navView)
         }
     }
