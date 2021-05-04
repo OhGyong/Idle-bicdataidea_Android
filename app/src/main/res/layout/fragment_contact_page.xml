@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -37,9 +37,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint_contact1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="68dp"
+                android:layout_marginStart="@dimen/side_margin"
+                android:layout_marginTop="@dimen/title_top_margin"
+                android:layout_marginEnd="@dimen/side_margin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/image_contact">
@@ -50,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:text="고객센터"
                     android:textColor="@color/black"
-                    android:textSize="30dp"
+                    android:textSize="@dimen/title_text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -58,64 +60,77 @@
                 <View
                     android:id="@+id/view_contact1"
                     android:layout_width="80dp"
-                    android:layout_height="5px"
+                    android:layout_height="2dp"
                     android:background="@color/purple_500"
                     app:layout_constraintStart_toStartOf="@+id/textview_contact1"
                     app:layout_constraintTop_toBottomOf="@+id/textview_contact1" />
 
                 <View
                     android:id="@+id/view_contact2"
-                    android:layout_width="320dp"
-                    android:layout_height="2px"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
                     android:background="@color/black"
-                    app:layout_constraintStart_toStartOf="@+id/view_contact1"
-                    app:layout_constraintTop_toBottomOf="@+id/view_contact1" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/view_contact1"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_contact1" />
 
-                <TextView
-                    android:id="@+id/contact_regist_bt"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="100dp"
-                    android:text="등록"
-                    android:textColor="@color/purple_200"
-                    android:textSize="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@+id/textview_contact1"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.588" />
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="30dp"
-                    android:background="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/contact_cancel_bt"
-                    app:layout_constraintStart_toEndOf="@+id/contact_regist_bt"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/idea_regist_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="등록"
+                        android:textColor="@color/purple_200"
+                        android:textSize="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/contact_cancel_bt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:text="취소"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/contact_regist_bt"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.529" />
+                    <View
+                        android:id="@+id/view9"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#BAB6B6"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/idea_regist_cancel_bt"
+                        app:layout_constraintStart_toEndOf="@+id/idea_regist_bt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/idea_regist_cancel_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="취소"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint_contact2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/side_margin"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/side_margin"
+                android:layout_marginBottom="@dimen/bottom_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraint_contact1">
 
@@ -123,7 +138,6 @@
                     android:id="@+id/textview_contact2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:text="이메일"
                     android:textColor="@color/black"
                     android:textSize="20dp"
@@ -133,7 +147,7 @@
 
                 <EditText
                     android:id="@+id/edittext_contact1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_edittext"
                     android:ems="14"
@@ -142,14 +156,15 @@
                     android:lines="1"
                     android:textColor="@color/black"
                     android:textColorHint="#BAB6B6"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textview_contact2"
                     app:layout_constraintTop_toBottomOf="@+id/textview_contact2" />
 
                 <View
                     android:id="@+id/view_contact3"
-                    android:layout_width="320dp"
+                    android:layout_width="0dp"
                     android:layout_height="2px"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/textview_to_view"
                     android:background="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -159,8 +174,7 @@
                     android:id="@+id/textview_contact3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/textview_to_view"
                     android:text="제목"
                     android:textColor="@color/black"
                     android:textSize="20dp"
@@ -170,7 +184,7 @@
 
                 <EditText
                     android:id="@+id/edittext_contact2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_edittext"
                     android:ems="14"
@@ -178,14 +192,15 @@
                     android:lines="1"
                     android:textColor="@color/black"
                     android:textColorHint="#BAB6B6"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textview_contact3"
                     app:layout_constraintTop_toBottomOf="@+id/textview_contact3" />
 
                 <View
                     android:id="@+id/view_contact4"
-                    android:layout_width="320dp"
+                    android:layout_width="0dp"
                     android:layout_height="2px"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/textview_to_view"
                     android:background="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -195,8 +210,7 @@
                     android:id="@+id/textview_contact4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/textview_to_view"
                     android:text="내용"
                     android:textColor="@color/black"
                     android:textSize="20dp"
@@ -206,10 +220,10 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraint_contact3"
-                    android:layout_width="360dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/border_regist"
                     android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textview_contact4"
                     app:layout_constraintTop_toBottomOf="@+id/textview_contact4">
 
@@ -217,8 +231,8 @@
                         android:id="@+id/linearLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:background="@drawable/border_regist"
+                        android:orientation="vertical"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -308,21 +322,30 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <jp.wasabeef.richeditor.RichEditor
-                        android:id="@+id/editor_contact_regist"
-                        android:layout_width="wrap_content"
-                        android:layout_height="300dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-                        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_regist"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                        <jp.wasabeef.richeditor.RichEditor
+                            android:id="@+id/editor_contact_regist"
+                            android:layout_width="0dp"
+                            android:layout_height="300dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="2dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </ScrollView>
 </layout>

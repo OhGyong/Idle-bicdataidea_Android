@@ -15,8 +15,11 @@ import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    var STATUS: String = "" //
+    private var STATUS: String = "" //
     var tabLastStatus: Int = 0 //
+
+    private lateinit var navView: NavigationView
+    private lateinit var drawer: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,8 +39,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         // nav_drawer
-        val drawer: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = findViewById(R.id.nav_view)
+        drawer = findViewById(R.id.drawer_layout)
+        navView = findViewById(R.id.nav_view)
 
         var drawerMenu = ArrayList<Int>()
         for (i:Int in 0 until binding.menuLayout.childCount){
@@ -432,6 +435,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         STATUS = ""
-        super.onBackPressed()
+
+        // drawer가 열려있을 때 뒤로가기 클릭 시 drawer 닫아주기
+        if(drawer.isDrawerOpen(navView)){
+            drawer.closeDrawer(navView)
+        }else{
+            super.onBackPressed()
+        }
+
+
     }
 }

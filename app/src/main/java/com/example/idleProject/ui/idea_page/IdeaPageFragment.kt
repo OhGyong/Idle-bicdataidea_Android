@@ -68,15 +68,15 @@ class IdeaData(
 class IdeaPageFragment : Fragment() {
 
     var rankList: ArrayList<RankData> = arrayListOf(
-        RankData("  1", "오기용", "91,500P"),
-        RankData("  2", "김영조", "59,000P"),
-        RankData("  3", "배산하", "38,500P"),
-        RankData("  4", "김진호", "12,500P"),
-        RankData("  5", "김호연", "8,000P"),
-        RankData("  6", "서서울", "8,000P"),
-        RankData("  7", "임유빈", "8,000P"),
-        RankData("  8", "이상혁", "8,000P"),
-        RankData("  9", "송태진", "8,000P"),
+        RankData("1", "오기용", "91,500P"),
+        RankData("2", "김영조", "59,000P"),
+        RankData("3", "배산하", "38,500P"),
+        RankData("4", "김진호", "12,500P"),
+        RankData("5", "김호연", "8,000P"),
+        RankData("6", "서서울", "8,000P"),
+        RankData("7", "임유빈", "8,000P"),
+        RankData("8", "이상혁", "8,000P"),
+        RankData("9", "송태진", "8,000P"),
         RankData("10", "박도현", "8,000P")
     )
 

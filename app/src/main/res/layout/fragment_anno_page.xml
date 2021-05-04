@@ -39,8 +39,9 @@
             android:id="@+id/constraint_anno1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginStart="@dimen/side_margin"
+            android:layout_marginTop="@dimen/title_top_margin"
+            android:layout_marginEnd="@dimen/side_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_anno">
@@ -51,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:text="공고정보 게시판"
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="@dimen/title_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -70,7 +71,6 @@
                 android:id="@+id/view2"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:layout_marginEnd="20dp"
                 android:background="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -79,11 +79,11 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraint_anno1"
+            app:layout_constraintStart_toStartOf="@+id/constraint_anno1"
             app:layout_constraintTop_toBottomOf="@+id/constraint_anno1">
 
             <TextView
@@ -95,7 +95,7 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,8 +116,7 @@
                 android:id="@+id/view5"
                 android:layout_width="0dp"
                 android:layout_height="2px"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/recyclerTitle_to_view_margin"
                 android:background="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -126,26 +125,25 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/annoRecycler"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:nestedScrollingEnabled="false"
                 android:background="@color/white"
+                android:nestedScrollingEnabled="false"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@+id/view5"
                 app:layout_constraintStart_toStartOf="@+id/textView5"
-                app:layout_constraintTop_toBottomOf="@+id/view5">
-            </androidx.recyclerview.widget.RecyclerView>
+                app:layout_constraintTop_toBottomOf="@+id/view5"></androidx.recyclerview.widget.RecyclerView>
 
             <EditText
                 android:id="@+id/annoSearchText"
-                android:layout_width="320dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/annoRecycler"
+                app:layout_constraintStart_toStartOf="@+id/annoRecycler"
                 app:layout_constraintTop_toBottomOf="@+id/annoRecycler" />
 
             <ImageView
