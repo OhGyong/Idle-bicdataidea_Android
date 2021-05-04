@@ -18,6 +18,7 @@
             android:id="@+id/myIdeaTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:ellipsize="end"
             android:singleLine="true"
             android:textColor="@color/black"
@@ -29,7 +30,7 @@
 
         <TextView
             android:id="@+id/myIdeaDate"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="14dp"
