@@ -14,6 +14,7 @@ import androidx.navigation.findNavController
 import com.example.idleProject.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
+
 class MainActivity : AppCompatActivity() {
 
     private var STATUS: String = "" //

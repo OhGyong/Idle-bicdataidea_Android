@@ -58,37 +58,39 @@ class NoticeCsPageFragment : Fragment() {
                 //선택한 항목으로 타이틀 이름 변경 및 선택한 항목으로 이동
                 viewPager2.setCurrentItem(index)
                 when (index) {
-                    1 -> noticeCsTitle.setText("문의게시판")
-                    else -> noticeCsTitle.setText("공지사항")
+                    0 -> noticeCsTitle.setText("공지사항")
 
+                    1 -> noticeCsTitle.setText("문의게시판");
                 }
+
                 // 선택한 항목의 탭 색 변경
                 when (index) {
+                    /*
+                    * index=0 공지사항, index=1 문의게시판 (선택되었을 경우만 값 정해짐)
+                    * position=0 공지사항, position=1 문의게시판 (정해져있는 값)`
+                    * white가 선택된 값, 동시변경을 위해서 이렇게 작성
+                    * */
+                    0 ->
+                        if (position == 0) {
+                            (tab.customView as TextView).text = "공지사항"
+                            (tab.customView as TextView).setTextColor(Color.WHITE)
+                        } else if (position == 1) {
+                            (tab.customView as TextView).text = "문의게시판"
+                            (tab.customView as TextView).setTextColor(Color.BLACK)
+                        }
                     1 ->
                         if (position == 0) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "공지사항"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 1) {
-                            tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                             (tab.customView as TextView).text = "문의게시판"
                             (tab.customView as TextView).setTextColor(Color.WHITE)
-                        }
-
-                    else ->
-                        if (position == 0) {
-                            tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
-                            (tab.customView as TextView).text = "공지사항"
-                            (tab.customView as TextView).setTextColor(Color.WHITE)
-                        } else if (position == 1) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
-                            (tab.customView as TextView).text = "문의게시판"
-                            (tab.customView as TextView).setTextColor(Color.BLACK)
                         }
                 }
             }
         }.attach()
 
+        // 탭 이동시 색 변경
         tabs.addOnTabSelectedListener(
             object : TabLayout.OnTabSelectedListener {
                 override fun onTabReselected(p0: TabLayout.Tab?) {
@@ -96,14 +98,12 @@ class NoticeCsPageFragment : Fragment() {
 
                 override fun onTabUnselected(tab: TabLayout.Tab?) {
                     if (tab?.customView is TextView) {
-                        tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                         (tab.customView as TextView).setTextColor(Color.BLACK)
                     }
                 }
 
                 override fun onTabSelected(tab: TabLayout.Tab) {
                     if (tab?.customView is TextView) {
-                        tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                         (tab.customView as TextView).setTextColor(Color.WHITE)
                         when ((tab.customView as TextView).text) {
                             "공지사항" -> noticeCsTitle.setText("공지사항")
@@ -111,10 +111,13 @@ class NoticeCsPageFragment : Fragment() {
                         }
                     }
                 }
-            })
+            }
+          )
+
 
         // 키보드 내리기
-        var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        var imm: InputMethodManager =
+            context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         (root.findViewById<ConstraintLayout>(R.id.notice_cs_header)).setOnClickListener {
             imm.hideSoftInputFromWindow(root?.getWindowToken(), 0)
         }
