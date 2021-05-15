@@ -41,7 +41,5 @@ https://user-images.githubusercontent.com/52282493/116803593-1e5dd300-ab54-11eb-
             imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
         }
 ```
-
-
  
 https://user-images.githubusercontent.com/52282493/116804566-a0e99100-ab5a-11eb-96bf-12fafd09343b.mp4
