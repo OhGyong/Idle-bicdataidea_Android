@@ -68,76 +68,60 @@ class MypageFragment : Fragment() {
                 when (index) {
                     1 ->
                         if (position == 0) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "회원정보수정"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 1) {
-                            tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                             (tab.customView as TextView).text = "포인트현황"
                             (tab.customView as TextView).setTextColor(Color.WHITE)
                         } else if (position == 2) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "내아이디어"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 3) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "관심사업"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         }
 
                     2 ->
                         if (position == 0) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "회원정보수정"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 1) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "포인트현황"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 2) {
-                            tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                             (tab.customView as TextView).text = "내아이디어"
                             (tab.customView as TextView).setTextColor(Color.WHITE)
                         } else if (position == 3) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "관심사업"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         }
 
                     3 ->
                         if (position == 0) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "회원정보수정"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 1) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "포인트현황"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 2) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "내아이디어"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 3) {
-                            tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                             (tab.customView as TextView).text = "관심사업"
                             (tab.customView as TextView).setTextColor(Color.WHITE)
                         }
 
                     else ->
                         if (position == 0) {
-                            tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                             (tab.customView as TextView).text = "회원정보수정"
                             (tab.customView as TextView).setTextColor(Color.WHITE)
                         } else if (position == 1) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "포인트현황"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 2) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "내아이디어"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         } else if (position == 3) {
-                            tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                             (tab.customView as TextView).text = "관심사업"
                             (tab.customView as TextView).setTextColor(Color.BLACK)
                         }
@@ -152,14 +136,12 @@ class MypageFragment : Fragment() {
 
                 override fun onTabUnselected(tab: TabLayout.Tab?) {
                     if (tab?.customView is TextView) {
-                        tab.customView?.setBackgroundColor(0xFFECEAEA.toInt())
                         (tab.customView as TextView).setTextColor(Color.BLACK)
                     }
                 }
 
                 override fun onTabSelected(tab: TabLayout.Tab) {
                     if (tab?.customView is TextView) {
-                        tab.customView?.setBackgroundColor(0xFF8345F1.toInt())
                         (tab.customView as TextView).setTextColor(Color.WHITE)
                         when((tab.customView as TextView).text){
                             "회원정보수정"->myPageTitleName.setText("회원정보수정")

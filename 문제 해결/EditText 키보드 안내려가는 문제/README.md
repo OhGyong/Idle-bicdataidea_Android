@@ -32,6 +32,8 @@ https://user-images.githubusercontent.com/52282493/116803593-1e5dd300-ab54-11eb-
 
 안된다.
 
+## 해결
+
 **해당 fragment에서 id를 넣고 그 fragment를 클릭했을 때의 동작을 추가해준 경우**</br>
 ```
         var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -40,6 +42,6 @@ https://user-images.githubusercontent.com/52282493/116803593-1e5dd300-ab54-11eb-
         }
 ```
 
-해결
+
 
 https://user-images.githubusercontent.com/52282493/116804566-a0e99100-ab5a-11eb-96bf-12fafd09343b.mp4
