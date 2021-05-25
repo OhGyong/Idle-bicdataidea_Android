@@ -27,7 +27,6 @@ class SignUpAgreeFragment : Fragment() {
         val checkBox2 : CheckBox = root.findViewById(R.id.sign_up_check2) // 체크박스 필수2
         val checkBox3 : CheckBox = root.findViewById(R.id.sign_up_check3) // 체크박스 선택
         val signUpAgreeBt: Button = root.findViewById(R.id.sign_up_agree_bt) // 확인 버튼
-        Toast.makeText(context, "필수 항목들을 체크하시기 바랍니다.", Toast.LENGTH_SHORT).show()
 
         // 확인 클릭시 회원가입 페이지로 이동
         signUpAgreeBt.setOnClickListener{
