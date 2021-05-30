@@ -239,27 +239,33 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textview_password_rule2" />
 
-            <RadioButton
-                android:id="@+id/sign_up_man_check"
+            <RadioGroup
+                android:id="@+id/gender_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="남성"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_gender" />
+                app:layout_constraintTop_toBottomOf="@+id/textview_gender">
 
-            <RadioButton
-                android:id="@+id/sign_up_woman_check"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="여성"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/sign_up_man_check"
-                app:layout_constraintTop_toBottomOf="@+id/textview_gender" />
+                <RadioButton
+                    android:id="@+id/sign_up_man_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="남성"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <RadioButton
+                    android:id="@+id/sign_up_woman_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="여성"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
 
             <TextView
                 android:id="@+id/textview_birth"
@@ -272,7 +278,7 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sign_up_man_check" />
+                app:layout_constraintTop_toBottomOf="@+id/gender_group" />
 
             <EditText
                 android:id="@+id/sign_up_birth"
@@ -358,7 +364,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/sign_up_company" />
 
             <Spinner
-                android:id="@+id/sign_up_state"
+                android:id="@+id/sign_up_state_spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

@@ -21,7 +21,7 @@ class MemberUpdatePageFragment : Fragment() {
         super.onCreateView(inflater, container, savedInstanceState)
         val root: View = inflater.inflate(R.layout.fragment_member_update_page, container, false)
 
-        val spinner: Spinner = root.findViewById(R.id.sign_up_state)
+        val spinner: Spinner = root.findViewById(R.id.member_state_spinner)
         ArrayAdapter.createFromResource(
             requireContext(),
             R.array.state_array,
