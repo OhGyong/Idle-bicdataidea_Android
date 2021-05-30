@@ -28,12 +28,24 @@ class SignUpAgreeFragment : Fragment() {
         val checkBox3 : CheckBox = root.findViewById(R.id.sign_up_check3) // 체크박스 선택
         val signUpAgreeBt: Button = root.findViewById(R.id.sign_up_agree_bt) // 확인 버튼
 
-        // 확인 클릭시 회원가입 페이지로 이동
-        signUpAgreeBt.setOnClickListener{
+        var choiceState = 0; // default 값으로 선택을 안한 것으로 함
 
+        // 확인 클릭 시 회원가입 페이지로 이동
+        signUpAgreeBt.setOnClickListener{
             // 필수 요소들이 둘 다 체크되었을 경우 회원가입 페이지로 이동
             if(checkBox1.isChecked && checkBox2.isChecked){
-                findNavController().navigate(R.id.nav_sign_up_page)
+
+                // 선택 클릭 시의 data 확인
+                if(checkBox3.isChecked){
+                    choiceState =1;
+                }
+
+                findNavController().navigate(
+                    R.id.nav_sign_up_page,
+                    Bundle().apply {
+                        this.putInt("choiceState", choiceState);
+                    }
+                )
             }
             // 필수 요소들을 체크하지 않았을 경우 toast로 필수 요소 체크하라고 알림
             else{

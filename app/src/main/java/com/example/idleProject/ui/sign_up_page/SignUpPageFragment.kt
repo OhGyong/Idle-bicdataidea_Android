@@ -21,12 +21,18 @@ class SignUpPageFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_sign_up_page, container, false)
 
+        var choiceState = 0;
+
+        arguments.let {
+            it?.getInt("choiceState")
+            choiceState = it!!.getInt("choiceState") // SignUpAgreeFragment 에서 얻은 선택 약관 체크 여부
+        }
+
         // 키보드 내리기
         var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         (root.findViewById<ConstraintLayout>(R.id.sign_up_layout)).setOnClickListener {
             imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
         }
-
         return root
     }
 }
