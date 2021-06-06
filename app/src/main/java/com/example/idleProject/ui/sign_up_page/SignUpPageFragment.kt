@@ -12,6 +12,11 @@ import android.widget.Spinner
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.idleProject.R
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class SignUpPageFragment : Fragment() {
 
@@ -43,12 +48,39 @@ class SignUpPageFragment : Fragment() {
             spinner.adapter = adapter
         }
 
-
         // 키보드 내리기
         var imm: InputMethodManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         (root.findViewById<ConstraintLayout>(R.id.sign_up_layout)).setOnClickListener {
             imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
         }
+
+        /**
+         * API 연결
+         */
+
+        var data: SignUpPageData? = null;
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://10.0.2.2:3000")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val dataService: SignUpPageInterface = retrofit.create(SignUpPageInterface::class.java);
+        dataService.signUpPageInterface().enqueue(object : Callback<SignUpPageData>{
+            override fun onFailure(call: Call<SignUpPageData>, t: Throwable) {
+                println("에러에러에러");
+            }
+
+            override fun onResponse(call: Call<SignUpPageData>, response: Response<SignUpPageData>) {
+                if(response == null){
+                    println("빈값");
+                }
+                data = response.body();
+            }
+        })
+
+
+
         return root
     }
 }
