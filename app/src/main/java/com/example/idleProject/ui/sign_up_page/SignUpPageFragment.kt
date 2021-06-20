@@ -36,7 +36,7 @@ class SignUpPageFragment : Fragment() {
             choiceState = it!!.getInt("choiceState")
         }
 
-        // spinner data 넣기
+        // spinner data 넣기, (시도를 선택해주세요 처리)
         val spinner: Spinner = root.findViewById(R.id.sign_up_state_spinner)
         ArrayAdapter.createFromResource(
             requireContext(),
@@ -54,10 +54,11 @@ class SignUpPageFragment : Fragment() {
             imm.hideSoftInputFromWindow(view?.getWindowToken(), 0)
         }
 
+
+
         /**
          * API 연결
          */
-
         var data: SignUpPageData? = null;
 
         val retrofit = Retrofit.Builder()
@@ -78,9 +79,10 @@ class SignUpPageFragment : Fragment() {
                 data = response.body();
             }
         })
-
-
-
         return root
     }
+}
+
+class insertSpinner(){
+
 }
