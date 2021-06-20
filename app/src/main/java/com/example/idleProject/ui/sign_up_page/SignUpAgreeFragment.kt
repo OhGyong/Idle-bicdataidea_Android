@@ -43,7 +43,7 @@ class SignUpAgreeFragment : Fragment() {
                 findNavController().navigate(
                     R.id.nav_sign_up_page,
                     Bundle().apply {
-                        this.putInt("choiceState", choiceState);
+                        this.putInt("choiceState", choiceState); // 이용약관 선택 여부 값 넘김
                     }
                 )
             }
