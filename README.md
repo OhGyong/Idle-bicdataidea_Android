@@ -104,8 +104,10 @@ API 전송 시 정수값 이외에 표현 값들을 같이 넘겨주면 업데�
 - nav_drawerLayout 이해, 페이지 별 drawerLayout 이동
 
 ## API 연결 전까지
-`전체`</br>
+`전체`
+
 https://user-images.githubusercontent.com/52282493/136694378-72c76826-f29e-4bbf-8199-0364164fc16a.mp4
 
-`WYSIWYG LIBARARY`</br>
+`WYSIWYG LIBARARY`
+
 https://user-images.githubusercontent.com/52282493/136694707-c229072e-dec9-4d80-af16-4156e6447f36.mp4
