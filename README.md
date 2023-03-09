@@ -9,7 +9,7 @@ https://user-images.githubusercontent.com/52282493/136694707-c229072e-dec9-4d80-
 
 # 안드로이드 진행상황
 
-**프론트**sdf
+**프론트**
 - 홈
 - 아이디어 플랫폼
 - 공고정보 게시판
