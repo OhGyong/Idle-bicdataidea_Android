@@ -1,3 +1,5 @@
+![아이디어 플랫폼](https://user-images.githubusercontent.com/52282493/224542398-2e20c252-86f1-4d02-814f-e05f4df91023.png)
+
 ## API 연결 전까지
 `전체`
 
