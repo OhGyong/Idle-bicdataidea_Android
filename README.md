@@ -1,6 +1,7 @@
 ![아이디어 플랫폼](https://user-images.githubusercontent.com/52282493/224542398-2e20c252-86f1-4d02-814f-e05f4df91023.png)
 
-https://user-images.githubusercontent.com/52282493/136694378-72c76826-f29e-4bbf-8199-0364164fc16a.mp4 <br/>
+https://user-images.githubusercontent.com/52282493/136694378-72c76826-f29e-4bbf-8199-0364164fc16a.mp4
+
 (API 미연결)
 
 
